@@ -697,3 +697,61 @@ select.text-input { appearance: auto; }
   .battle-actions.two,
   .command-grid { grid-template-columns: 1fr; }
 }
+
+/* v0.6.0 呪文・特技 */
+.ability-panel { grid-column: span 2; }
+.ability-command-box {
+  margin-top: 1rem;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 18px;
+  padding: 0.9rem;
+}
+.ability-use-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 0.65rem;
+  align-items: center;
+}
+.battle-command-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.ability-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.7rem;
+  max-height: 420px;
+  overflow: auto;
+  padding-right: 0.2rem;
+}
+.ability-card {
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.055);
+  border-radius: 16px;
+  padding: 0.75rem;
+}
+.ability-card strong {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.65rem;
+  font-size: 0.98rem;
+}
+.ability-card span,
+.ability-card em {
+  display: block;
+  color: var(--muted);
+  font-size: 0.78rem;
+  line-height: 1.5;
+  margin-top: 0.35rem;
+  font-style: normal;
+}
+.ability-type-spell { color: #8fd3ff; }
+.ability-type-skill { color: #ffd18f; }
+.log-entry.skill { border-left-color: #ffd18f; }
+.log-entry.support { border-left-color: #d5b4ff; }
+@media (max-width: 1100px) {
+  .ability-panel { grid-column: span 1; }
+}
+@media (max-width: 760px) {
+  .ability-use-row,
+  .ability-list,
+  .battle-command-grid { grid-template-columns: 1fr; }
+}

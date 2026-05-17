@@ -14,7 +14,7 @@
     <div>
       <p class="eyebrow">RPG PWA SAMPLE</p>
       <h1>職業・仲間モンスター・ターン制バトル</h1>
-      <p class="lead">職業変更、熟練度、上級職解放、レベルアップ、ダンジョン探索、コマンドバトルを確認できます。</p>
+      <p class="lead">職業変更、熟練度、上級職解放、レベルアップ、ダンジョン探索、コマンドバトル、呪文・特技習得を確認できます。</p>
       <p class="version-line">Version <strong id="versionInfo">-</strong> / Data <span id="dataVersionInfo">-</span></p>
     </div>
     <div class="header-actions">
@@ -115,14 +115,32 @@
         <strong>ダンジョンに潜ると敵が出現します。</strong>
         <span>「ダンジョン探索」から行き先を選んでください。</span>
       </div>
-      <div class="command-grid">
+      <div class="ability-command-box">
+        <label class="field-label" for="abilitySelect">呪文・特技</label>
+        <div class="ability-use-row">
+          <select id="abilitySelect" class="text-input"></select>
+          <button id="abilityButton" class="secondary">使用</button>
+        </div>
+        <p id="abilityHint" class="hint">レベルアップまたは職業熟練度で覚えた呪文・特技を使えます。</p>
+      </div>
+      <div class="command-grid battle-command-grid">
         <button id="attackButton">たたかう</button>
-        <button id="fireButton" class="secondary">火の術 MP4</button>
-        <button id="healButton" class="secondary">ホイミ MP3</button>
         <button id="guardButton" class="ghost">ぼうぎょ</button>
         <button id="fleeButton" class="ghost">にげる</button>
       </div>
       <p class="hint">勝利すると経験値・ゴールド・職業熟練度を獲得します。◎付きモンスターは確率で仲間になります。</p>
+    </section>
+
+    <section class="panel ability-panel">
+      <div class="section-title-row">
+        <div>
+          <p class="eyebrow">SPELLS & SKILLS</p>
+          <h2>習得済み呪文・特技</h2>
+        </div>
+        <span id="abilityCount" class="pill">-</span>
+      </div>
+      <p class="hint">取得条件は、主人公レベルと各職業の熟練度で判定します。職業で覚えたものは転職後も使用できます。</p>
+      <div id="learnedAbilityList" class="ability-list"></div>
     </section>
 
     <section class="panel bonus-panel">

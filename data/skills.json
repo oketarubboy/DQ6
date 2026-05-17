@@ -1,0 +1,1467 @@
+[
+  {
+    "id": "kaengiri",
+    "name": "かえんぎり",
+    "type": "skill",
+    "category": "attack",
+    "cost": 0,
+    "costType": "mp",
+    "target": "敵1匹",
+    "timing": "戦闘中",
+    "element": "ギラ系",
+    "effect": "直接攻撃の0.3倍～1.3倍のダメージを与える（対象の耐性によって変化）",
+    "battle": {
+      "physicalMultiplierRange": [
+        0.3,
+        1.3
+      ]
+    }
+  },
+  {
+    "id": "inazumagiri",
+    "name": "いなずまぎり",
+    "type": "skill",
+    "category": "attack",
+    "cost": 0,
+    "costType": "mp",
+    "target": "敵1匹",
+    "timing": "戦闘中",
+    "element": "イオ系",
+    "effect": "直接攻撃の0.3倍～1.3倍のダメージを与える（対象の耐性によって変化）",
+    "battle": {
+      "physicalMultiplierRange": [
+        0.3,
+        1.3
+      ]
+    }
+  },
+  {
+    "id": "shinkuugiri",
+    "name": "しんくうぎり",
+    "type": "skill",
+    "category": "attack",
+    "cost": 0,
+    "costType": "mp",
+    "target": "敵1匹",
+    "timing": "戦闘中",
+    "element": "バギ系",
+    "effect": "直接攻撃の0.3倍～1.3倍のダメージを与える（対象の耐性によって変化）",
+    "battle": {
+      "physicalMultiplierRange": [
+        0.3,
+        1.3
+      ]
+    }
+  },
+  {
+    "id": "mahyadogiri",
+    "name": "マヒャドぎり",
+    "type": "skill",
+    "category": "attack",
+    "cost": 0,
+    "costType": "mp",
+    "target": "敵1匹",
+    "timing": "戦闘中",
+    "element": "ヒャド系",
+    "effect": "直接攻撃の0.3倍～1.3倍のダメージを与える（対象の耐性によって変化）",
+    "battle": {
+      "physicalMultiplierRange": [
+        0.3,
+        1.3
+      ]
+    }
+  },
+  {
+    "id": "morobagiri",
+    "name": "もろばぎり",
+    "type": "skill",
+    "category": "attack",
+    "cost": 0,
+    "costType": "mp",
+    "target": "敵1匹",
+    "timing": "戦闘中",
+    "element": "-",
+    "effect": "直接攻撃の約1.5倍のダメージを与えるが、その1/4のダメージを食らう",
+    "battle": {
+      "physicalMultiplier": 1.5,
+      "recoilRate": 0.25
+    }
+  },
+  {
+    "id": "shippuuzuki",
+    "name": "しっぷうづき",
+    "type": "skill",
+    "category": "attack",
+    "cost": 0,
+    "costType": "mp",
+    "target": "敵1匹",
+    "timing": "戦闘中",
+    "element": "-",
+    "effect": "直接攻撃の0.8倍のダメージを与える/必ずターン始めに攻撃",
+    "battle": {
+      "physicalMultiplier": 0.8
+    }
+  },
+  {
+    "id": "hayabusagiri",
+    "name": "はやぶさぎり",
+    "type": "skill",
+    "category": "attack",
+    "cost": 0,
+    "costType": "mp",
+    "target": "敵1匹",
+    "timing": "戦闘中",
+    "element": "-",
+    "effect": "直接攻撃の0.75倍のダメージを2回与える",
+    "battle": {
+      "physicalMultiplier": 0.75,
+      "hits": 2
+    }
+  },
+  {
+    "id": "majingiri",
+    "name": "まじんぎり",
+    "type": "skill",
+    "category": "attack",
+    "cost": 0,
+    "costType": "mp",
+    "target": "敵1匹",
+    "timing": "戦闘中",
+    "element": "-",
+    "effect": "3/8の確率で会心の一撃を放つ",
+    "battle": {
+      "criticalRate": 0.375,
+      "missOnFail": true
+    }
+  },
+  {
+    "id": "minagoroshi",
+    "name": "みなごろし",
+    "type": "skill",
+    "category": "attack",
+    "cost": 0,
+    "costType": "mp",
+    "target": "ランダム",
+    "timing": "戦闘中",
+    "element": "-",
+    "effect": "敵味方ランダムに1回だけ会心の一撃を放つ",
+    "battle": {
+      "randomCritical": true
+    }
+  },
+  {
+    "id": "zombiegiri",
+    "name": "ゾンビぎり",
+    "type": "skill",
+    "category": "attack",
+    "cost": 0,
+    "costType": "mp",
+    "target": "敵1匹",
+    "timing": "戦闘中",
+    "element": "-",
+    "effect": "直接攻撃と同様のダメージを与える/ゾンビ種に1.5倍",
+    "battle": {
+      "physicalMultiplier": 1.0
+    }
+  },
+  {
+    "id": "dragongiri",
+    "name": "ドラゴンぎり",
+    "type": "skill",
+    "category": "attack",
+    "cost": 0,
+    "costType": "mp",
+    "target": "敵1匹",
+    "timing": "戦闘中",
+    "element": "-",
+    "effect": "直接攻撃と同様のダメージを与える/ドラゴン種に1.5倍",
+    "battle": {
+      "physicalMultiplier": 1.0
+    }
+  },
+  {
+    "id": "metalgiri",
+    "name": "メタルぎり",
+    "type": "skill",
+    "category": "attack",
+    "cost": 0,
+    "costType": "mp",
+    "target": "敵1匹",
+    "timing": "戦闘中",
+    "element": "-",
+    "effect": "直接攻撃と同様のダメージを与える/メタル種に必ず1ダメージ",
+    "battle": {
+      "physicalMultiplier": 1.0,
+      "metalBonus": true
+    }
+  },
+  {
+    "id": "tobihizageri",
+    "name": "とびひざげり",
+    "type": "skill",
+    "category": "attack",
+    "cost": 0,
+    "costType": "mp",
+    "target": "敵1匹",
+    "timing": "戦闘中",
+    "element": "-",
+    "effect": "直接攻撃と同様のダメージを与える/浮遊種に1.5倍",
+    "battle": {
+      "physicalMultiplier": 1.0
+    }
+  },
+  {
+    "id": "seikenzuki",
+    "name": "せいけんづき",
+    "type": "skill",
+    "category": "attack",
+    "cost": 0,
+    "costType": "mp",
+    "target": "敵1匹",
+    "timing": "戦闘中",
+    "element": "岩石系",
+    "effect": "直接攻撃の2倍のダメージを与える",
+    "battle": {
+      "physicalMultiplier": 2.0
+    }
+  },
+  {
+    "id": "kyuushozuki",
+    "name": "きゅうしょづき",
+    "type": "skill",
+    "category": "attack",
+    "cost": 0,
+    "costType": "mp",
+    "target": "敵1匹",
+    "timing": "戦闘中",
+    "element": "-",
+    "effect": "直接攻撃の半分のダメージを与え、稀に即死効果",
+    "battle": {
+      "physicalMultiplier": 0.5,
+      "instantDeath": 0.12
+    }
+  },
+  {
+    "id": "bakuretsuken",
+    "name": "ばくれつけん",
+    "type": "skill",
+    "category": "attack",
+    "cost": 0,
+    "costType": "mp",
+    "target": "敵全体",
+    "timing": "戦闘中",
+    "element": "-",
+    "effect": "直接攻撃の半分のダメージをランダムで4回与える",
+    "battle": {
+      "physicalMultiplier": 0.5,
+      "hits": 4
+    }
+  },
+  {
+    "id": "taiatari",
+    "name": "たいあたり",
+    "type": "skill",
+    "category": "attack",
+    "cost": 0,
+    "costType": "hpRate",
+    "target": "敵1匹",
+    "timing": "戦闘中",
+    "element": "ザキ系",
+    "effect": "対象の現在HPの約8割のダメージを与える",
+    "battle": {
+      "currentHpRateDamage": 0.8,
+      "selfHpCostRate": 0.8
+    }
+  },
+  {
+    "id": "sutemi",
+    "name": "すてみ",
+    "type": "skill",
+    "category": "attack",
+    "cost": 0,
+    "costType": "mp",
+    "target": "敵1匹",
+    "timing": "戦闘中",
+    "element": "-",
+    "effect": "直接攻撃の2倍のダメージを与えるが、そのターン、被ダメージが2倍になる",
+    "battle": {
+      "physicalMultiplier": 2.0,
+      "takenDamageMul": 2
+    }
+  },
+  {
+    "id": "samidareken",
+    "name": "さみだれけん",
+    "type": "skill",
+    "category": "attack",
+    "cost": 0,
+    "costType": "mp",
+    "target": "敵全体",
+    "timing": "戦闘中",
+    "element": "岩石系",
+    "effect": "直接攻撃と同様のダメージを与える",
+    "battle": {
+      "physicalMultiplier": 1.0
+    }
+  },
+  {
+    "id": "mawashigeri",
+    "name": "まわしげり",
+    "type": "skill",
+    "category": "attack",
+    "cost": 0,
+    "costType": "mp",
+    "target": "敵グループ",
+    "timing": "戦闘中",
+    "element": "-",
+    "effect": "直接攻撃と同様のダメージを与える",
+    "battle": {
+      "physicalMultiplier": 1.0
+    }
+  },
+  {
+    "id": "moonsault",
+    "name": "ムーンサルト",
+    "type": "skill",
+    "category": "attack",
+    "cost": 0,
+    "costType": "mp",
+    "target": "敵全体",
+    "timing": "戦闘中",
+    "element": "-",
+    "effect": "敵全体に均一に通常攻撃より若干弱いダメージを与える",
+    "battle": {
+      "physicalMultiplier": 0.85
+    }
+  },
+  {
+    "id": "kamaitachi",
+    "name": "かまいたち",
+    "type": "skill",
+    "category": "attack",
+    "cost": 0,
+    "costType": "mp",
+    "target": "敵1匹",
+    "timing": "戦闘中",
+    "element": "バギ系",
+    "effect": "およそ使用者のレベル×3+10のダメージを与える（最大180）",
+    "battle": {
+      "levelDamage": {
+        "mul": 3,
+        "add": 10,
+        "max": 180
+      }
+    }
+  },
+  {
+    "id": "shinkuuha",
+    "name": "しんくうは",
+    "type": "skill",
+    "category": "attack",
+    "cost": 0,
+    "costType": "mp",
+    "target": "敵グループ",
+    "timing": "戦闘中",
+    "element": "バギ系",
+    "effect": "およそ使用者のレベル×3+30のダメージを与える（最大150）",
+    "battle": {
+      "levelDamage": {
+        "mul": 3,
+        "add": 30,
+        "max": 150
+      }
+    }
+  },
+  {
+    "id": "hinoiki",
+    "name": "ひのいき",
+    "type": "skill",
+    "category": "attack",
+    "cost": 0,
+    "costType": "mp",
+    "target": "敵全体",
+    "timing": "戦闘中",
+    "element": "炎系",
+    "effect": "（息）対象に6～10のダメージを与える",
+    "battle": {
+      "damage": [
+        6,
+        10
+      ]
+    }
+  },
+  {
+    "id": "kaennoiki",
+    "name": "かえんのいき",
+    "type": "skill",
+    "category": "attack",
+    "cost": 0,
+    "costType": "mp",
+    "target": "敵全体",
+    "timing": "戦闘中",
+    "element": "炎系",
+    "effect": "（息）対象に30～40のダメージを与える",
+    "battle": {
+      "damage": [
+        30,
+        40
+      ]
+    }
+  },
+  {
+    "id": "hageshiihonoo",
+    "name": "はげしいほのお",
+    "type": "skill",
+    "category": "attack",
+    "cost": 0,
+    "costType": "mp",
+    "target": "敵全体",
+    "timing": "戦闘中",
+    "element": "炎系",
+    "effect": "（息）対象に65～85のダメージを与える",
+    "battle": {
+      "damage": [
+        65,
+        85
+      ]
+    }
+  },
+  {
+    "id": "shakunetsu",
+    "name": "しゃくねつ",
+    "type": "skill",
+    "category": "attack",
+    "cost": 0,
+    "costType": "mp",
+    "target": "敵全体",
+    "timing": "戦闘中",
+    "element": "炎系",
+    "effect": "（息）対象に150～170のダメージを与える",
+    "battle": {
+      "damage": [
+        150,
+        170
+      ]
+    }
+  },
+  {
+    "id": "tsumetaiiki",
+    "name": "つめたいいき",
+    "type": "skill",
+    "category": "attack",
+    "cost": 0,
+    "costType": "mp",
+    "target": "敵全体",
+    "timing": "戦闘中",
+    "element": "吹雪系",
+    "effect": "（息）対象に13～16のダメージを与える",
+    "battle": {
+      "damage": [
+        13,
+        16
+      ]
+    }
+  },
+  {
+    "id": "koorinoiki",
+    "name": "こおりのいき",
+    "type": "skill",
+    "category": "attack",
+    "cost": 0,
+    "costType": "mp",
+    "target": "敵全体",
+    "timing": "戦闘中",
+    "element": "吹雪系",
+    "effect": "（息）対象に50～60のダメージを与える",
+    "battle": {
+      "damage": [
+        50,
+        60
+      ]
+    }
+  },
+  {
+    "id": "kogoerufubuki",
+    "name": "こごえるふぶき",
+    "type": "skill",
+    "category": "attack",
+    "cost": 0,
+    "costType": "mp",
+    "target": "敵全体",
+    "timing": "戦闘中",
+    "element": "吹雪系",
+    "effect": "（息）対象に120～140のダメージを与える",
+    "battle": {
+      "damage": [
+        120,
+        140
+      ]
+    }
+  },
+  {
+    "id": "kagayakuiki",
+    "name": "かがやくいき",
+    "type": "skill",
+    "category": "attack",
+    "cost": 0,
+    "costType": "mp",
+    "target": "敵全体",
+    "timing": "戦闘中",
+    "element": "吹雪系",
+    "effect": "（息）対象に210～230のダメージを与える",
+    "battle": {
+      "damage": [
+        210,
+        230
+      ]
+    }
+  },
+  {
+    "id": "ishitsubute",
+    "name": "いしつぶて",
+    "type": "skill",
+    "category": "attack",
+    "cost": 0,
+    "costType": "mp",
+    "target": "敵グループ",
+    "timing": "戦闘中",
+    "element": "岩石系",
+    "effect": "対象に10～25のダメージを与える",
+    "battle": {
+      "damage": [
+        10,
+        25
+      ]
+    }
+  },
+  {
+    "id": "tsunami",
+    "name": "つなみ",
+    "type": "skill",
+    "category": "attack",
+    "cost": 0,
+    "costType": "mp",
+    "target": "敵全体",
+    "timing": "戦闘中",
+    "element": "バギ系",
+    "effect": "（息）対象に30～40のダメージを与える",
+    "battle": {
+      "damage": [
+        30,
+        40
+      ]
+    }
+  },
+  {
+    "id": "inazuma",
+    "name": "いなずま",
+    "type": "skill",
+    "category": "attack",
+    "cost": 0,
+    "costType": "mp",
+    "target": "敵全体",
+    "timing": "戦闘中",
+    "element": "イオ系",
+    "effect": "対象に40～50のダメージを与える",
+    "battle": {
+      "damage": [
+        40,
+        50
+      ]
+    }
+  },
+  {
+    "id": "jihibiki",
+    "name": "じひびき",
+    "type": "skill",
+    "category": "attack",
+    "cost": 0,
+    "costType": "mp",
+    "target": "敵全体",
+    "timing": "戦闘中",
+    "element": "バギ系",
+    "effect": "対象に50～65のダメージを与える",
+    "battle": {
+      "damage": [
+        50,
+        65
+      ]
+    }
+  },
+  {
+    "id": "magma",
+    "name": "マグマ",
+    "type": "skill",
+    "category": "attack",
+    "cost": 0,
+    "costType": "mp",
+    "target": "敵全体",
+    "timing": "戦闘中",
+    "element": "炎系",
+    "effect": "（息）対象に70～85のダメージを与える",
+    "battle": {
+      "damage": [
+        70,
+        85
+      ]
+    }
+  },
+  {
+    "id": "gansekiotoshi",
+    "name": "がんせきおとし",
+    "type": "skill",
+    "category": "attack",
+    "cost": 0,
+    "costType": "mp",
+    "target": "敵全体",
+    "timing": "戦闘中",
+    "element": "岩石系",
+    "effect": "対象に90～130のダメージを与える",
+    "battle": {
+      "damage": [
+        90,
+        130
+      ]
+    }
+  },
+  {
+    "id": "hibashira",
+    "name": "ひばしら",
+    "type": "skill",
+    "category": "attack",
+    "cost": 0,
+    "costType": "mp",
+    "target": "敵1匹",
+    "timing": "戦闘中",
+    "element": "炎系",
+    "effect": "（息）対象に170～190のダメージを与える",
+    "battle": {
+      "damage": [
+        170,
+        190
+      ]
+    }
+  },
+  {
+    "id": "grandcross",
+    "name": "グランドクロス",
+    "type": "skill",
+    "category": "attack",
+    "cost": 20,
+    "costType": "mp",
+    "target": "敵グループ",
+    "timing": "戦闘中",
+    "element": "バギ系",
+    "effect": "対象に180～210のダメージを与える/ゾンビ種に1.3倍",
+    "battle": {
+      "damage": [
+        180,
+        210
+      ]
+    }
+  },
+  {
+    "id": "gigaslash",
+    "name": "ギガスラッシュ",
+    "type": "skill",
+    "category": "attack",
+    "cost": 20,
+    "costType": "mp",
+    "target": "敵グループ",
+    "timing": "戦闘中",
+    "element": "デイン系",
+    "effect": "対象に350～410のダメージを与える",
+    "battle": {
+      "damage": [
+        350,
+        410
+      ]
+    }
+  },
+  {
+    "id": "jigospark",
+    "name": "ジゴスパーク",
+    "type": "skill",
+    "category": "attack",
+    "cost": 25,
+    "costType": "mp",
+    "target": "敵全体",
+    "timing": "戦闘中",
+    "element": "デイン系",
+    "effect": "対象に210～290のダメージを与える",
+    "battle": {
+      "damage": [
+        210,
+        290
+      ]
+    }
+  },
+  {
+    "id": "bigbang",
+    "name": "ビッグバン",
+    "type": "skill",
+    "category": "attack",
+    "cost": 30,
+    "costType": "mp",
+    "target": "敵全体",
+    "timing": "戦闘中",
+    "element": "メラ系",
+    "effect": "（息）対象に300～400のダメージを与える",
+    "battle": {
+      "damage": [
+        300,
+        400
+      ]
+    }
+  },
+  {
+    "id": "madante",
+    "name": "マダンテ",
+    "type": "skill",
+    "category": "attack",
+    "cost": 0,
+    "costType": "allMp",
+    "target": "敵全体",
+    "timing": "戦闘中",
+    "element": "炎系",
+    "effect": "対象に消費MPの3倍のダメージを与える",
+    "battle": {
+      "madante": true
+    }
+  },
+  {
+    "id": "tomoenage",
+    "name": "ともえなげ",
+    "type": "skill",
+    "category": "attack",
+    "cost": 0,
+    "costType": "mp",
+    "target": "敵1匹",
+    "timing": "戦闘中",
+    "element": "ザキ系",
+    "effect": "敵を消し去る/味方の場合は酒場行き",
+    "battle": {
+      "banish": 0.4
+    }
+  },
+  {
+    "id": "tsukitobashi",
+    "name": "つきとばし",
+    "type": "skill",
+    "category": "attack",
+    "cost": 0,
+    "costType": "mp",
+    "target": "敵1匹",
+    "timing": "戦闘中",
+    "element": "ザキ系",
+    "effect": "敵を消し去る（経験値・Gは手に入らない）",
+    "battle": {
+      "banish": 0.35
+    }
+  },
+  {
+    "id": "shinoodori",
+    "name": "しのおどり",
+    "type": "skill",
+    "category": "attack",
+    "cost": 0,
+    "costType": "mp",
+    "target": "敵全体",
+    "timing": "戦闘中",
+    "element": "ザキ系",
+    "effect": "（踊り）対象を一定の確率で死に至らしめる",
+    "battle": {
+      "instantDeath": 0.25
+    }
+  },
+  {
+    "id": "jiware",
+    "name": "じわれ",
+    "type": "skill",
+    "category": "attack",
+    "cost": 0,
+    "costType": "mp",
+    "target": "敵全体",
+    "timing": "戦闘中",
+    "element": "ザキ系",
+    "effect": "対象を一定の確率で死に至らしめる",
+    "battle": {
+      "instantDeath": 0.25
+    }
+  },
+  {
+    "id": "guntaiyobi",
+    "name": "ぐんたいよび",
+    "type": "skill",
+    "category": "attack",
+    "cost": 0,
+    "costType": "goldLevel",
+    "target": "敵全体",
+    "timing": "戦闘中",
+    "element": "軍隊系",
+    "effect": "使用者のレベル×2+25のダメージを4回与える",
+    "battle": {
+      "armyCall": true
+    }
+  },
+  {
+    "id": "amaiiki",
+    "name": "あまいいき",
+    "type": "skill",
+    "category": "support",
+    "cost": 0,
+    "costType": "mp",
+    "target": "敵グループ",
+    "timing": "戦闘中",
+    "element": "ラリホー系",
+    "effect": "（息）「眠り」状態にさせることができる",
+    "battle": {
+      "sleep": 1,
+      "successRate": 0.4
+    }
+  },
+  {
+    "id": "dokunoiki",
+    "name": "どくのいき",
+    "type": "skill",
+    "category": "support",
+    "cost": 0,
+    "costType": "mp",
+    "target": "敵グループ",
+    "timing": "戦闘中",
+    "element": "毒系",
+    "effect": "（息）「毒」状態にさせることができる",
+    "battle": {
+      "poison": true
+    }
+  },
+  {
+    "id": "moudokunokiri",
+    "name": "もうどくのきり",
+    "type": "skill",
+    "category": "support",
+    "cost": 0,
+    "costType": "mp",
+    "target": "敵グループ",
+    "timing": "戦闘中",
+    "element": "毒系",
+    "effect": "「猛毒」状態にさせることができる",
+    "battle": {
+      "poison": true,
+      "strong": true
+    }
+  },
+  {
+    "id": "yaketsukuiki",
+    "name": "やけつくいき",
+    "type": "skill",
+    "category": "support",
+    "cost": 0,
+    "costType": "mp",
+    "target": "敵グループ",
+    "timing": "戦闘中",
+    "element": "麻痺系",
+    "effect": "（息）「麻痺」状態にさせることができる",
+    "battle": {
+      "sleep": 1,
+      "successRate": 0.45
+    }
+  },
+  {
+    "id": "sunakemuri",
+    "name": "すなけむり",
+    "type": "skill",
+    "category": "support",
+    "cost": 0,
+    "costType": "mp",
+    "target": "敵全体",
+    "timing": "戦闘中",
+    "element": "マヌーサ系",
+    "effect": "直接攻撃の命中率が下がる（5/8になる）",
+    "battle": {
+      "enemyAccuracy": 0.625
+    }
+  },
+  {
+    "id": "sasouodori",
+    "name": "さそうおどり",
+    "type": "skill",
+    "category": "support",
+    "cost": 0,
+    "costType": "mp",
+    "target": "敵1匹",
+    "timing": "戦闘中",
+    "element": "行動封系",
+    "effect": "（踊り）1ターンの間、行動不能にする",
+    "battle": {
+      "skip": 1,
+      "successRate": 0.5
+    }
+  },
+  {
+    "id": "fushiginaodori",
+    "name": "ふしぎなおどり",
+    "type": "skill",
+    "category": "support",
+    "cost": 0,
+    "costType": "mp",
+    "target": "敵1匹",
+    "timing": "戦闘中",
+    "element": "マホトラ系",
+    "effect": "（踊り）対象のMPを5～11減少させる",
+    "battle": {
+      "mpDamage": [
+        5,
+        11
+      ]
+    }
+  },
+  {
+    "id": "mahotoraodori",
+    "name": "マホトラおどり",
+    "type": "skill",
+    "category": "support",
+    "cost": 0,
+    "costType": "mp",
+    "target": "敵1匹",
+    "timing": "戦闘中",
+    "element": "マホトラ系",
+    "effect": "（踊り）対象のMPを5～11吸収する",
+    "battle": {
+      "mpDrain": [
+        5,
+        11
+      ]
+    }
+  },
+  {
+    "id": "medapanidance",
+    "name": "メダパニダンス",
+    "type": "skill",
+    "category": "support",
+    "cost": 0,
+    "costType": "mp",
+    "target": "敵グループ",
+    "timing": "戦闘中",
+    "element": "メダパニ系",
+    "effect": "（踊り）「混乱」状態にさせることができる",
+    "battle": {
+      "skip": 1,
+      "successRate": 0.45
+    }
+  },
+  {
+    "id": "odorifuuji",
+    "name": "おどりふうじ",
+    "type": "skill",
+    "category": "support",
+    "cost": 0,
+    "costType": "mp",
+    "target": "敵グループ",
+    "timing": "戦闘中",
+    "element": "踊り封系",
+    "effect": "（踊り）踊り系統の特技を封じることができる",
+    "battle": {
+      "skip": 1,
+      "successRate": 0.35
+    }
+  },
+  {
+    "id": "namemawashi",
+    "name": "なめまわし",
+    "type": "skill",
+    "category": "support",
+    "cost": 0,
+    "costType": "mp",
+    "target": "敵1匹",
+    "timing": "戦闘中",
+    "element": "行動封系",
+    "effect": "1ターンの間、行動不能にする",
+    "battle": {
+      "skip": 1,
+      "successRate": 0.5
+    }
+  },
+  {
+    "id": "hyakuretsuname",
+    "name": "ひゃくれつなめ",
+    "type": "skill",
+    "category": "support",
+    "cost": 0,
+    "costType": "mp",
+    "target": "敵1匹",
+    "timing": "戦闘中",
+    "element": "行動封系",
+    "effect": "1ターンの間、行動不能にし、防御力を0にする",
+    "battle": {
+      "skip": 1,
+      "successRate": 0.55,
+      "enemyDefMul": 0
+    }
+  },
+  {
+    "id": "mabushiihikari",
+    "name": "まぶしいひかり",
+    "type": "skill",
+    "category": "support",
+    "cost": 0,
+    "costType": "mp",
+    "target": "敵全体",
+    "timing": "戦闘中",
+    "element": "マヌーサ系",
+    "effect": "直接攻撃の命中率が下がる（5/8になる）",
+    "battle": {
+      "enemyAccuracy": 0.625
+    }
+  },
+  {
+    "id": "bukiminahikari",
+    "name": "ぶきみなひかり",
+    "type": "skill",
+    "category": "support",
+    "cost": 0,
+    "costType": "mp",
+    "target": "敵グループ",
+    "timing": "戦闘中",
+    "element": "ザキ系",
+    "effect": "確率で決まる呪文・特技の耐性を減少し、効きやすくする",
+    "battle": {
+      "lowerResistance": true
+    }
+  },
+  {
+    "id": "otakebi",
+    "name": "おたけび",
+    "type": "skill",
+    "category": "support",
+    "cost": 0,
+    "costType": "mp",
+    "target": "敵全体",
+    "timing": "戦闘中",
+    "element": "行動封系",
+    "effect": "1ターンの間、行動不能にする",
+    "battle": {
+      "skip": 1,
+      "successRate": 0.5
+    }
+  },
+  {
+    "id": "ashibarai",
+    "name": "あしばらい",
+    "type": "skill",
+    "category": "support",
+    "cost": 0,
+    "costType": "mp",
+    "target": "敵1匹",
+    "timing": "戦闘中",
+    "element": "行動封系",
+    "effect": "1ターンの間、行動不能にする",
+    "battle": {
+      "skip": 1,
+      "successRate": 0.55
+    }
+  },
+  {
+    "id": "ukenagashi",
+    "name": "うけながし",
+    "type": "skill",
+    "category": "support",
+    "cost": 0,
+    "costType": "mp",
+    "target": "自分",
+    "timing": "戦闘中",
+    "element": "-",
+    "effect": "自分への直接攻撃を敵味方問わずランダムに振替える",
+    "battle": {
+      "counterStance": true
+    }
+  },
+  {
+    "id": "mikawashikyaku",
+    "name": "みかわしきゃく",
+    "type": "skill",
+    "category": "support",
+    "cost": 0,
+    "costType": "mp",
+    "target": "自分",
+    "timing": "戦闘中",
+    "element": "-",
+    "effect": "（踊り）直接攻撃の回避率が1/2になる",
+    "battle": {
+      "evasion": 0.5
+    }
+  },
+  {
+    "id": "kiaitame",
+    "name": "きあいため",
+    "type": "skill",
+    "category": "support",
+    "cost": 0,
+    "costType": "mp",
+    "target": "自分",
+    "timing": "戦闘中",
+    "element": "-",
+    "effect": "次の直接攻撃のダメージを約2倍にする",
+    "battle": {
+      "charge": 2
+    }
+  },
+  {
+    "id": "chikaratame",
+    "name": "ちからため",
+    "type": "skill",
+    "category": "support",
+    "cost": 0,
+    "costType": "mp",
+    "target": "自分",
+    "timing": "戦闘中",
+    "element": "-",
+    "effect": "次の直接攻撃のダメージを約2倍にする",
+    "battle": {
+      "charge": 2
+    }
+  },
+  {
+    "id": "asobi",
+    "name": "あそび",
+    "type": "skill",
+    "category": "support",
+    "cost": 0,
+    "costType": "mp",
+    "target": "-",
+    "timing": "戦闘中",
+    "element": "-",
+    "effect": "キャラと遊び人熟練度に応じてさまざまな効果がランダムで発動",
+    "battle": {
+      "random": true
+    }
+  },
+  {
+    "id": "manemane",
+    "name": "まねまね",
+    "type": "skill",
+    "category": "support",
+    "cost": 0,
+    "costType": "mp",
+    "target": "自分",
+    "timing": "戦闘中",
+    "element": "-",
+    "effect": "受けた攻撃と同じ攻撃方法を相手に与える",
+    "battle": {
+      "counterStance": true
+    }
+  },
+  {
+    "id": "itetsukuhadou",
+    "name": "いてつくはどう",
+    "type": "skill",
+    "category": "support",
+    "cost": 0,
+    "costType": "mp",
+    "target": "敵全体",
+    "timing": "戦闘中",
+    "element": "-",
+    "effect": "対象に有利な補助効果を全て打ち消す",
+    "battle": {
+      "clearEnemyBuffs": true
+    }
+  },
+  {
+    "id": "migawari",
+    "name": "みがわり",
+    "type": "skill",
+    "category": "support",
+    "cost": 0,
+    "costType": "mp",
+    "target": "味方1人",
+    "timing": "戦闘中",
+    "element": "-",
+    "effect": "対象の受けるダメージを全て自分が引き受ける",
+    "battle": {
+      "guardAlly": true
+    }
+  },
+  {
+    "id": "nioudachi",
+    "name": "におうだち",
+    "type": "skill",
+    "category": "support",
+    "cost": 0,
+    "costType": "mp",
+    "target": "味方全員",
+    "timing": "戦闘中",
+    "element": "-",
+    "effect": "対象の受けるダメージを全て自分が引き受ける",
+    "battle": {
+      "guardAlly": true
+    }
+  },
+  {
+    "id": "oikaze",
+    "name": "おいかぜ",
+    "type": "skill",
+    "category": "support",
+    "cost": 0,
+    "costType": "mp",
+    "target": "自分",
+    "timing": "戦闘中",
+    "element": "-",
+    "effect": "息系統の攻撃を跳ね返す",
+    "battle": {
+      "breathReflect": true
+    }
+  },
+  {
+    "id": "daibougyo",
+    "name": "だいぼうぎょ",
+    "type": "skill",
+    "category": "support",
+    "cost": 0,
+    "costType": "mp",
+    "target": "自分",
+    "timing": "戦闘中",
+    "element": "-",
+    "effect": "そのターン、受けるダメージを1/10にする（炎系、吹雪系を除く）",
+    "battle": {
+      "bigGuard": true
+    }
+  },
+  {
+    "id": "shoukan",
+    "name": "しょうかん",
+    "type": "skill",
+    "category": "support",
+    "cost": 20,
+    "costType": "mp",
+    "target": "-",
+    "timing": "戦闘中",
+    "element": "-",
+    "effect": "精霊を召喚し、一緒に戦う（精霊は4種で使用者のレベルで変化）",
+    "battle": {
+      "damage": [
+        60,
+        120
+      ]
+    }
+  },
+  {
+    "id": "henshin",
+    "name": "へんしん",
+    "type": "skill",
+    "category": "support",
+    "cost": 0,
+    "costType": "mp",
+    "target": "自分",
+    "timing": "戦闘中",
+    "element": "-",
+    "effect": "怪物に変身。戦闘終了時まで攻撃力上昇。",
+    "battle": {
+      "playerAttackMul": 1.5
+    }
+  },
+  {
+    "id": "pafupafu",
+    "name": "ぱふぱふ",
+    "type": "skill",
+    "category": "support",
+    "cost": 0,
+    "costType": "mp",
+    "target": "敵1匹",
+    "timing": "戦闘中",
+    "element": "行動封系",
+    "effect": "1ターンの間、行動不能にする。本サンプルでは行動封じとして扱います。",
+    "battle": {
+      "skip": 1,
+      "successRate": 0.6
+    }
+  },
+  {
+    "id": "neru",
+    "name": "ねる",
+    "type": "skill",
+    "category": "heal",
+    "cost": 0,
+    "costType": "mp",
+    "target": "自分",
+    "timing": "移動中",
+    "element": "-",
+    "effect": "「眠り」状態になってしまうが、一定歩数歩くごとにHP・MPが回復",
+    "battle": {
+      "heal": [
+        30,
+        40
+      ]
+    }
+  },
+  {
+    "id": "hustle_dance",
+    "name": "ハッスルダンス",
+    "type": "skill",
+    "category": "heal",
+    "cost": 0,
+    "costType": "mp",
+    "target": "味方全員",
+    "timing": "戦闘中",
+    "element": "-",
+    "effect": "（踊り）HPを70～80ポイント回復する",
+    "battle": {
+      "heal": [
+        70,
+        80
+      ]
+    }
+  },
+  {
+    "id": "meisou",
+    "name": "めいそう",
+    "type": "skill",
+    "category": "heal",
+    "cost": 0,
+    "costType": "mp",
+    "target": "自分",
+    "timing": "戦闘中",
+    "element": "-",
+    "effect": "HPを500ポイント回復する",
+    "battle": {
+      "heal": [
+        500,
+        500
+      ]
+    }
+  },
+  {
+    "id": "seireinouta",
+    "name": "せいれいのうた",
+    "type": "skill",
+    "category": "heal",
+    "cost": 20,
+    "costType": "mp",
+    "target": "味方全員",
+    "timing": "戦闘中",
+    "element": "-",
+    "effect": "（踊り）次のターンにHPを完全回復で生き返らせる。ただし、失敗することもある",
+    "battle": {
+      "healFull": true
+    }
+  },
+  {
+    "id": "megazal_dance",
+    "name": "メガザルダンス",
+    "type": "skill",
+    "category": "heal",
+    "cost": 0,
+    "costType": "mp",
+    "target": "味方全員",
+    "timing": "戦闘中",
+    "element": "-",
+    "effect": "（踊り）HPを全回復+死者はHP完全回復で生き返らせる。使用者は死亡。失敗もある",
+    "battle": {
+      "sacrificeFullHeal": true,
+      "successRate": 0.7
+    }
+  },
+  {
+    "id": "takanome",
+    "name": "タカのめ",
+    "type": "skill",
+    "category": "utility",
+    "costType": "mp",
+    "cost": 0,
+    "target": "移動",
+    "timing": "移動中",
+    "attribute": "-",
+    "effect": "近くの町や城の方向を調べる。",
+    "battle": {}
+  },
+  {
+    "id": "furomi",
+    "name": "フローミ",
+    "type": "skill",
+    "category": "utility",
+    "costType": "mp",
+    "cost": 0,
+    "target": "移動",
+    "timing": "移動中",
+    "attribute": "-",
+    "effect": "現在いる場所の名前を調べる。",
+    "battle": {}
+  },
+  {
+    "id": "shinobiashi",
+    "name": "しのびあし",
+    "type": "skill",
+    "category": "utility",
+    "costType": "mp",
+    "cost": 0,
+    "target": "移動",
+    "timing": "移動中",
+    "attribute": "-",
+    "effect": "敵との遭遇率を下げる。",
+    "battle": {}
+  },
+  {
+    "id": "touzokunohana",
+    "name": "とうぞくのはな",
+    "type": "skill",
+    "category": "utility",
+    "costType": "mp",
+    "cost": 0,
+    "target": "移動",
+    "timing": "移動中",
+    "attribute": "-",
+    "effect": "残っている宝の数を調べる。",
+    "battle": {}
+  },
+  {
+    "id": "remirama",
+    "name": "レミラーマ",
+    "type": "skill",
+    "category": "utility",
+    "costType": "mp",
+    "cost": 0,
+    "target": "移動",
+    "timing": "移動中",
+    "attribute": "-",
+    "effect": "画面内の隠された宝を光らせる。",
+    "battle": {}
+  },
+  {
+    "id": "anahori",
+    "name": "あなほり",
+    "type": "skill",
+    "category": "utility",
+    "costType": "mp",
+    "cost": 0,
+    "target": "移動",
+    "timing": "移動中",
+    "attribute": "-",
+    "effect": "地面を掘ってゴールドやアイテムを探す。",
+    "battle": {}
+  },
+  {
+    "id": "oogoe",
+    "name": "おおごえ",
+    "type": "skill",
+    "category": "utility",
+    "costType": "mp",
+    "cost": 0,
+    "target": "移動",
+    "timing": "移動中",
+    "attribute": "-",
+    "effect": "商人・宿屋・神父を呼び出す。",
+    "battle": {}
+  },
+  {
+    "id": "kuchibue",
+    "name": "くちぶえ",
+    "type": "skill",
+    "category": "utility",
+    "costType": "mp",
+    "cost": 0,
+    "target": "移動",
+    "timing": "移動中",
+    "attribute": "-",
+    "effect": "敵を呼び寄せる。",
+    "battle": {}
+  }
+]

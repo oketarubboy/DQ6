@@ -1,0 +1,936 @@
+[
+  {
+    "id": "mera",
+    "name": "メラ",
+    "type": "spell",
+    "category": "attack",
+    "cost": 2,
+    "costType": "mp",
+    "target": "敵1匹",
+    "timing": "戦闘中",
+    "element": "メラ系",
+    "effect": "対象に12～15のダメージを与える",
+    "battle": {
+      "damage": [
+        12,
+        15
+      ]
+    }
+  },
+  {
+    "id": "merami",
+    "name": "メラミ",
+    "type": "spell",
+    "category": "attack",
+    "cost": 4,
+    "costType": "mp",
+    "target": "敵1匹",
+    "timing": "戦闘中",
+    "element": "メラ系",
+    "effect": "対象に70～90のダメージを与える",
+    "battle": {
+      "damage": [
+        70,
+        90
+      ]
+    }
+  },
+  {
+    "id": "merazoma",
+    "name": "メラゾーマ",
+    "type": "spell",
+    "category": "attack",
+    "cost": 10,
+    "costType": "mp",
+    "target": "敵1匹",
+    "timing": "戦闘中",
+    "element": "メラ系",
+    "effect": "対象に180～200のダメージを与える",
+    "battle": {
+      "damage": [
+        180,
+        200
+      ]
+    }
+  },
+  {
+    "id": "gira",
+    "name": "ギラ",
+    "type": "spell",
+    "category": "attack",
+    "cost": 4,
+    "costType": "mp",
+    "target": "敵グループ",
+    "timing": "戦闘中",
+    "element": "ギラ系",
+    "effect": "対象に16～24のダメージを与える",
+    "battle": {
+      "damage": [
+        16,
+        24
+      ]
+    }
+  },
+  {
+    "id": "begirama",
+    "name": "ベギラマ",
+    "type": "spell",
+    "category": "attack",
+    "cost": 6,
+    "costType": "mp",
+    "target": "敵グループ",
+    "timing": "戦闘中",
+    "element": "ギラ系",
+    "effect": "対象に30～42のダメージを与える",
+    "battle": {
+      "damage": [
+        30,
+        42
+      ]
+    }
+  },
+  {
+    "id": "begiragon",
+    "name": "ベギラゴン",
+    "type": "spell",
+    "category": "attack",
+    "cost": 10,
+    "costType": "mp",
+    "target": "敵グループ",
+    "timing": "戦闘中",
+    "element": "ギラ系",
+    "effect": "対象に88～112のダメージを与える",
+    "battle": {
+      "damage": [
+        88,
+        112
+      ]
+    }
+  },
+  {
+    "id": "io",
+    "name": "イオ",
+    "type": "spell",
+    "category": "attack",
+    "cost": 5,
+    "costType": "mp",
+    "target": "敵全体",
+    "timing": "戦闘中",
+    "element": "イオ系",
+    "effect": "対象に20～30のダメージを与える",
+    "battle": {
+      "damage": [
+        20,
+        30
+      ]
+    }
+  },
+  {
+    "id": "iora",
+    "name": "イオラ",
+    "type": "spell",
+    "category": "attack",
+    "cost": 8,
+    "costType": "mp",
+    "target": "敵全体",
+    "timing": "戦闘中",
+    "element": "イオ系",
+    "effect": "対象に52～68のダメージを与える",
+    "battle": {
+      "damage": [
+        52,
+        68
+      ]
+    }
+  },
+  {
+    "id": "ionazun",
+    "name": "イオナズン",
+    "type": "spell",
+    "category": "attack",
+    "cost": 15,
+    "costType": "mp",
+    "target": "敵全体",
+    "timing": "戦闘中",
+    "element": "イオ系",
+    "effect": "対象に130～150のダメージを与える",
+    "battle": {
+      "damage": [
+        130,
+        150
+      ]
+    }
+  },
+  {
+    "id": "bagi",
+    "name": "バギ",
+    "type": "spell",
+    "category": "attack",
+    "cost": 2,
+    "costType": "mp",
+    "target": "敵グループ",
+    "timing": "戦闘中",
+    "element": "バギ系",
+    "effect": "対象に8～24のダメージを与える",
+    "battle": {
+      "damage": [
+        8,
+        24
+      ]
+    }
+  },
+  {
+    "id": "bagima",
+    "name": "バギマ",
+    "type": "spell",
+    "category": "attack",
+    "cost": 4,
+    "costType": "mp",
+    "target": "敵グループ",
+    "timing": "戦闘中",
+    "element": "バギ系",
+    "effect": "対象に25～55のダメージを与える",
+    "battle": {
+      "damage": [
+        25,
+        55
+      ]
+    }
+  },
+  {
+    "id": "bagicross",
+    "name": "バギクロス",
+    "type": "spell",
+    "category": "attack",
+    "cost": 8,
+    "costType": "mp",
+    "target": "敵グループ",
+    "timing": "戦闘中",
+    "element": "バギ系",
+    "effect": "対象に80～180のダメージを与える",
+    "battle": {
+      "damage": [
+        80,
+        180
+      ]
+    }
+  },
+  {
+    "id": "hyado",
+    "name": "ヒャド",
+    "type": "spell",
+    "category": "attack",
+    "cost": 3,
+    "costType": "mp",
+    "target": "敵1匹",
+    "timing": "戦闘中",
+    "element": "ヒャド系",
+    "effect": "対象に25～35のダメージを与える",
+    "battle": {
+      "damage": [
+        25,
+        35
+      ]
+    }
+  },
+  {
+    "id": "hyadaruko",
+    "name": "ヒャダルコ",
+    "type": "spell",
+    "category": "attack",
+    "cost": 5,
+    "costType": "mp",
+    "target": "敵グループ",
+    "timing": "戦闘中",
+    "element": "ヒャド系",
+    "effect": "対象に42～58のダメージを与える",
+    "battle": {
+      "damage": [
+        42,
+        58
+      ]
+    }
+  },
+  {
+    "id": "mahyado",
+    "name": "マヒャド",
+    "type": "spell",
+    "category": "attack",
+    "cost": 12,
+    "costType": "mp",
+    "target": "敵全体",
+    "timing": "戦闘中",
+    "element": "ヒャド系",
+    "effect": "対象に80～104のダメージを与える",
+    "battle": {
+      "damage": [
+        80,
+        104
+      ]
+    }
+  },
+  {
+    "id": "raidein",
+    "name": "ライデイン",
+    "type": "spell",
+    "category": "attack",
+    "cost": 6,
+    "costType": "mp",
+    "target": "敵全体",
+    "timing": "戦闘中",
+    "element": "デイン系",
+    "effect": "対象に70～90のダメージを与える",
+    "battle": {
+      "damage": [
+        70,
+        90
+      ]
+    }
+  },
+  {
+    "id": "gigadein",
+    "name": "ギガデイン",
+    "type": "spell",
+    "category": "attack",
+    "cost": 15,
+    "costType": "mp",
+    "target": "敵グループ",
+    "timing": "戦闘中",
+    "element": "デイン系",
+    "effect": "対象に175～225のダメージを与える",
+    "battle": {
+      "damage": [
+        175,
+        225
+      ]
+    }
+  },
+  {
+    "id": "minadein",
+    "name": "ミナデイン",
+    "type": "spell",
+    "category": "attack",
+    "cost": 10,
+    "costType": "mp",
+    "target": "敵1匹",
+    "timing": "戦闘中",
+    "element": "デイン系",
+    "effect": "対象に600～700のダメージを与える",
+    "battle": {
+      "damage": [
+        600,
+        700
+      ],
+      "note": "本サンプルでは消費MP10として扱います。"
+    }
+  },
+  {
+    "id": "zaki",
+    "name": "ザキ",
+    "type": "spell",
+    "category": "attack",
+    "cost": 4,
+    "costType": "mp",
+    "target": "敵1匹",
+    "timing": "戦闘中",
+    "element": "ザキ系",
+    "effect": "対象を一定の確率で死に至らしめる",
+    "battle": {
+      "instantDeath": 0.25
+    }
+  },
+  {
+    "id": "zaraki",
+    "name": "ザラキ",
+    "type": "spell",
+    "category": "attack",
+    "cost": 7,
+    "costType": "mp",
+    "target": "敵グループ",
+    "timing": "戦闘中",
+    "element": "ザキ系",
+    "effect": "対象を一定の確率で死に至らしめる",
+    "battle": {
+      "instantDeath": 0.28
+    }
+  },
+  {
+    "id": "zarakima",
+    "name": "ザラキーマ",
+    "type": "spell",
+    "category": "attack",
+    "cost": 15,
+    "costType": "mp",
+    "target": "敵全体",
+    "timing": "戦闘中",
+    "element": "ザキ系",
+    "effect": "対象を一定の確率で死に至らしめる",
+    "battle": {
+      "instantDeath": 0.32
+    }
+  },
+  {
+    "id": "megante",
+    "name": "メガンテ",
+    "type": "spell",
+    "category": "attack",
+    "cost": 1,
+    "costType": "mp",
+    "target": "敵全体",
+    "timing": "戦闘中",
+    "element": "ザキ系",
+    "effect": "対象は即死するか残りHP1桁になる（経験値・Gは手に入らない）",
+    "battle": {
+      "megante": true
+    }
+  },
+  {
+    "id": "palpunte",
+    "name": "パルプンテ",
+    "type": "spell",
+    "category": "attack",
+    "cost": 20,
+    "costType": "mp",
+    "target": "-",
+    "timing": "戦闘中",
+    "element": "-",
+    "effect": "さまざまな効果が起こる",
+    "battle": {
+      "random": true
+    }
+  },
+  {
+    "id": "nifram",
+    "name": "ニフラム",
+    "type": "spell",
+    "category": "support",
+    "cost": 1,
+    "costType": "mp",
+    "target": "敵グループ",
+    "timing": "戦闘中",
+    "element": "ニフラム系",
+    "effect": "敵を消し去る。ゾンビ種に特に有効（経験値・Gは手に入らない）",
+    "battle": {
+      "banish": 0.35
+    }
+  },
+  {
+    "id": "rariho",
+    "name": "ラリホー",
+    "type": "spell",
+    "category": "support",
+    "cost": 3,
+    "costType": "mp",
+    "target": "敵グループ",
+    "timing": "戦闘中",
+    "element": "ラリホー系",
+    "effect": "「眠り」状態にさせることができる（確率・小）",
+    "battle": {
+      "sleep": 1,
+      "successRate": 0.35
+    }
+  },
+  {
+    "id": "rarihoma",
+    "name": "ラリホーマ",
+    "type": "spell",
+    "category": "support",
+    "cost": 5,
+    "costType": "mp",
+    "target": "敵グループ",
+    "timing": "戦闘中",
+    "element": "ラリホー系",
+    "effect": "「眠り」状態にさせることができる（確率・大）",
+    "battle": {
+      "sleep": 2,
+      "successRate": 0.6
+    }
+  },
+  {
+    "id": "mahotone",
+    "name": "マホトーン",
+    "type": "spell",
+    "category": "support",
+    "cost": 3,
+    "costType": "mp",
+    "target": "敵グループ",
+    "timing": "戦闘中",
+    "element": "呪文封系",
+    "effect": "呪文を封じることができる",
+    "battle": {
+      "sealMagic": true
+    }
+  },
+  {
+    "id": "manusa",
+    "name": "マヌーサ",
+    "type": "spell",
+    "category": "support",
+    "cost": 5,
+    "costType": "mp",
+    "target": "敵グループ",
+    "timing": "戦闘中",
+    "element": "マヌーサ系",
+    "effect": "直接攻撃の命中率が下がる（3/8になる）",
+    "battle": {
+      "enemyAccuracy": 0.375
+    }
+  },
+  {
+    "id": "medapani",
+    "name": "メダパニ",
+    "type": "spell",
+    "category": "support",
+    "cost": 5,
+    "costType": "mp",
+    "target": "敵グループ",
+    "timing": "戦闘中",
+    "element": "メダパニ系",
+    "effect": "「混乱」状態にさせることができる",
+    "battle": {
+      "sleep": 1,
+      "successRate": 0.45
+    }
+  },
+  {
+    "id": "mahotora",
+    "name": "マホトラ",
+    "type": "spell",
+    "category": "support",
+    "cost": 0,
+    "costType": "mp",
+    "target": "敵1匹",
+    "timing": "戦闘中",
+    "element": "マホトラ系",
+    "effect": "対象のMPを5～30ポイント吸収する",
+    "battle": {
+      "mpDrain": [
+        5,
+        30
+      ]
+    }
+  },
+  {
+    "id": "mahokite",
+    "name": "マホキテ",
+    "type": "spell",
+    "category": "support",
+    "cost": 2,
+    "costType": "mp",
+    "target": "自分",
+    "timing": "戦闘中",
+    "element": "-",
+    "effect": "敵から受けた呪文の消費MP分、自分のMP回復",
+    "battle": {
+      "buff": "mahokite"
+    }
+  },
+  {
+    "id": "magic_barrier",
+    "name": "マジックバリア",
+    "type": "spell",
+    "category": "support",
+    "cost": 3,
+    "costType": "mp",
+    "target": "味方全員",
+    "timing": "戦闘中",
+    "element": "-",
+    "effect": "属性ダメージおよび確率を減少させる",
+    "battle": {
+      "magicBarrier": true
+    }
+  },
+  {
+    "id": "fubaha",
+    "name": "フバーハ",
+    "type": "spell",
+    "category": "support",
+    "cost": 3,
+    "costType": "mp",
+    "target": "味方全員",
+    "timing": "戦闘中",
+    "element": "-",
+    "effect": "炎系、吹雪系のダメージを減少させる",
+    "battle": {
+      "breathBarrier": true
+    }
+  },
+  {
+    "id": "mahocanta",
+    "name": "マホカンタ",
+    "type": "spell",
+    "category": "support",
+    "cost": 4,
+    "costType": "mp",
+    "target": "自分",
+    "timing": "戦闘中",
+    "element": "-",
+    "effect": "呪文を何度でも跳ね返す。ただし、味方呪文も反射してしまう",
+    "battle": {
+      "reflectMagic": 999
+    }
+  },
+  {
+    "id": "mahoturn",
+    "name": "マホターン",
+    "type": "spell",
+    "category": "support",
+    "cost": 4,
+    "costType": "mp",
+    "target": "自分",
+    "timing": "戦闘中",
+    "element": "-",
+    "effect": "呪文を一度だけ跳ね返す。ただし、味方呪文も反射してしまう",
+    "battle": {
+      "reflectMagic": 1
+    }
+  },
+  {
+    "id": "rukani",
+    "name": "ルカニ",
+    "type": "spell",
+    "category": "support",
+    "cost": 3,
+    "costType": "mp",
+    "target": "敵1匹",
+    "timing": "戦闘中",
+    "element": "ルカニ系",
+    "effect": "対象の守備力を50パーセント下げる",
+    "battle": {
+      "enemyDefMul": 0.5
+    }
+  },
+  {
+    "id": "rukanan",
+    "name": "ルカナン",
+    "type": "spell",
+    "category": "support",
+    "cost": 4,
+    "costType": "mp",
+    "target": "敵グループ",
+    "timing": "戦闘中",
+    "element": "ルカニ系",
+    "effect": "対象の守備力を25パーセント下げる",
+    "battle": {
+      "enemyDefMul": 0.75
+    }
+  },
+  {
+    "id": "sukara",
+    "name": "スカラ",
+    "type": "spell",
+    "category": "support",
+    "cost": 2,
+    "costType": "mp",
+    "target": "味方1人",
+    "timing": "戦闘中",
+    "element": "-",
+    "effect": "対象の防御力を50パーセント上げる",
+    "battle": {
+      "playerDefMul": 1.5
+    }
+  },
+  {
+    "id": "sukuruto",
+    "name": "スクルト",
+    "type": "spell",
+    "category": "support",
+    "cost": 3,
+    "costType": "mp",
+    "target": "味方全員",
+    "timing": "戦闘中",
+    "element": "-",
+    "effect": "対象の防御力を25パーセント上げる",
+    "battle": {
+      "playerDefMul": 1.25
+    }
+  },
+  {
+    "id": "baikilt",
+    "name": "バイキルト",
+    "type": "spell",
+    "category": "support",
+    "cost": 6,
+    "costType": "mp",
+    "target": "味方1人",
+    "timing": "戦闘中",
+    "element": "-",
+    "effect": "味方の攻撃力を約2倍にする",
+    "battle": {
+      "playerAttackMul": 2
+    }
+  },
+  {
+    "id": "dragonram",
+    "name": "ドラゴラム",
+    "type": "spell",
+    "category": "support",
+    "cost": 18,
+    "costType": "mp",
+    "target": "自分",
+    "timing": "戦闘中",
+    "element": "-",
+    "effect": "ドラゴンに変身。戦闘終了後まで敵全体にブレス攻撃",
+    "battle": {
+      "playerAttackMul": 1.5,
+      "damage": [
+        60,
+        85
+      ]
+    }
+  },
+  {
+    "id": "bashirura",
+    "name": "バシルーラ",
+    "type": "spell",
+    "category": "support",
+    "cost": 8,
+    "costType": "mp",
+    "target": "敵1匹",
+    "timing": "戦闘中",
+    "element": "ニフラム系",
+    "effect": "敵を消し去る（経験値・Gは手に入らない）",
+    "battle": {
+      "banish": 0.5
+    }
+  },
+  {
+    "id": "astron",
+    "name": "アストロン",
+    "type": "spell",
+    "category": "support",
+    "cost": 2,
+    "costType": "mp",
+    "target": "味方全員",
+    "timing": "戦闘中",
+    "element": "-",
+    "effect": "数ターンの間、一切の攻撃を受け付けないが行動できない",
+    "battle": {
+      "astron": 1
+    }
+  },
+  {
+    "id": "hoimi",
+    "name": "ホイミ",
+    "type": "spell",
+    "category": "heal",
+    "cost": 3,
+    "costType": "mp",
+    "target": "味方1人",
+    "timing": "いつでも",
+    "element": "-",
+    "effect": "HPを30～40ポイント回復する",
+    "battle": {
+      "heal": [
+        30,
+        40
+      ]
+    }
+  },
+  {
+    "id": "behoimi",
+    "name": "ベホイミ",
+    "type": "spell",
+    "category": "heal",
+    "cost": 5,
+    "costType": "mp",
+    "target": "味方1人",
+    "timing": "いつでも",
+    "element": "-",
+    "effect": "HPを75～95ポイント回復する",
+    "battle": {
+      "heal": [
+        75,
+        95
+      ]
+    }
+  },
+  {
+    "id": "behoma",
+    "name": "ベホマ",
+    "type": "spell",
+    "category": "heal",
+    "cost": 7,
+    "costType": "mp",
+    "target": "味方1人",
+    "timing": "いつでも",
+    "element": "-",
+    "effect": "HPを全回復する",
+    "battle": {
+      "healFull": true
+    }
+  },
+  {
+    "id": "behomara",
+    "name": "ベホマラー",
+    "type": "spell",
+    "category": "heal",
+    "cost": 18,
+    "costType": "mp",
+    "target": "味方全員",
+    "timing": "いつでも",
+    "element": "-",
+    "effect": "HPを100～120ポイント回復する",
+    "battle": {
+      "heal": [
+        100,
+        120
+      ]
+    }
+  },
+  {
+    "id": "behomazun",
+    "name": "ベホマズン",
+    "type": "spell",
+    "category": "heal",
+    "cost": 36,
+    "costType": "mp",
+    "target": "味方全員",
+    "timing": "いつでも",
+    "element": "-",
+    "effect": "HPを全回復する",
+    "battle": {
+      "healFull": true
+    }
+  },
+  {
+    "id": "kiari",
+    "name": "キアリー",
+    "type": "spell",
+    "category": "heal",
+    "cost": 2,
+    "costType": "mp",
+    "target": "味方1人",
+    "timing": "いつでも",
+    "element": "-",
+    "effect": "毒状態を治療する",
+    "battle": {
+      "cure": "poison"
+    }
+  },
+  {
+    "id": "kiariku",
+    "name": "キアリク",
+    "type": "spell",
+    "category": "heal",
+    "cost": 2,
+    "costType": "mp",
+    "target": "味方全員",
+    "timing": "戦闘中",
+    "element": "-",
+    "effect": "麻痺状態を治療する",
+    "battle": {
+      "cure": "paralysis"
+    }
+  },
+  {
+    "id": "zaoral",
+    "name": "ザオラル",
+    "type": "spell",
+    "category": "heal",
+    "cost": 10,
+    "costType": "mp",
+    "target": "味方1人",
+    "timing": "いつでも",
+    "element": "-",
+    "effect": "HP半分で生き返らせる。1/2の確率で失敗する",
+    "battle": {
+      "revive": 0.5
+    }
+  },
+  {
+    "id": "zaoriku",
+    "name": "ザオリク",
+    "type": "spell",
+    "category": "heal",
+    "cost": 20,
+    "costType": "mp",
+    "target": "味方1人",
+    "timing": "いつでも",
+    "element": "-",
+    "effect": "HPを完全回復で生き返らせる",
+    "battle": {
+      "revive": 1
+    }
+  },
+  {
+    "id": "megazal",
+    "name": "メガザル",
+    "type": "spell",
+    "category": "heal",
+    "cost": 0,
+    "costType": "allMp",
+    "target": "味方全員",
+    "timing": "戦闘中",
+    "element": "-",
+    "effect": "HPを全回復+死者はHP完全回復で生き返らせる。使用者は死亡",
+    "battle": {
+      "sacrificeFullHeal": true
+    }
+  },
+  {
+    "id": "rura",
+    "name": "ルーラ",
+    "type": "spell",
+    "category": "utility",
+    "costType": "mp",
+    "cost": 1,
+    "target": "移動",
+    "timing": "移動中",
+    "attribute": "-",
+    "effect": "一度行った場所へ移動する。",
+    "battle": {}
+  },
+  {
+    "id": "riremito",
+    "name": "リレミト",
+    "type": "spell",
+    "category": "utility",
+    "costType": "mp",
+    "cost": 8,
+    "target": "移動",
+    "timing": "移動中",
+    "attribute": "-",
+    "effect": "ダンジョンから脱出する。",
+    "battle": {}
+  },
+  {
+    "id": "toheros",
+    "name": "トヘロス",
+    "type": "spell",
+    "category": "utility",
+    "costType": "mp",
+    "cost": 4,
+    "target": "移動",
+    "timing": "移動中",
+    "attribute": "-",
+    "effect": "弱い敵との遭遇を抑える。",
+    "battle": {}
+  },
+  {
+    "id": "toramana",
+    "name": "トラマナ",
+    "type": "spell",
+    "category": "utility",
+    "costType": "mp",
+    "cost": 2,
+    "target": "移動",
+    "timing": "移動中",
+    "attribute": "-",
+    "effect": "ダメージ床の被害を防ぐ。",
+    "battle": {}
+  },
+  {
+    "id": "inpas",
+    "name": "インパス",
+    "type": "spell",
+    "category": "utility",
+    "costType": "mp",
+    "cost": 1,
+    "target": "調査",
+    "timing": "移動中",
+    "attribute": "-",
+    "effect": "宝箱やアイテムを鑑定する。",
+    "battle": {}
+  }
+]

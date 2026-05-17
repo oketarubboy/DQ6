@@ -1,4 +1,4 @@
-const CACHE_NAME = "job-rpg-pwa-sample-v4";
+const CACHE_NAME = "job-rpg-pwa-sample-v6";
 const ASSETS = [
   "./",
   "index.html",
@@ -9,6 +9,9 @@ const ASSETS = [
   "data/monsters.json",
   "data/dungeons.json",
   "data/hero-levels.json",
+  "data/spells.json",
+  "data/skills.json",
+  "data/learn-rules.json",
   "assets/icons/icon-192.png",
   "assets/icons/icon-512.png"
 ];

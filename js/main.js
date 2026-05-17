@@ -1,6 +1,6 @@
-const APP_VERSION = "v0.4.0";
-const DATA_VERSION = "2026-05-17 battle-dungeons-levels";
-const SAVE_KEY = "job-rpg-pwa-sample-v4";
+const APP_VERSION = "v0.6.0";
+const DATA_VERSION = "2026-05-17 job-learn-rules-v2";
+const SAVE_KEY = "job-rpg-pwa-sample-v6";
 
 const STAT_LABELS = {
   str: "力",
@@ -54,6 +54,7 @@ const DEFAULT_STATE = {
   acknowledgedUnlocks: [],
   recruitedMonsterIds: [],
   battle: null,
+  selectedAbilityKey: "",
   log: ["RPGサンプルを開始しました。ダンジョンに潜るとターン制バトルが始まります。"]
 };
 
@@ -61,6 +62,9 @@ let jobs = [];
 let monsters = [];
 let dungeons = [];
 let heroLevels = [];
+let spells = [];
+let skills = [];
+let learnRules = { level: [], jobs: {} };
 let state = clone(DEFAULT_STATE);
 let currentFilter = "all";
 let monsterFilter = "all";
@@ -80,11 +84,14 @@ async function loadJson(path) {
 }
 
 async function loadData() {
-  [jobs, monsters, dungeons, heroLevels] = await Promise.all([
+  [jobs, monsters, dungeons, heroLevels, spells, skills, learnRules] = await Promise.all([
     loadJson("data/jobs.json"),
     loadJson("data/monsters.json"),
     loadJson("data/dungeons.json"),
-    loadJson("data/hero-levels.json")
+    loadJson("data/hero-levels.json"),
+    loadJson("data/spells.json"),
+    loadJson("data/skills.json"),
+    loadJson("data/learn-rules.json")
   ]);
 }
 
@@ -207,6 +214,340 @@ function getTypeLabel(type) {
 
 function getItemName(itemId) {
   return RARE_ITEMS[itemId]?.name || itemId;
+}
+
+function makeAbilityKey(ability) {
+  return `${ability.type}:${ability.id}`;
+}
+
+function getAbilityByKey(key) {
+  if (!key || !key.includes(":")) return null;
+  const [type, id] = key.split(":");
+  const source = type === "spell" ? spells : skills;
+  return source.find((ability) => ability.id === id) || null;
+}
+
+function getAbilityTypeLabel(type) {
+  return type === "spell" ? "呪文" : "特技";
+}
+
+function getAbilityCategoryLabel(category) {
+  if (category === "attack") return "攻撃";
+  if (category === "support") return "補助";
+  if (category === "heal") return "回復";
+  return "その他";
+}
+
+function getAbilitySourceText(key) {
+  const [type, id] = key.split(":");
+  const sources = [];
+  for (const rule of learnRules.level || []) {
+    if (rule.type === type && rule.id === id) sources.push(`Lv${rule.level}`);
+  }
+  for (const [jobId, rules] of Object.entries(learnRules.jobs || {})) {
+    for (const rule of rules) {
+      if (rule.type === type && rule.id === id) {
+        const job = getJob(jobId);
+        sources.push(`${job?.name || jobId}★${rule.rank}`);
+      }
+    }
+  }
+  return sources.join(" / ") || "初期";
+}
+
+function getLearnedAbilityKeys() {
+  const learned = new Set();
+  const level = getHeroLevel();
+  for (const rule of learnRules.level || []) {
+    if (level >= Number(rule.level || 1)) learned.add(`${rule.type}:${rule.id}`);
+  }
+  for (const [jobId, rules] of Object.entries(learnRules.jobs || {})) {
+    const progress = getProgress(jobId);
+    const jobHasBeenUsed = jobId === state.currentJobId || progress.totalBattles > 0 || progress.rank > 1 || progress.mastered;
+    if (!jobHasBeenUsed) continue;
+    for (const rule of rules) {
+      if (progress.rank >= Number(rule.rank || 1)) learned.add(`${rule.type}:${rule.id}`);
+    }
+  }
+  return [...learned].filter((key) => getAbilityByKey(key));
+}
+
+function getLearnedAbilities() {
+  return getLearnedAbilityKeys()
+    .map((key) => ({ key, ability: getAbilityByKey(key) }))
+    .filter((item) => item.ability)
+    .sort((a, b) => {
+      const typeOrder = a.ability.type.localeCompare(b.ability.type, "ja");
+      if (typeOrder !== 0) return typeOrder;
+      return a.ability.name.localeCompare(b.ability.name, "ja");
+    });
+}
+
+function getBattleUsableAbilities() {
+  return getLearnedAbilities().filter(({ ability }) => ability.timing === "戦闘中" || ability.timing === "いつでも");
+}
+
+function getDisplayCost(ability) {
+  if (!ability) return "-";
+  if (ability.costType === "allMp") return "MP全部";
+  if (ability.costType === "hpRate") return "HP消費";
+  if (ability.costType === "goldLevel") return "Lv×50G";
+  return `MP${getEffectiveMpCost(ability)}`;
+}
+
+function getEffectiveMpCost(ability) {
+  if (!ability || ability.costType !== "mp") return 0;
+  const base = Number(ability.cost || 0);
+  if (base <= 0) return 0;
+  return isMastered("sage") ? Math.max(1, Math.floor(base * 0.75)) : base;
+}
+
+function ensureSelectedAbility() {
+  const usable = getBattleUsableAbilities();
+  if (!usable.length) {
+    state.selectedAbilityKey = "";
+    return null;
+  }
+  if (!state.selectedAbilityKey || !usable.some((item) => item.key === state.selectedAbilityKey)) {
+    state.selectedAbilityKey = usable[0].key;
+  }
+  return getAbilityByKey(state.selectedAbilityKey);
+}
+
+function ensureBattleStatus() {
+  if (!state.battle) return null;
+  if (!state.battle.status) {
+    state.battle.status = {
+      enemyDefMul: 1,
+      playerDefMul: 1,
+      playerAttackMul: 1,
+      enemyAccuracy: 1,
+      enemySkipTurns: 0,
+      magicBarrier: false,
+      breathBarrier: false,
+      reflectMagic: 0,
+      bigGuard: false,
+      takenDamageMul: 1,
+      chargeMul: 1
+    };
+  }
+  return state.battle.status;
+}
+
+function consumeAbilityCost(ability) {
+  const stats = getFinalStatValues();
+  if (ability.costType === "mp") {
+    const cost = getEffectiveMpCost(ability);
+    if (state.currentMp < cost) return { ok: false, message: `${ability.name}にはMP${cost}が必要です。` };
+    state.currentMp -= cost;
+    return { ok: true };
+  }
+  if (ability.costType === "allMp") {
+    if (state.currentMp <= 0) return { ok: false, message: `${ability.name}にはMPが必要です。` };
+    const consumed = state.currentMp;
+    state.currentMp = 0;
+    return { ok: true, consumedMp: consumed };
+  }
+  if (ability.costType === "hpRate") {
+    const costHp = Math.max(1, Math.floor(state.currentHp * 0.8));
+    if (state.currentHp <= costHp) return { ok: false, message: `${ability.name}を使うにはHPが足りません。` };
+    state.currentHp = Math.max(1, state.currentHp - costHp);
+    return { ok: true, consumedHp: costHp };
+  }
+  if (ability.costType === "goldLevel") {
+    const costGold = getHeroLevel() * 50;
+    if (state.gold < costGold) return { ok: false, message: `${ability.name}には${costGold}ゴールドが必要です。` };
+    state.gold -= costGold;
+    return { ok: true, consumedGold: costGold };
+  }
+  return { ok: true };
+}
+
+function applyAbilityDamage(ability, enemy, damage, logKind = null) {
+  const defeated = applyEnemyDamage(Math.max(0, Math.floor(damage)));
+  addLog(`${state.playerName}は${ability.name}を使った！${enemy.name}に${Math.max(0, Math.floor(damage))}ダメージ。`, logKind || (ability.type === "spell" ? "spell" : "skill"));
+  return defeated;
+}
+
+function handleNoRewardWin(enemy, message) {
+  addLog(message, "support");
+  state.battle = null;
+  saveState(false);
+  render();
+}
+
+function resolveAbilityEffect(ability, costInfo) {
+  const enemy = getCurrentEnemy();
+  if (!enemy || !state.battle?.active) return;
+  const status = ensureBattleStatus();
+  const meta = ability.battle || {};
+  const stats = getFinalStatValues();
+  let defeated = false;
+  let usedTurn = true;
+
+  if (meta.madante) {
+    defeated = applyAbilityDamage(ability, enemy, (costInfo.consumedMp || 0) * 3, "skill");
+  } else if (meta.armyCall) {
+    const one = getHeroLevel() * 2 + 25;
+    defeated = applyAbilityDamage(ability, enemy, one * 4, "skill");
+  } else if (meta.megante) {
+    if (chance(0.5)) {
+      handleNoRewardWin(enemy, `${state.playerName}は${ability.name}を唱えた！${enemy.name}は砕け散った。経験値とゴールドは手に入りません。`);
+      return;
+    }
+    const hp = randInt(1, 9);
+    state.battle.enemyHp = Math.min(state.battle.enemyHp, hp);
+    addLog(`${state.playerName}は${ability.name}を唱えた！${enemy.name}のHPが${hp}になった。`, "spell");
+  } else if (meta.random) {
+    const roll = randInt(1, 4);
+    if (roll === 1) defeated = applyAbilityDamage(ability, enemy, randInt(50, 140), ability.type === "spell" ? "spell" : "skill");
+    if (roll === 2) { state.currentHp = Math.min(stats.mhp, state.currentHp + randInt(40, 120)); addLog(`${ability.name}の不思議な効果！HPが回復した。`, "heal"); }
+    if (roll === 3) { status.enemySkipTurns = Math.max(status.enemySkipTurns, 1); addLog(`${ability.name}の不思議な効果！${enemy.name}は動けなくなった。`, "support"); }
+    if (roll === 4) addLog(`${ability.name}の不思議な効果！しかし何も起こらなかった。`, "support");
+  } else if (meta.instantDeath && chance(Number(meta.instantDeath))) {
+    state.battle.enemyHp = 0;
+    addLog(`${state.playerName}は${ability.name}を使った！${enemy.name}を一撃で倒した！`, ability.type === "spell" ? "spell" : "skill");
+    defeated = true;
+  } else if (meta.banish && chance(Number(meta.banish))) {
+    handleNoRewardWin(enemy, `${state.playerName}は${ability.name}を使った！${enemy.name}を消し去った。経験値とゴールドは手に入りません。`);
+    return;
+  } else if (Array.isArray(meta.damage)) {
+    defeated = applyAbilityDamage(ability, enemy, randInt(meta.damage[0], meta.damage[1]), ability.type === "spell" ? "spell" : "skill");
+  } else if (meta.levelDamage) {
+    const d = Math.min(meta.levelDamage.max || 9999, getHeroLevel() * meta.levelDamage.mul + meta.levelDamage.add + randInt(-4, 4));
+    defeated = applyAbilityDamage(ability, enemy, d, "skill");
+  } else if (meta.currentHpRateDamage) {
+    defeated = applyAbilityDamage(ability, enemy, Math.max(1, state.battle.enemyHp * meta.currentHpRateDamage), "skill");
+  } else if (meta.randomCritical) {
+    if (chance(0.5)) {
+      const d = Math.max(1, getFinalStatValues().str * 2 + randInt(10, 40));
+      defeated = applyAbilityDamage(ability, enemy, d, "critical");
+    } else {
+      const selfDamage = Math.max(1, Math.floor(state.currentHp * 0.25));
+      state.currentHp = Math.max(1, state.currentHp - selfDamage);
+      addLog(`${ability.name}が味方側に飛んだ！${state.playerName}は${selfDamage}ダメージ。`, "enemy");
+    }
+  } else if (meta.criticalRate) {
+    if (chance(meta.criticalRate)) {
+      defeated = applyAbilityDamage(ability, enemy, Math.max(1, getFinalStatValues().str * 2 + randInt(20, 60)), "critical");
+    } else {
+      addLog(`${state.playerName}は${ability.name}を使った！しかし外れた。`, "skill");
+    }
+  } else if (meta.physicalMultiplier || meta.physicalMultiplierRange || meta.hits) {
+    const hits = Number(meta.hits || 1);
+    let total = 0;
+    for (let i = 0; i < hits; i++) {
+      const base = calcPlayerPhysicalDamage(enemy).damage;
+      const multiplier = meta.physicalMultiplierRange ? (meta.physicalMultiplierRange[0] + Math.random() * (meta.physicalMultiplierRange[1] - meta.physicalMultiplierRange[0])) : Number(meta.physicalMultiplier || 1);
+      total += Math.max(1, Math.floor(base * multiplier));
+    }
+    if (meta.metalBonus && enemy.name.includes("メタル")) total = Math.max(total, 1);
+    defeated = applyAbilityDamage(ability, enemy, total, "skill");
+    if (meta.recoilRate) {
+      const recoil = Math.max(1, Math.floor(total * meta.recoilRate));
+      state.currentHp = Math.max(0, state.currentHp - recoil);
+      addLog(`${ability.name}の反動で${state.playerName}は${recoil}ダメージを受けた。`, "enemy");
+    }
+    if (meta.takenDamageMul) status.takenDamageMul = Number(meta.takenDamageMul);
+  } else if (Array.isArray(meta.heal)) {
+    const recover = randInt(meta.heal[0], meta.heal[1]);
+    state.currentHp = Math.min(stats.mhp, state.currentHp + recover);
+    addLog(`${state.playerName}は${ability.name}を使った。HPが${recover}回復した。`, "heal");
+  } else if (meta.healFull) {
+    state.currentHp = stats.mhp;
+    addLog(`${state.playerName}は${ability.name}を使った。HPが全回復した。`, "heal");
+  } else if (meta.sacrificeFullHeal) {
+    state.currentHp = 0;
+    addLog(`${state.playerName}は${ability.name}を使った。味方は全回復したが、使用者は倒れた。`, "heal");
+    handleDefeat(enemy);
+    return;
+  } else if (meta.mpDrain) {
+    const drain = randInt(meta.mpDrain[0], meta.mpDrain[1]);
+    state.currentMp = Math.min(stats.mmp, state.currentMp + drain);
+    addLog(`${state.playerName}は${ability.name}を使った。MPを${drain}吸収した。`, "support");
+  } else if (meta.mpDamage) {
+    addLog(`${state.playerName}は${ability.name}を使った。${enemy.name}のMPを減らした。`, "support");
+  } else {
+    applySupportMeta(ability, meta, enemy, status);
+  }
+
+  if (state.currentHp <= 0) {
+    handleDefeat(enemy);
+    return;
+  }
+  if (defeated || state.battle.enemyHp <= 0) {
+    handleVictory(enemy);
+    return;
+  }
+  if (usedTurn) enemyTurn();
+}
+
+function applySupportMeta(ability, meta, enemy, status) {
+  if (meta.sleep) {
+    if (chance(meta.successRate ?? 0.5)) {
+      status.enemySkipTurns = Math.max(status.enemySkipTurns, Number(meta.sleep));
+      addLog(`${state.playerName}は${ability.name}を使った。${enemy.name}は動けなくなった。`, "support");
+    } else addLog(`${state.playerName}は${ability.name}を使った。しかし効かなかった。`, "support");
+    return;
+  }
+  if (meta.skip) {
+    if (chance(meta.successRate ?? 0.5)) {
+      status.enemySkipTurns = Math.max(status.enemySkipTurns, Number(meta.skip));
+      addLog(`${state.playerName}は${ability.name}を使った。${enemy.name}の動きを止めた。`, "support");
+    } else addLog(`${state.playerName}は${ability.name}を使った。しかし効かなかった。`, "support");
+    return;
+  }
+  if (meta.enemyDefMul !== undefined) {
+    status.enemyDefMul = Math.min(status.enemyDefMul, Number(meta.enemyDefMul));
+    addLog(`${state.playerName}は${ability.name}を使った。${enemy.name}の守備力を下げた。`, "support");
+    return;
+  }
+  if (meta.playerDefMul) {
+    status.playerDefMul = Math.max(status.playerDefMul, Number(meta.playerDefMul));
+    addLog(`${state.playerName}は${ability.name}を使った。守備力が上がった。`, "support");
+    return;
+  }
+  if (meta.playerAttackMul) {
+    status.playerAttackMul = Math.max(status.playerAttackMul, Number(meta.playerAttackMul));
+    addLog(`${state.playerName}は${ability.name}を使った。攻撃力が上がった。`, "support");
+    return;
+  }
+  if (meta.enemyAccuracy) {
+    status.enemyAccuracy = Math.min(status.enemyAccuracy, Number(meta.enemyAccuracy));
+    addLog(`${state.playerName}は${ability.name}を使った。${enemy.name}の命中率が下がった。`, "support");
+    return;
+  }
+  if (meta.magicBarrier) { status.magicBarrier = true; addLog(`${state.playerName}は${ability.name}を使った。呪文への備えを固めた。`, "support"); return; }
+  if (meta.breathBarrier) { status.breathBarrier = true; addLog(`${state.playerName}は${ability.name}を使った。炎と吹雪への備えを固めた。`, "support"); return; }
+  if (meta.reflectMagic) { status.reflectMagic = Number(meta.reflectMagic); addLog(`${state.playerName}は${ability.name}を使った。呪文を跳ね返す構えになった。`, "support"); return; }
+  if (meta.bigGuard) { status.bigGuard = true; addLog(`${state.playerName}は${ability.name}を使った。大防御の構えを取った。`, "support"); return; }
+  if (meta.charge) { status.chargeMul = Math.max(status.chargeMul, Number(meta.charge)); addLog(`${state.playerName}は${ability.name}を使った。次の攻撃に力をためた。`, "support"); return; }
+  if (meta.clearEnemyBuffs) { status.enemyDefMul = 1; addLog(`${state.playerName}は${ability.name}を使った。敵の補助効果を打ち消した。`, "support"); return; }
+  addLog(`${state.playerName}は${ability.name}を使った。${ability.effect}`, "support");
+}
+
+function useSelectedAbility() {
+  const enemy = getCurrentEnemy();
+  if (!enemy) return;
+  const ability = getAbilityByKey(state.selectedAbilityKey);
+  if (!ability) {
+    addLog("使用できる呪文・特技がありません。", "locked");
+    renderLog();
+    return;
+  }
+  const learned = getLearnedAbilityKeys().includes(makeAbilityKey(ability));
+  if (!learned) {
+    addLog(`${ability.name}はまだ習得していません。`, "locked");
+    renderLog();
+    return;
+  }
+  const costInfo = consumeAbilityCost(ability);
+  if (!costInfo.ok) {
+    addLog(costInfo.message, "locked");
+    render();
+    return;
+  }
+  resolveAbilityEffect(ability, costInfo);
 }
 
 function isJobUnlocked(jobId) {
@@ -466,7 +807,20 @@ function startDungeonBattle(dungeonId = state.currentDungeonId) {
     enemyId: enemy.id,
     enemyHp: Math.max(1, Number(enemy.stats?.maxHp || 1)),
     turn: 1,
-    guarding: false
+    guarding: false,
+    status: {
+      enemyDefMul: 1,
+      playerDefMul: 1,
+      playerAttackMul: 1,
+      enemyAccuracy: 1,
+      enemySkipTurns: 0,
+      magicBarrier: false,
+      breathBarrier: false,
+      reflectMagic: 0,
+      bigGuard: false,
+      takenDamageMul: 1,
+      chargeMul: 1
+    }
   };
   addLog(`${dungeon.name}に潜りました。${enemy.name}があらわれた！`, "encounter");
   saveState(false);
@@ -480,9 +834,15 @@ function getCurrentEnemy() {
 
 function calcPlayerPhysicalDamage(enemy) {
   const stats = getFinalStatValues();
-  let base = stats.str * 0.9 - Number(enemy.stats?.defense || 0) * 0.35;
+  const status = ensureBattleStatus() || {};
+  const enemyDefense = Number(enemy.stats?.defense || 0) * Number(status.enemyDefMul ?? 1);
+  let base = stats.str * 0.9 * Number(status.playerAttackMul ?? 1) - enemyDefense * 0.35;
   base = Math.max(1, base);
   let damage = Math.floor(base * (randInt(85, 115) / 100));
+  if (Number(status.chargeMul || 1) > 1) {
+    damage = Math.floor(damage * Number(status.chargeMul));
+    status.chargeMul = 1;
+  }
   const critical = chance(1 / 16);
   if (critical) damage = Math.floor(damage * 1.65) + randInt(1, 4);
   return { damage: Math.max(1, damage), critical };
@@ -575,12 +935,28 @@ function enemyTurn() {
   const enemy = getCurrentEnemy();
   if (!enemy) return;
   const stats = getFinalStatValues();
+  const status = ensureBattleStatus();
+
+  if (status.enemySkipTurns > 0) {
+    status.enemySkipTurns -= 1;
+    addLog(`${enemy.name}は動けない！`, "support");
+    endTurnRecovery();
+    state.battle.turn += 1;
+    state.battle.guarding = false;
+    status.bigGuard = false;
+    status.takenDamageMul = 1;
+    saveState(false);
+    render();
+    return;
+  }
 
   if (isMastered("superstar") && chance(0.12)) {
     addLog(`${enemy.name}は見とれていて動けない！`, "master");
     endTurnRecovery();
     state.battle.turn += 1;
     state.battle.guarding = false;
+    status.bigGuard = false;
+    status.takenDamageMul = 1;
     saveState(false);
     render();
     return;
@@ -591,6 +967,20 @@ function enemyTurn() {
     endTurnRecovery();
     state.battle.turn += 1;
     state.battle.guarding = false;
+    status.bigGuard = false;
+    status.takenDamageMul = 1;
+    saveState(false);
+    render();
+    return;
+  }
+
+  if (Math.random() > Number(status.enemyAccuracy ?? 1)) {
+    addLog(`${enemy.name}の攻撃は外れた！`, "enemy");
+    endTurnRecovery();
+    state.battle.turn += 1;
+    state.battle.guarding = false;
+    status.bigGuard = false;
+    status.takenDamageMul = 1;
     saveState(false);
     render();
     return;
@@ -604,17 +994,42 @@ function enemyTurn() {
       endTurnRecovery();
       state.battle.turn += 1;
       state.battle.guarding = false;
+      status.bigGuard = false;
+      status.takenDamageMul = 1;
+      saveState(false);
+      render();
+      return;
+    }
+    if (status.reflectMagic) {
+      const reflectDamage = Math.max(5, Math.floor(Number(enemy.stats?.attack || 1) * 0.45 + Number(enemy.stats?.maxMp || 0) * 0.2));
+      state.battle.enemyHp = Math.max(0, state.battle.enemyHp - reflectDamage);
+      if (status.reflectMagic !== 999) status.reflectMagic = Math.max(0, status.reflectMagic - 1);
+      addLog(`${enemy.name}の呪文攻撃！${state.playerName}は跳ね返し、${enemy.name}に${reflectDamage}ダメージ。`, "spell");
+      if (state.battle.enemyHp <= 0) {
+        handleVictory(enemy);
+        return;
+      }
+      endTurnRecovery();
+      state.battle.turn += 1;
+      state.battle.guarding = false;
+      status.bigGuard = false;
+      status.takenDamageMul = 1;
       saveState(false);
       render();
       return;
     }
     damage = Math.max(2, Math.floor(Number(enemy.stats?.attack || 1) * 0.42 + Number(enemy.stats?.maxMp || 0) * 0.12 - stats.int * 0.12 + randInt(-3, 6)));
+    if (status.magicBarrier) damage = Math.max(1, Math.floor(damage * 0.65));
     if (state.battle.guarding) damage = Math.max(1, Math.floor(damage / 2));
+    if (status.bigGuard) damage = Math.max(1, Math.floor(damage / 10));
+    damage = Math.max(1, Math.floor(damage * Number(status.takenDamageMul ?? 1)));
     state.currentHp = Math.max(0, state.currentHp - damage);
     addLog(`${enemy.name}の呪文攻撃！${state.playerName}は${damage}ダメージを受けた。`, "enemy");
   } else {
-    damage = Math.max(1, Math.floor(Number(enemy.stats?.attack || 1) * 0.58 - stats.vit * 0.28 + randInt(-2, 5)));
+    damage = Math.max(1, Math.floor(Number(enemy.stats?.attack || 1) * 0.58 - (stats.vit * Number(status.playerDefMul ?? 1)) * 0.28 + randInt(-2, 5)));
     if (state.battle.guarding) damage = Math.max(1, Math.floor(damage / 2));
+    if (status.bigGuard) damage = Math.max(1, Math.floor(damage / 10));
+    damage = Math.max(1, Math.floor(damage * Number(status.takenDamageMul ?? 1)));
     state.currentHp = Math.max(0, state.currentHp - damage);
     addLog(`${enemy.name}の攻撃！${state.playerName}は${damage}ダメージを受けた。`, "enemy");
   }
@@ -627,6 +1042,8 @@ function enemyTurn() {
   endTurnRecovery();
   state.battle.turn += 1;
   state.battle.guarding = false;
+  status.bigGuard = false;
+  status.takenDamageMul = 1;
   saveState(false);
   render();
 }
@@ -793,10 +1210,57 @@ function renderDungeonPanel() {
   $("#dungeonDescription").textContent = `${dungeon.description} 出現範囲：No.${dungeon.enemyStart}〜${dungeon.enemyEnd}`;
 }
 
+
+function renderAbilityCommand() {
+  const select = $("#abilitySelect");
+  const hint = $("#abilityHint");
+  if (!select) return;
+  const usable = getBattleUsableAbilities();
+  const selected = ensureSelectedAbility();
+  select.innerHTML = "";
+  if (!usable.length) {
+    const option = document.createElement("option");
+    option.value = "";
+    option.textContent = "習得済みの呪文・特技がありません";
+    select.appendChild(option);
+    hint.textContent = "主人公レベルを上げるか、職業熟練度を上げると習得できます。";
+    return;
+  }
+  for (const { key, ability } of usable) {
+    const option = document.createElement("option");
+    option.value = key;
+    option.textContent = `${ability.name}（${getAbilityTypeLabel(ability.type)}・${getAbilityCategoryLabel(ability.category)}・${getDisplayCost(ability)}）`;
+    select.appendChild(option);
+  }
+  select.value = state.selectedAbilityKey || selected?.id || usable[0].key;
+  const ability = getAbilityByKey(select.value);
+  hint.textContent = ability ? `${ability.target} / ${ability.element || "-"} / ${ability.effect}` : "";
+}
+
+function renderLearnedAbilities() {
+  const list = getLearnedAbilities();
+  const wrap = $("#learnedAbilityList");
+  const count = $("#abilityCount");
+  if (!wrap) return;
+  count.textContent = `${list.length} / ${spells.length + skills.length}`;
+  wrap.innerHTML = "";
+  if (!list.length) {
+    wrap.innerHTML = `<div class="ability-card"><strong>まだありません</strong><span>レベルアップまたは職業熟練度アップで覚えます。</span></div>`;
+    return;
+  }
+  for (const { key, ability } of list) {
+    const card = document.createElement("div");
+    card.className = "ability-card";
+    card.innerHTML = `<strong><span>${ability.name}</span><span class="ability-type-${ability.type}">${getAbilityTypeLabel(ability.type)}</span></strong><span>${getAbilityCategoryLabel(ability.category)} / ${getDisplayCost(ability)} / ${ability.target} / ${ability.timing}</span><em>${ability.effect}</em><em>取得：${getAbilitySourceText(key)}</em>`;
+    wrap.appendChild(card);
+  }
+}
+
 function renderBattle() {
   const enemy = getCurrentEnemy();
   const box = $("#enemyBox");
-  const buttons = ["#attackButton", "#fireButton", "#healButton", "#guardButton", "#fleeButton"].map($);
+  const buttons = ["#attackButton", "#abilityButton", "#guardButton", "#fleeButton"].map($).filter(Boolean);
+  renderAbilityCommand();
   if (!enemy) {
     $("#battleTitle").textContent = "戦闘なし";
     $("#battleTurn").textContent = "待機中";
@@ -810,10 +1274,11 @@ function renderBattle() {
   const maxHp = Math.max(1, Number(enemyStats.maxHp || 1));
   const hpRate = Math.max(0, Math.min(100, Math.round((state.battle.enemyHp / maxHp) * 100)));
   const dungeon = getDungeon(state.battle.dungeonId);
+  const status = ensureBattleStatus() || {};
   $("#battleTitle").textContent = `${enemy.name} が出現中`;
   $("#battleTurn").textContent = `${dungeon.name} / ${state.battle.turn}ターン`;
   box.className = "enemy-box";
-  box.innerHTML = `<div class="enemy-name-row"><strong>${enemy.name}</strong><span>No.${getMonsterNumber(enemy)}</span></div><div class="enemy-hp-label">HP ${state.battle.enemyHp} / ${maxHp}</div><div class="progress-bar enemy-hp-bar"><div style="width:${hpRate}%"></div></div><div class="enemy-stats-mini"><span>攻 ${enemyStats.attack || 0}</span><span>守 ${enemyStats.defense || 0}</span><span>早 ${enemyStats.speed || 0}</span><span>EXP ${enemy.rewards?.exp || 0}</span><span>G ${enemy.rewards?.gold || 0}</span></div>`;
+  box.innerHTML = `<div class="enemy-name-row"><strong>${enemy.name}</strong><span>No.${getMonsterNumber(enemy)}</span></div><div class="enemy-hp-label">HP ${state.battle.enemyHp} / ${maxHp}</div><div class="progress-bar enemy-hp-bar"><div style="width:${hpRate}%"></div></div><div class="enemy-stats-mini"><span>攻 ${enemyStats.attack || 0}</span><span>守 ${enemyStats.defense || 0}</span><span>早 ${enemyStats.speed || 0}</span><span>EXP ${enemy.rewards?.exp || 0}</span><span>G ${enemy.rewards?.gold || 0}</span><span>敵守備×${Number(status.enemyDefMul ?? 1)}</span></div>`;
 }
 
 function renderTabs() {
@@ -966,6 +1431,7 @@ function render() {
   renderStats();
   renderDungeonPanel();
   renderBattle();
+  renderLearnedAbilities();
   renderMasterBonuses();
   renderRareItems();
   renderTabs();
@@ -995,8 +1461,12 @@ function bindEvents() {
   $("#enterDungeonButton").addEventListener("click", () => startDungeonBattle(state.currentDungeonId));
   $("#sameDungeonButton").addEventListener("click", () => startDungeonBattle(state.currentDungeonId));
   $("#attackButton").addEventListener("click", playerAttack);
-  $("#fireButton").addEventListener("click", playerFire);
-  $("#healButton").addEventListener("click", playerHeal);
+  $("#abilitySelect").addEventListener("change", (event) => {
+    state.selectedAbilityKey = event.target.value;
+    saveState(false);
+    renderAbilityCommand();
+  });
+  $("#abilityButton").addEventListener("click", useSelectedAbility);
   $("#guardButton").addEventListener("click", playerGuard);
   $("#fleeButton").addEventListener("click", playerFlee);
   $("#changeJobButton").addEventListener("click", () => changeJob(state.selectedJobId));

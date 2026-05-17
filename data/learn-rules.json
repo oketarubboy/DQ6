@@ -1,0 +1,826 @@
+{
+  "level": [],
+  "jobs": {
+    "warrior": [
+      {
+        "rank": 2,
+        "type": "skill",
+        "id": "kiaitame"
+      },
+      {
+        "rank": 4,
+        "type": "skill",
+        "id": "morobagiri"
+      },
+      {
+        "rank": 5,
+        "type": "skill",
+        "id": "shippuuzuki"
+      },
+      {
+        "rank": 6,
+        "type": "skill",
+        "id": "minagoroshi"
+      },
+      {
+        "rank": 7,
+        "type": "skill",
+        "id": "hayabusagiri"
+      },
+      {
+        "rank": 8,
+        "type": "skill",
+        "id": "majingiri"
+      }
+    ],
+    "martial_artist": [
+      {
+        "rank": 1,
+        "type": "skill",
+        "id": "ashibarai"
+      },
+      {
+        "rank": 2,
+        "type": "skill",
+        "id": "mawashigeri"
+      },
+      {
+        "rank": 3,
+        "type": "skill",
+        "id": "kamaitachi"
+      },
+      {
+        "rank": 4,
+        "type": "skill",
+        "id": "mikawashikyaku"
+      },
+      {
+        "rank": 5,
+        "type": "skill",
+        "id": "seikenzuki"
+      },
+      {
+        "rank": 6,
+        "type": "skill",
+        "id": "kyuushozuki"
+      },
+      {
+        "rank": 7,
+        "type": "skill",
+        "id": "tomoenage"
+      },
+      {
+        "rank": 8,
+        "type": "skill",
+        "id": "bakuretsuken"
+      }
+    ],
+    "mage": [
+      {
+        "rank": 1,
+        "type": "spell",
+        "id": "merami"
+      },
+      {
+        "rank": 1,
+        "type": "spell",
+        "id": "rariho"
+      },
+      {
+        "rank": 2,
+        "type": "spell",
+        "id": "gira"
+      },
+      {
+        "rank": 2,
+        "type": "spell",
+        "id": "manusa"
+      },
+      {
+        "rank": 3,
+        "type": "spell",
+        "id": "begirama"
+      },
+      {
+        "rank": 3,
+        "type": "spell",
+        "id": "rura"
+      },
+      {
+        "rank": 4,
+        "type": "spell",
+        "id": "medapani"
+      },
+      {
+        "rank": 4,
+        "type": "spell",
+        "id": "rukanan"
+      },
+      {
+        "rank": 5,
+        "type": "spell",
+        "id": "iora"
+      },
+      {
+        "rank": 5,
+        "type": "spell",
+        "id": "riremito"
+      },
+      {
+        "rank": 6,
+        "type": "spell",
+        "id": "hyadaruko"
+      },
+      {
+        "rank": 6,
+        "type": "spell",
+        "id": "mahotora"
+      },
+      {
+        "rank": 7,
+        "type": "spell",
+        "id": "rarihoma"
+      },
+      {
+        "rank": 8,
+        "type": "spell",
+        "id": "begiragon"
+      },
+      {
+        "rank": 8,
+        "type": "spell",
+        "id": "mahocanta"
+      }
+    ],
+    "priest": [
+      {
+        "rank": 1,
+        "type": "spell",
+        "id": "hoimi"
+      },
+      {
+        "rank": 1,
+        "type": "spell",
+        "id": "nifram"
+      },
+      {
+        "rank": 2,
+        "type": "spell",
+        "id": "bagi"
+      },
+      {
+        "rank": 2,
+        "type": "spell",
+        "id": "kiari"
+      },
+      {
+        "rank": 3,
+        "type": "spell",
+        "id": "sukara"
+      },
+      {
+        "rank": 3,
+        "type": "spell",
+        "id": "mahotone"
+      },
+      {
+        "rank": 4,
+        "type": "spell",
+        "id": "behoimi"
+      },
+      {
+        "rank": 4,
+        "type": "spell",
+        "id": "kiariku"
+      },
+      {
+        "rank": 5,
+        "type": "spell",
+        "id": "zaki"
+      },
+      {
+        "rank": 5,
+        "type": "spell",
+        "id": "sukuruto"
+      },
+      {
+        "rank": 6,
+        "type": "spell",
+        "id": "bagima"
+      },
+      {
+        "rank": 7,
+        "type": "spell",
+        "id": "zaraki"
+      },
+      {
+        "rank": 7,
+        "type": "spell",
+        "id": "behoma"
+      },
+      {
+        "rank": 8,
+        "type": "spell",
+        "id": "zaoral"
+      }
+    ],
+    "dancer": [
+      {
+        "rank": 1,
+        "type": "skill",
+        "id": "sasouodori"
+      },
+      {
+        "rank": 2,
+        "type": "skill",
+        "id": "mikawashikyaku"
+      },
+      {
+        "rank": 3,
+        "type": "skill",
+        "id": "fushiginaodori"
+      },
+      {
+        "rank": 4,
+        "type": "skill",
+        "id": "medapanidance"
+      },
+      {
+        "rank": 5,
+        "type": "skill",
+        "id": "ukenagashi"
+      },
+      {
+        "rank": 6,
+        "type": "skill",
+        "id": "odorifuuji"
+      },
+      {
+        "rank": 7,
+        "type": "skill",
+        "id": "mahotoraodori"
+      },
+      {
+        "rank": 8,
+        "type": "skill",
+        "id": "shinoodori"
+      }
+    ],
+    "thief": [
+      {
+        "rank": 1,
+        "type": "skill",
+        "id": "sunakemuri"
+      },
+      {
+        "rank": 2,
+        "type": "skill",
+        "id": "takanome"
+      },
+      {
+        "rank": 3,
+        "type": "skill",
+        "id": "ishitsubute"
+      },
+      {
+        "rank": 4,
+        "type": "skill",
+        "id": "tsukitobashi"
+      },
+      {
+        "rank": 5,
+        "type": "skill",
+        "id": "furomi"
+      },
+      {
+        "rank": 6,
+        "type": "skill",
+        "id": "shinobiashi"
+      },
+      {
+        "rank": 7,
+        "type": "skill",
+        "id": "touzokunohana"
+      },
+      {
+        "rank": 8,
+        "type": "skill",
+        "id": "remirama"
+      }
+    ],
+    "monster_tamer": [
+      {
+        "rank": 2,
+        "type": "skill",
+        "id": "amaiiki"
+      },
+      {
+        "rank": 3,
+        "type": "skill",
+        "id": "dokunoiki"
+      },
+      {
+        "rank": 4,
+        "type": "skill",
+        "id": "hyakuretsuname"
+      },
+      {
+        "rank": 5,
+        "type": "skill",
+        "id": "tsumetaiiki"
+      },
+      {
+        "rank": 6,
+        "type": "skill",
+        "id": "kaennoiki"
+      },
+      {
+        "rank": 7,
+        "type": "skill",
+        "id": "yaketsukuiki"
+      },
+      {
+        "rank": 8,
+        "type": "spell",
+        "id": "dragonram"
+      }
+    ],
+    "merchant": [
+      {
+        "rank": 1,
+        "type": "spell",
+        "id": "inpas"
+      },
+      {
+        "rank": 2,
+        "type": "skill",
+        "id": "chikaratame"
+      },
+      {
+        "rank": 3,
+        "type": "skill",
+        "id": "anahori"
+      },
+      {
+        "rank": 4,
+        "type": "skill",
+        "id": "fushiginaodori"
+      },
+      {
+        "rank": 5,
+        "type": "skill",
+        "id": "otakebi"
+      },
+      {
+        "rank": 6,
+        "type": "skill",
+        "id": "taiatari"
+      },
+      {
+        "rank": 7,
+        "type": "skill",
+        "id": "oogoe"
+      },
+      {
+        "rank": 8,
+        "type": "skill",
+        "id": "guntaiyobi"
+      }
+    ],
+    "gadabout": [
+      {
+        "rank": 1,
+        "type": "skill",
+        "id": "asobi"
+      },
+      {
+        "rank": 2,
+        "type": "skill",
+        "id": "kuchibue"
+      },
+      {
+        "rank": 3,
+        "type": "skill",
+        "id": "namemawashi"
+      },
+      {
+        "rank": 4,
+        "type": "skill",
+        "id": "pafupafu"
+      },
+      {
+        "rank": 5,
+        "type": "skill",
+        "id": "neru"
+      },
+      {
+        "rank": 6,
+        "type": "skill",
+        "id": "hyakuretsuname"
+      },
+      {
+        "rank": 7,
+        "type": "skill",
+        "id": "manemane"
+      },
+      {
+        "rank": 8,
+        "type": "spell",
+        "id": "palpunte"
+      }
+    ],
+    "battle_master": [
+      {
+        "rank": 1,
+        "type": "skill",
+        "id": "shinkuugiri"
+      },
+      {
+        "rank": 2,
+        "type": "skill",
+        "id": "zombiegiri"
+      },
+      {
+        "rank": 3,
+        "type": "skill",
+        "id": "ukenagashi"
+      },
+      {
+        "rank": 4,
+        "type": "skill",
+        "id": "samidareken"
+      },
+      {
+        "rank": 5,
+        "type": "skill",
+        "id": "tobihizageri"
+      },
+      {
+        "rank": 6,
+        "type": "skill",
+        "id": "dragongiri"
+      },
+      {
+        "rank": 7,
+        "type": "skill",
+        "id": "gansekiotoshi"
+      },
+      {
+        "rank": 8,
+        "type": "skill",
+        "id": "metalgiri"
+      }
+    ],
+    "magic_knight": [
+      {
+        "rank": 1,
+        "type": "skill",
+        "id": "kaengiri"
+      },
+      {
+        "rank": 2,
+        "type": "spell",
+        "id": "baikilt"
+      },
+      {
+        "rank": 3,
+        "type": "skill",
+        "id": "inazumagiri"
+      },
+      {
+        "rank": 4,
+        "type": "spell",
+        "id": "mahoturn"
+      },
+      {
+        "rank": 5,
+        "type": "skill",
+        "id": "mahyadogiri"
+      },
+      {
+        "rank": 6,
+        "type": "spell",
+        "id": "bashirura"
+      },
+      {
+        "rank": 7,
+        "type": "skill",
+        "id": "magma"
+      },
+      {
+        "rank": 8,
+        "type": "spell",
+        "id": "merazoma"
+      }
+    ],
+    "paladin": [
+      {
+        "rank": 1,
+        "type": "skill",
+        "id": "migawari"
+      },
+      {
+        "rank": 2,
+        "type": "skill",
+        "id": "shinkuuha"
+      },
+      {
+        "rank": 3,
+        "type": "skill",
+        "id": "sutemi"
+      },
+      {
+        "rank": 4,
+        "type": "spell",
+        "id": "bagicross"
+      },
+      {
+        "rank": 5,
+        "type": "spell",
+        "id": "magic_barrier"
+      },
+      {
+        "rank": 6,
+        "type": "skill",
+        "id": "nioudachi"
+      },
+      {
+        "rank": 7,
+        "type": "spell",
+        "id": "megazal"
+      },
+      {
+        "rank": 8,
+        "type": "skill",
+        "id": "grandcross"
+      }
+    ],
+    "sage": [
+      {
+        "rank": 1,
+        "type": "spell",
+        "id": "mahokite"
+      },
+      {
+        "rank": 2,
+        "type": "spell",
+        "id": "fubaha"
+      },
+      {
+        "rank": 3,
+        "type": "spell",
+        "id": "bashirura"
+      },
+      {
+        "rank": 3,
+        "type": "spell",
+        "id": "baikilt"
+      },
+      {
+        "rank": 4,
+        "type": "skill",
+        "id": "tsunami"
+      },
+      {
+        "rank": 4,
+        "type": "skill",
+        "id": "shoukan"
+      },
+      {
+        "rank": 5,
+        "type": "spell",
+        "id": "behomara"
+      },
+      {
+        "rank": 5,
+        "type": "skill",
+        "id": "jiware"
+      },
+      {
+        "rank": 6,
+        "type": "spell",
+        "id": "zaoriku"
+      },
+      {
+        "rank": 6,
+        "type": "spell",
+        "id": "mahyado"
+      },
+      {
+        "rank": 7,
+        "type": "spell",
+        "id": "magic_barrier"
+      },
+      {
+        "rank": 7,
+        "type": "spell",
+        "id": "megante"
+      },
+      {
+        "rank": 8,
+        "type": "spell",
+        "id": "ionazun"
+      },
+      {
+        "rank": 8,
+        "type": "spell",
+        "id": "zarakima"
+      }
+    ],
+    "ranger": [
+      {
+        "rank": 1,
+        "type": "spell",
+        "id": "toheros"
+      },
+      {
+        "rank": 2,
+        "type": "skill",
+        "id": "moudokunokiri"
+      },
+      {
+        "rank": 3,
+        "type": "spell",
+        "id": "toramana"
+      },
+      {
+        "rank": 4,
+        "type": "skill",
+        "id": "jihibiki"
+      },
+      {
+        "rank": 5,
+        "type": "skill",
+        "id": "mabushiihikari"
+      },
+      {
+        "rank": 6,
+        "type": "skill",
+        "id": "daibougyo"
+      },
+      {
+        "rank": 7,
+        "type": "skill",
+        "id": "hibashira"
+      },
+      {
+        "rank": 8,
+        "type": "skill",
+        "id": "oikaze"
+      }
+    ],
+    "superstar": [
+      {
+        "rank": 1,
+        "type": "skill",
+        "id": "mabushiihikari"
+      },
+      {
+        "rank": 2,
+        "type": "spell",
+        "id": "astron"
+      },
+      {
+        "rank": 3,
+        "type": "skill",
+        "id": "inazuma"
+      },
+      {
+        "rank": 4,
+        "type": "skill",
+        "id": "megazal_dance"
+      },
+      {
+        "rank": 5,
+        "type": "skill",
+        "id": "bukiminahikari"
+      },
+      {
+        "rank": 6,
+        "type": "skill",
+        "id": "hustle_dance"
+      },
+      {
+        "rank": 7,
+        "type": "skill",
+        "id": "moonsault"
+      },
+      {
+        "rank": 8,
+        "type": "skill",
+        "id": "seireinouta"
+      }
+    ],
+    "hero": [
+      {
+        "rank": 1,
+        "type": "spell",
+        "id": "astron"
+      },
+      {
+        "rank": 2,
+        "type": "skill",
+        "id": "itetsukuhadou"
+      },
+      {
+        "rank": 3,
+        "type": "spell",
+        "id": "raidein"
+      },
+      {
+        "rank": 4,
+        "type": "spell",
+        "id": "gigadein"
+      },
+      {
+        "rank": 5,
+        "type": "skill",
+        "id": "meisou"
+      },
+      {
+        "rank": 6,
+        "type": "skill",
+        "id": "gigaslash"
+      },
+      {
+        "rank": 7,
+        "type": "skill",
+        "id": "jigospark"
+      },
+      {
+        "rank": 8,
+        "type": "spell",
+        "id": "minadein"
+      }
+    ],
+    "dragon": [
+      {
+        "rank": 1,
+        "type": "skill",
+        "id": "hinoiki"
+      },
+      {
+        "rank": 2,
+        "type": "skill",
+        "id": "tsumetaiiki"
+      },
+      {
+        "rank": 3,
+        "type": "skill",
+        "id": "kaennoiki"
+      },
+      {
+        "rank": 4,
+        "type": "skill",
+        "id": "koorinoiki"
+      },
+      {
+        "rank": 5,
+        "type": "skill",
+        "id": "hageshiihonoo"
+      },
+      {
+        "rank": 6,
+        "type": "skill",
+        "id": "kogoerufubuki"
+      },
+      {
+        "rank": 7,
+        "type": "skill",
+        "id": "shakunetsu"
+      },
+      {
+        "rank": 8,
+        "type": "skill",
+        "id": "kagayakuiki"
+      }
+    ],
+    "metal_sprite": [
+      {
+        "rank": 2,
+        "type": "spell",
+        "id": "astron"
+      },
+      {
+        "rank": 4,
+        "type": "spell",
+        "id": "rura"
+      },
+      {
+        "rank": 6,
+        "type": "skill",
+        "id": "madante"
+      },
+      {
+        "rank": 7,
+        "type": "skill",
+        "id": "jigospark"
+      },
+      {
+        "rank": 8,
+        "type": "skill",
+        "id": "bigbang"
+      }
+    ]
+  }
+}
