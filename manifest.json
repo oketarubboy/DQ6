@@ -1,7 +1,7 @@
 {
   "name": "職業システム RPG PWA サンプル",
   "short_name": "JobRPG",
-  "description": "職業変更、熟練度、上級職解放条件、レアアイテム転職を確認できるPWAサンプルです。",
+  "description": "職業変更、熟練度、上級職解放条件、レアアイテム転職、モンスター図鑑を確認できるPWAサンプルです。",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",

@@ -1,0 +1,5659 @@
+[
+  {
+    "id": "monster_001",
+    "name": "ぶちスライム",
+    "sourceName": "ぶちスライム",
+    "recruitable": false,
+    "stats": {
+      "attack": 5,
+      "defense": 5,
+      "speed": 7,
+      "maxHp": 6,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 1,
+      "gold": 1
+    },
+    "source": {
+      "attack": "5",
+      "defense": "5*",
+      "speed": "7",
+      "maxHp": "6",
+      "maxMp": "0",
+      "exp": "1",
+      "gold": "1"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_002",
+    "name": "ファーラット",
+    "sourceName": "◎ファーラット",
+    "recruitable": true,
+    "stats": {
+      "attack": 6,
+      "defense": 6,
+      "speed": 6,
+      "maxHp": 7,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 2,
+      "gold": 2
+    },
+    "source": {
+      "attack": "6",
+      "defense": "6*",
+      "speed": "6",
+      "maxHp": "7",
+      "maxMp": "0",
+      "exp": "2",
+      "gold": "2"
+    },
+    "unknownFields": [],
+    "note": "◎付きのため仲間候補"
+  },
+  {
+    "id": "monster_003",
+    "name": "マンドラゴラ",
+    "sourceName": "マンドラゴラ",
+    "recruitable": false,
+    "stats": {
+      "attack": 10,
+      "defense": 7,
+      "speed": 8,
+      "maxHp": 9,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 3,
+      "gold": 3
+    },
+    "source": {
+      "attack": "10",
+      "defense": "7*",
+      "speed": "8",
+      "maxHp": "-9",
+      "maxMp": "0",
+      "exp": "3",
+      "gold": "3"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_004",
+    "name": "おばけなめくじ",
+    "sourceName": "おばけなめくじ",
+    "recruitable": false,
+    "stats": {
+      "attack": 10,
+      "defense": 9,
+      "speed": 8,
+      "maxHp": 8,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 4,
+      "gold": 4
+    },
+    "source": {
+      "attack": "10",
+      "defense": "9*",
+      "speed": "8",
+      "maxHp": "8",
+      "maxMp": "0",
+      "exp": "4",
+      "gold": "4"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_005",
+    "name": "スライム",
+    "sourceName": "◎スライム",
+    "recruitable": true,
+    "stats": {
+      "attack": 12,
+      "defense": 13,
+      "speed": 9,
+      "maxHp": 13,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 4,
+      "gold": 3
+    },
+    "source": {
+      "attack": "12",
+      "defense": "13*",
+      "speed": "9",
+      "maxHp": "13",
+      "maxMp": "0",
+      "exp": "4",
+      "gold": "3"
+    },
+    "unknownFields": [],
+    "note": "◎付きのため仲間候補"
+  },
+  {
+    "id": "monster_006",
+    "name": "ねずこうもり",
+    "sourceName": "ねずこうもり",
+    "recruitable": false,
+    "stats": {
+      "attack": 12,
+      "defense": 10,
+      "speed": 10,
+      "maxHp": 11,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 6,
+      "gold": 5
+    },
+    "source": {
+      "attack": "12",
+      "defense": "10*",
+      "speed": "10",
+      "maxHp": "11",
+      "maxMp": "0",
+      "exp": "6",
+      "gold": "5"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_007",
+    "name": "テンツク",
+    "sourceName": "テンツク",
+    "recruitable": false,
+    "stats": {
+      "attack": 12,
+      "defense": 12,
+      "speed": 10,
+      "maxHp": 13,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 6,
+      "gold": 8
+    },
+    "source": {
+      "attack": "12",
+      "defense": "12*",
+      "speed": "10",
+      "maxHp": "13",
+      "maxMp": "0",
+      "exp": "6",
+      "gold": "8"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_008",
+    "name": "リップス",
+    "sourceName": "◎リップス",
+    "recruitable": true,
+    "stats": {
+      "attack": 8,
+      "defense": 12,
+      "speed": 9,
+      "maxHp": 13,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 7,
+      "gold": 7
+    },
+    "source": {
+      "attack": "8",
+      "defense": "12*",
+      "speed": "9",
+      "maxHp": "13",
+      "maxMp": "0",
+      "exp": "7",
+      "gold": "7"
+    },
+    "unknownFields": [],
+    "note": "◎付きのため仲間候補"
+  },
+  {
+    "id": "monster_009",
+    "name": "オニオーン",
+    "sourceName": "オニオーン",
+    "recruitable": false,
+    "stats": {
+      "attack": 12,
+      "defense": 14,
+      "speed": 10,
+      "maxHp": 12,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 8,
+      "gold": 9
+    },
+    "source": {
+      "attack": "12",
+      "defense": "14*",
+      "speed": "10",
+      "maxHp": "12",
+      "maxMp": "0",
+      "exp": "8",
+      "gold": "9"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_010",
+    "name": "スライムベス",
+    "sourceName": "スライムベス",
+    "recruitable": false,
+    "stats": {
+      "attack": 20,
+      "defense": 20,
+      "speed": 15,
+      "maxHp": 15,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 9,
+      "gold": 6
+    },
+    "source": {
+      "attack": "20",
+      "defense": "20*",
+      "speed": "15",
+      "maxHp": "15",
+      "maxMp": "0",
+      "exp": "9",
+      "gold": "6"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_011",
+    "name": "きりかぶこぞう",
+    "sourceName": "きりかぶこぞう",
+    "recruitable": false,
+    "stats": {
+      "attack": 12,
+      "defense": 14,
+      "speed": 10,
+      "maxHp": 16,
+      "maxMp": 3
+    },
+    "rewards": {
+      "exp": 10,
+      "gold": 10
+    },
+    "source": {
+      "attack": "12",
+      "defense": "14*",
+      "speed": "10",
+      "maxHp": "16",
+      "maxMp": "3",
+      "exp": "10",
+      "gold": "10"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_012",
+    "name": "どくろあらい",
+    "sourceName": "どくろあらい",
+    "recruitable": false,
+    "stats": {
+      "attack": 12,
+      "defense": 15,
+      "speed": 13,
+      "maxHp": 17,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 11,
+      "gold": 12
+    },
+    "source": {
+      "attack": "12",
+      "defense": "15*",
+      "speed": "13",
+      "maxHp": "17",
+      "maxMp": "0",
+      "exp": "11",
+      "gold": "12"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_013",
+    "name": "シールドこぞう",
+    "sourceName": "シールドこぞう",
+    "recruitable": false,
+    "stats": {
+      "attack": 11,
+      "defense": 36,
+      "speed": 11,
+      "maxHp": 13,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 12,
+      "gold": 11
+    },
+    "source": {
+      "attack": "11",
+      "defense": "36*",
+      "speed": "11",
+      "maxHp": "13",
+      "maxMp": "0",
+      "exp": "12",
+      "gold": "11"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_014",
+    "name": "ギズモ",
+    "sourceName": "ギズモ",
+    "recruitable": false,
+    "stats": {
+      "attack": 14,
+      "defense": 18,
+      "speed": 15,
+      "maxHp": 16,
+      "maxMp": 3
+    },
+    "rewards": {
+      "exp": 13,
+      "gold": 10
+    },
+    "source": {
+      "attack": "14",
+      "defense": "18*",
+      "speed": "15",
+      "maxHp": "16",
+      "maxMp": "3",
+      "exp": "13",
+      "gold": "10"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_015",
+    "name": "アロードッグ",
+    "sourceName": "アロードッグ",
+    "recruitable": false,
+    "stats": {
+      "attack": 16,
+      "defense": 19,
+      "speed": 12,
+      "maxHp": 20,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 14,
+      "gold": 12
+    },
+    "source": {
+      "attack": "16",
+      "defense": "19*",
+      "speed": "12",
+      "maxHp": "20",
+      "maxMp": "0",
+      "exp": "14",
+      "gold": "12"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_016",
+    "name": "ガンコどり",
+    "sourceName": "ガンコどり",
+    "recruitable": false,
+    "stats": {
+      "attack": 15,
+      "defense": 24,
+      "speed": 15,
+      "maxHp": 22,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 15,
+      "gold": 11
+    },
+    "source": {
+      "attack": "15",
+      "defense": "24*",
+      "speed": "15",
+      "maxHp": "22",
+      "maxMp": "0",
+      "exp": "15",
+      "gold": "11"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_017",
+    "name": "テールイーター",
+    "sourceName": "テールイーター",
+    "recruitable": false,
+    "stats": {
+      "attack": 18,
+      "defense": 22,
+      "speed": 16,
+      "maxHp": 25,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 15,
+      "gold": 14
+    },
+    "source": {
+      "attack": "18",
+      "defense": "22*",
+      "speed": "16",
+      "maxHp": "25",
+      "maxMp": "0",
+      "exp": "15",
+      "gold": "14"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_018",
+    "name": "バブルスライム",
+    "sourceName": "バブルスライム",
+    "recruitable": false,
+    "stats": {
+      "attack": 20,
+      "defense": 12,
+      "speed": 17,
+      "maxHp": 18,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 16,
+      "gold": 9
+    },
+    "source": {
+      "attack": "20",
+      "defense": "12*",
+      "speed": "17",
+      "maxHp": "18",
+      "maxMp": "0",
+      "exp": "16",
+      "gold": "9"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_019",
+    "name": "もりじじい",
+    "sourceName": "もりじじい",
+    "recruitable": false,
+    "stats": {
+      "attack": 20,
+      "defense": 20,
+      "speed": 15,
+      "maxHp": 28,
+      "maxMp": 3
+    },
+    "rewards": {
+      "exp": 18,
+      "gold": 14
+    },
+    "source": {
+      "attack": "20",
+      "defense": "20*",
+      "speed": "15",
+      "maxHp": "-28",
+      "maxMp": "3?",
+      "exp": "18",
+      "gold": "14"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_020",
+    "name": "しのどれい",
+    "sourceName": "しのどれい",
+    "recruitable": false,
+    "stats": {
+      "attack": 45,
+      "defense": 36,
+      "speed": 20,
+      "maxHp": 48,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 18,
+      "gold": 18
+    },
+    "source": {
+      "attack": "45",
+      "defense": "36*",
+      "speed": "20",
+      "maxHp": "-48",
+      "maxMp": "0",
+      "exp": "18",
+      "gold": "18"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_021",
+    "name": "ピーポ",
+    "sourceName": "ピーポ",
+    "recruitable": false,
+    "stats": {
+      "attack": 25,
+      "defense": 31,
+      "speed": 15,
+      "maxHp": 30,
+      "maxMp": 8
+    },
+    "rewards": {
+      "exp": 19,
+      "gold": 15
+    },
+    "source": {
+      "attack": "25",
+      "defense": "31*",
+      "speed": "15",
+      "maxHp": "30*",
+      "maxMp": "8?",
+      "exp": "19",
+      "gold": "15"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_022",
+    "name": "ハエまどう",
+    "sourceName": "ハエまどう",
+    "recruitable": false,
+    "stats": {
+      "attack": 20,
+      "defense": 22,
+      "speed": 14,
+      "maxHp": 25,
+      "maxMp": 3
+    },
+    "rewards": {
+      "exp": 19,
+      "gold": 18
+    },
+    "source": {
+      "attack": "20",
+      "defense": "22*",
+      "speed": "14",
+      "maxHp": "25",
+      "maxMp": "3",
+      "exp": "19",
+      "gold": "18"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_023",
+    "name": "はなまどう",
+    "sourceName": "はなまどう",
+    "recruitable": false,
+    "stats": {
+      "attack": 40,
+      "defense": 20,
+      "speed": 20,
+      "maxHp": 32,
+      "maxMp": 9
+    },
+    "rewards": {
+      "exp": 19,
+      "gold": 20
+    },
+    "source": {
+      "attack": "40",
+      "defense": "20?",
+      "speed": "20",
+      "maxHp": "32",
+      "maxMp": "9",
+      "exp": "19",
+      "gold": "20"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_024",
+    "name": "ことだまつかい",
+    "sourceName": "ことだまつかい",
+    "recruitable": false,
+    "stats": {
+      "attack": 55,
+      "defense": 31,
+      "speed": 25,
+      "maxHp": 45,
+      "maxMp": 8
+    },
+    "rewards": {
+      "exp": 20,
+      "gold": 14
+    },
+    "source": {
+      "attack": "55",
+      "defense": "31*",
+      "speed": "25",
+      "maxHp": "45",
+      "maxMp": "8",
+      "exp": "20",
+      "gold": "14"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_025",
+    "name": "ビッグフェイス",
+    "sourceName": "ビッグフェイス",
+    "recruitable": false,
+    "stats": {
+      "attack": 26,
+      "defense": 48,
+      "speed": 14,
+      "maxHp": 28,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 21,
+      "gold": 13
+    },
+    "source": {
+      "attack": "26",
+      "defense": "48*",
+      "speed": "14",
+      "maxHp": "28",
+      "maxMp": "0",
+      "exp": "21",
+      "gold": "13"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_026",
+    "name": "どろにんぎょう",
+    "sourceName": "◎どろにんぎょう",
+    "recruitable": true,
+    "stats": {
+      "attack": 20,
+      "defense": 23,
+      "speed": 15,
+      "maxHp": 36,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 21,
+      "gold": 12
+    },
+    "source": {
+      "attack": "20",
+      "defense": "23*",
+      "speed": "15",
+      "maxHp": "-36",
+      "maxMp": "0",
+      "exp": "21",
+      "gold": "12"
+    },
+    "unknownFields": [],
+    "note": "◎付きのため仲間候補"
+  },
+  {
+    "id": "monster_027",
+    "name": "ヘルホーネット",
+    "sourceName": "ヘルホーネット",
+    "recruitable": false,
+    "stats": {
+      "attack": 32,
+      "defense": 35,
+      "speed": 15,
+      "maxHp": 39,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 22,
+      "gold": 17
+    },
+    "source": {
+      "attack": "32",
+      "defense": "35*",
+      "speed": "15",
+      "maxHp": "39",
+      "maxMp": "0",
+      "exp": "22",
+      "gold": "17"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_028",
+    "name": "スライムナイト",
+    "sourceName": "◎スライムナイト",
+    "recruitable": true,
+    "stats": {
+      "attack": 32,
+      "defense": 30,
+      "speed": 15,
+      "maxHp": 32,
+      "maxMp": 6
+    },
+    "rewards": {
+      "exp": 23,
+      "gold": 14
+    },
+    "source": {
+      "attack": "32",
+      "defense": "30*",
+      "speed": "15",
+      "maxHp": "32",
+      "maxMp": "6",
+      "exp": "23",
+      "gold": "14"
+    },
+    "unknownFields": [],
+    "note": "◎付きのため仲間候補"
+  },
+  {
+    "id": "monster_029",
+    "name": "シャドー",
+    "sourceName": "シャドー",
+    "recruitable": false,
+    "stats": {
+      "attack": 45,
+      "defense": 130,
+      "speed": 30,
+      "maxHp": 24,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 23,
+      "gold": 10
+    },
+    "source": {
+      "attack": "45",
+      "defense": "130*",
+      "speed": "30",
+      "maxHp": "-24",
+      "maxMp": "0",
+      "exp": "23",
+      "gold": "10"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_030",
+    "name": "ベビーゴイル",
+    "sourceName": "ベビーゴイル",
+    "recruitable": false,
+    "stats": {
+      "attack": 24,
+      "defense": 33,
+      "speed": 14,
+      "maxHp": 28,
+      "maxMp": 8
+    },
+    "rewards": {
+      "exp": 24,
+      "gold": 9
+    },
+    "source": {
+      "attack": "24",
+      "defense": "33*",
+      "speed": "14",
+      "maxHp": "28",
+      "maxMp": "8",
+      "exp": "24",
+      "gold": "9"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_031",
+    "name": "たまねぎマン",
+    "sourceName": "たまねぎマン",
+    "recruitable": false,
+    "stats": {
+      "attack": 50,
+      "defense": 39,
+      "speed": 25,
+      "maxHp": 45,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 24,
+      "gold": 16
+    },
+    "source": {
+      "attack": "50",
+      "defense": "39*",
+      "speed": "25",
+      "maxHp": "-45",
+      "maxMp": "0",
+      "exp": "24",
+      "gold": "16"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_032",
+    "name": "スライム（合体）",
+    "sourceName": "スライム（合体）",
+    "recruitable": false,
+    "stats": {
+      "attack": 0,
+      "defense": 72,
+      "speed": 70,
+      "maxHp": 150,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 24,
+      "gold": 18
+    },
+    "source": {
+      "attack": "?",
+      "defense": "72*",
+      "speed": "70",
+      "maxHp": "150*",
+      "maxMp": "0",
+      "exp": "24",
+      "gold": "18"
+    },
+    "unknownFields": [
+      "attack"
+    ],
+    "note": ""
+  },
+  {
+    "id": "monster_033",
+    "name": "モコモコじゅう",
+    "sourceName": "モコモコじゅう",
+    "recruitable": false,
+    "stats": {
+      "attack": 45,
+      "defense": 31,
+      "speed": 27,
+      "maxHp": 48,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 27,
+      "gold": 8
+    },
+    "source": {
+      "attack": "45",
+      "defense": "31*",
+      "speed": "27",
+      "maxHp": "48",
+      "maxMp": "0",
+      "exp": "27",
+      "gold": "8"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_034",
+    "name": "ちんもくのひつじ",
+    "sourceName": "ちんもくのひつじ",
+    "recruitable": false,
+    "stats": {
+      "attack": 50,
+      "defense": 37,
+      "speed": 18,
+      "maxHp": 50,
+      "maxMp": 3
+    },
+    "rewards": {
+      "exp": 28,
+      "gold": 13
+    },
+    "source": {
+      "attack": "50",
+      "defense": "37*",
+      "speed": "18",
+      "maxHp": "50",
+      "maxMp": "3",
+      "exp": "28",
+      "gold": "13"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_035",
+    "name": "デスファレーナ",
+    "sourceName": "デスファレーナ",
+    "recruitable": false,
+    "stats": {
+      "attack": 55,
+      "defense": 44,
+      "speed": 25,
+      "maxHp": 40,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 28,
+      "gold": 8
+    },
+    "source": {
+      "attack": "55",
+      "defense": "44*",
+      "speed": "25",
+      "maxHp": "40",
+      "maxMp": "0",
+      "exp": "28",
+      "gold": "8"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_036",
+    "name": "ホイミスライム",
+    "sourceName": "ホイミスライム",
+    "recruitable": false,
+    "stats": {
+      "attack": 40,
+      "defense": 40,
+      "speed": 40,
+      "maxHp": 45,
+      "maxMp": 34
+    },
+    "rewards": {
+      "exp": 33,
+      "gold": 18
+    },
+    "source": {
+      "attack": "40",
+      "defense": "40*",
+      "speed": "40",
+      "maxHp": "45",
+      "maxMp": "34",
+      "exp": "33",
+      "gold": "18"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_037",
+    "name": "ヘルボックル",
+    "sourceName": "ヘルボックル",
+    "recruitable": false,
+    "stats": {
+      "attack": 45,
+      "defense": 50,
+      "speed": 30,
+      "maxHp": 35,
+      "maxMp": 9
+    },
+    "rewards": {
+      "exp": 33,
+      "gold": 19
+    },
+    "source": {
+      "attack": "45",
+      "defense": "50*",
+      "speed": "30",
+      "maxHp": "35",
+      "maxMp": "9",
+      "exp": "33",
+      "gold": "19"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_038",
+    "name": "フレイムマン",
+    "sourceName": "フレイムマン",
+    "recruitable": false,
+    "stats": {
+      "attack": 50,
+      "defense": 33,
+      "speed": 30,
+      "maxHp": 42,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 38,
+      "gold": 22
+    },
+    "source": {
+      "attack": "50",
+      "defense": "33*",
+      "speed": "30",
+      "maxHp": "42*",
+      "maxMp": "0",
+      "exp": "38",
+      "gold": "22"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_039",
+    "name": "ケダモン",
+    "sourceName": "ケダモン",
+    "recruitable": false,
+    "stats": {
+      "attack": 60,
+      "defense": 40,
+      "speed": 30,
+      "maxHp": 90,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 38,
+      "gold": 28
+    },
+    "source": {
+      "attack": "60",
+      "defense": "40*",
+      "speed": "30",
+      "maxHp": "90*",
+      "maxMp": "0",
+      "exp": "38",
+      "gold": "28"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_040",
+    "name": "はねせんにん",
+    "sourceName": "はねせんにん",
+    "recruitable": false,
+    "stats": {
+      "attack": 0,
+      "defense": 39,
+      "speed": 30,
+      "maxHp": 55,
+      "maxMp": 12
+    },
+    "rewards": {
+      "exp": 42,
+      "gold": 27
+    },
+    "source": {
+      "attack": "?",
+      "defense": "39*",
+      "speed": "30",
+      "maxHp": "55",
+      "maxMp": "12",
+      "exp": "42",
+      "gold": "27"
+    },
+    "unknownFields": [
+      "attack"
+    ],
+    "note": ""
+  },
+  {
+    "id": "monster_041",
+    "name": "スカルガルー",
+    "sourceName": "スカルガルー",
+    "recruitable": false,
+    "stats": {
+      "attack": 65,
+      "defense": 40,
+      "speed": 22,
+      "maxHp": 46,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 46,
+      "gold": 30
+    },
+    "source": {
+      "attack": "65",
+      "defense": "40*",
+      "speed": "22",
+      "maxHp": "46",
+      "maxMp": "0",
+      "exp": "46",
+      "gold": "30"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_042",
+    "name": "ダンスキャロット",
+    "sourceName": "ダンスキャロット",
+    "recruitable": false,
+    "stats": {
+      "attack": 65,
+      "defense": 34,
+      "speed": 35,
+      "maxHp": 54,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 48,
+      "gold": 29
+    },
+    "source": {
+      "attack": "65",
+      "defense": "34*",
+      "speed": "35",
+      "maxHp": "54*",
+      "maxMp": "0",
+      "exp": "48",
+      "gold": "29"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_043",
+    "name": "フェアリードラゴン",
+    "sourceName": "フェアリードラゴン",
+    "recruitable": false,
+    "stats": {
+      "attack": 65,
+      "defense": 60,
+      "speed": 27,
+      "maxHp": 45,
+      "maxMp": 5
+    },
+    "rewards": {
+      "exp": 49,
+      "gold": 27
+    },
+    "source": {
+      "attack": "65",
+      "defense": "60*",
+      "speed": "27",
+      "maxHp": "45",
+      "maxMp": "5",
+      "exp": "49",
+      "gold": "27"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_044",
+    "name": "ダークホビット",
+    "sourceName": "ダークホビット",
+    "recruitable": false,
+    "stats": {
+      "attack": 30,
+      "defense": 42,
+      "speed": 20,
+      "maxHp": 60,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 50,
+      "gold": 38
+    },
+    "source": {
+      "attack": "30",
+      "defense": "42*",
+      "speed": "20",
+      "maxHp": "60*",
+      "maxMp": "0",
+      "exp": "50",
+      "gold": "38"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_045",
+    "name": "おどるほうせき",
+    "sourceName": "おどるほうせき",
+    "recruitable": false,
+    "stats": {
+      "attack": 50,
+      "defense": 80,
+      "speed": 60,
+      "maxHp": 90,
+      "maxMp": 40
+    },
+    "rewards": {
+      "exp": 370,
+      "gold": 0
+    },
+    "source": {
+      "attack": "50",
+      "defense": "80*",
+      "speed": "60",
+      "maxHp": "-90",
+      "maxMp": "40以上50",
+      "exp": "370",
+      "gold": ""
+    },
+    "unknownFields": [
+      "gold"
+    ],
+    "note": ""
+  },
+  {
+    "id": "monster_046",
+    "name": "ヒートギズモ",
+    "sourceName": "ヒートギズモ",
+    "recruitable": false,
+    "stats": {
+      "attack": 65,
+      "defense": 48,
+      "speed": 35,
+      "maxHp": 53,
+      "maxMp": 20
+    },
+    "rewards": {
+      "exp": 53,
+      "gold": 17
+    },
+    "source": {
+      "attack": "65",
+      "defense": "48*",
+      "speed": "35",
+      "maxHp": "53",
+      "maxMp": "20",
+      "exp": "53",
+      "gold": "17"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_047",
+    "name": "キラーグース",
+    "sourceName": "キラーグース",
+    "recruitable": false,
+    "stats": {
+      "attack": 70,
+      "defense": 45,
+      "speed": 30,
+      "maxHp": 72,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 55,
+      "gold": 25
+    },
+    "source": {
+      "attack": "70",
+      "defense": "45*",
+      "speed": "30",
+      "maxHp": "72*",
+      "maxMp": "0",
+      "exp": "55",
+      "gold": "25"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_048",
+    "name": "バットマジック",
+    "sourceName": "バットマジック",
+    "recruitable": false,
+    "stats": {
+      "attack": 70,
+      "defense": 44,
+      "speed": 35,
+      "maxHp": 50,
+      "maxMp": 12
+    },
+    "rewards": {
+      "exp": 55,
+      "gold": 28
+    },
+    "source": {
+      "attack": "70",
+      "defense": "44*",
+      "speed": "35",
+      "maxHp": "50",
+      "maxMp": "12",
+      "exp": "55",
+      "gold": "28"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_049",
+    "name": "ぶちスライムベス",
+    "sourceName": "ぶちスライムベス",
+    "recruitable": false,
+    "stats": {
+      "attack": 0,
+      "defense": 74,
+      "speed": 60,
+      "maxHp": 90,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 63,
+      "gold": 49
+    },
+    "source": {
+      "attack": "?",
+      "defense": "74*",
+      "speed": "60",
+      "maxHp": "-90",
+      "maxMp": "0",
+      "exp": "63",
+      "gold": "49"
+    },
+    "unknownFields": [
+      "attack"
+    ],
+    "note": ""
+  },
+  {
+    "id": "monster_050",
+    "name": "マドハンド",
+    "sourceName": "マドハンド",
+    "recruitable": false,
+    "stats": {
+      "attack": 90,
+      "defense": 63,
+      "speed": 75,
+      "maxHp": 126,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 63,
+      "gold": 50
+    },
+    "source": {
+      "attack": "90",
+      "defense": "63*",
+      "speed": "75",
+      "maxHp": "126*",
+      "maxMp": "0",
+      "exp": "63",
+      "gold": "50"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_051",
+    "name": "オークマン",
+    "sourceName": "オークマン",
+    "recruitable": false,
+    "stats": {
+      "attack": 85,
+      "defense": 42,
+      "speed": 40,
+      "maxHp": 78,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 65,
+      "gold": 40
+    },
+    "source": {
+      "attack": "85",
+      "defense": "42*",
+      "speed": "40",
+      "maxHp": "78*",
+      "maxMp": "0",
+      "exp": "65",
+      "gold": "40"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_052",
+    "name": "くさったしたい",
+    "sourceName": "◎くさったしたい",
+    "recruitable": true,
+    "stats": {
+      "attack": 67,
+      "defense": 2,
+      "speed": 33,
+      "maxHp": 90,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 67,
+      "gold": 15
+    },
+    "source": {
+      "attack": "67",
+      "defense": "2*",
+      "speed": "33",
+      "maxHp": "-90",
+      "maxMp": "0",
+      "exp": "67",
+      "gold": "15"
+    },
+    "unknownFields": [],
+    "note": "◎付きのため仲間候補"
+  },
+  {
+    "id": "monster_053",
+    "name": "あくまのカガミ",
+    "sourceName": "あくまのカガミ",
+    "recruitable": false,
+    "stats": {
+      "attack": 70,
+      "defense": 75,
+      "speed": 25,
+      "maxHp": 90,
+      "maxMp": 50
+    },
+    "rewards": {
+      "exp": 68,
+      "gold": 35
+    },
+    "source": {
+      "attack": "70",
+      "defense": "75*",
+      "speed": "25",
+      "maxHp": "90*",
+      "maxMp": "50",
+      "exp": "68",
+      "gold": "35"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_054",
+    "name": "スライムつむり",
+    "sourceName": "スライムつむり",
+    "recruitable": false,
+    "stats": {
+      "attack": 70,
+      "defense": 160,
+      "speed": 75,
+      "maxHp": 120,
+      "maxMp": 6
+    },
+    "rewards": {
+      "exp": 69,
+      "gold": 35
+    },
+    "source": {
+      "attack": "70",
+      "defense": "160*",
+      "speed": "75",
+      "maxHp": "120*",
+      "maxMp": "6",
+      "exp": "69",
+      "gold": "35"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_055",
+    "name": "ドッグスナイパー",
+    "sourceName": "ドッグスナイパー",
+    "recruitable": false,
+    "stats": {
+      "attack": 80,
+      "defense": 40,
+      "speed": 60,
+      "maxHp": 84,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 72,
+      "gold": 27
+    },
+    "source": {
+      "attack": "80",
+      "defense": "40*",
+      "speed": "60",
+      "maxHp": "84*",
+      "maxMp": "0",
+      "exp": "72",
+      "gold": "27"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_056",
+    "name": "どれいへいし",
+    "sourceName": "どれいへいし",
+    "recruitable": false,
+    "stats": {
+      "attack": 80,
+      "defense": 43,
+      "speed": 35,
+      "maxHp": 75,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 73,
+      "gold": 20
+    },
+    "source": {
+      "attack": "80",
+      "defense": "43*",
+      "speed": "35",
+      "maxHp": "-75",
+      "maxMp": "0",
+      "exp": "73",
+      "gold": "20"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_057",
+    "name": "エビルポット",
+    "sourceName": "エビルポット",
+    "recruitable": false,
+    "stats": {
+      "attack": 60,
+      "defense": 60,
+      "speed": 36,
+      "maxHp": 55,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 74,
+      "gold": 28
+    },
+    "source": {
+      "attack": "60",
+      "defense": "60?",
+      "speed": "36",
+      "maxHp": "-55",
+      "maxMp": "0",
+      "exp": "74",
+      "gold": "28"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_058",
+    "name": "しびれくらげ",
+    "sourceName": "しびれくらげ",
+    "recruitable": false,
+    "stats": {
+      "attack": 80,
+      "defense": 70,
+      "speed": 50,
+      "maxHp": 90,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 77,
+      "gold": 34
+    },
+    "source": {
+      "attack": "80",
+      "defense": "70*",
+      "speed": "50",
+      "maxHp": "90*",
+      "maxMp": "0",
+      "exp": "77",
+      "gold": "34"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_059",
+    "name": "ぬけがらへい",
+    "sourceName": "ぬけがらへい",
+    "recruitable": false,
+    "stats": {
+      "attack": 85,
+      "defense": 31,
+      "speed": 35,
+      "maxHp": 96,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 78,
+      "gold": 28
+    },
+    "source": {
+      "attack": "85",
+      "defense": "31*",
+      "speed": "35",
+      "maxHp": "96*",
+      "maxMp": "0",
+      "exp": "78",
+      "gold": "28"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_060",
+    "name": "おばけうみうし",
+    "sourceName": "おばけうみうし",
+    "recruitable": false,
+    "stats": {
+      "attack": 80,
+      "defense": 55,
+      "speed": 55,
+      "maxHp": 108,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 79,
+      "gold": 74
+    },
+    "source": {
+      "attack": "80",
+      "defense": "55*",
+      "speed": "55",
+      "maxHp": "108*",
+      "maxMp": "0",
+      "exp": "79",
+      "gold": "74"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_061",
+    "name": "ポイズンキャロット",
+    "sourceName": "ポイズンキャロット",
+    "recruitable": false,
+    "stats": {
+      "attack": 85,
+      "defense": 40,
+      "speed": 55,
+      "maxHp": 80,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 79,
+      "gold": 28
+    },
+    "source": {
+      "attack": "85",
+      "defense": "40*",
+      "speed": "55",
+      "maxHp": "-80",
+      "maxMp": "0",
+      "exp": "79",
+      "gold": "28"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_062",
+    "name": "ポイズンキラー",
+    "sourceName": "ポイズンキラー",
+    "recruitable": false,
+    "stats": {
+      "attack": 95,
+      "defense": 80,
+      "speed": 65,
+      "maxHp": 95,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 80,
+      "gold": 60
+    },
+    "source": {
+      "attack": "95",
+      "defense": "80*",
+      "speed": "65",
+      "maxHp": "-95",
+      "maxMp": "0",
+      "exp": "80",
+      "gold": "60"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_063",
+    "name": "じごくのたまねぎ",
+    "sourceName": "じごくのたまねぎ",
+    "recruitable": false,
+    "stats": {
+      "attack": 95,
+      "defense": 57,
+      "speed": 80,
+      "maxHp": 156,
+      "maxMp": 5
+    },
+    "rewards": {
+      "exp": 80,
+      "gold": 30
+    },
+    "source": {
+      "attack": "95",
+      "defense": "57*",
+      "speed": "80",
+      "maxHp": "156*",
+      "maxMp": "5",
+      "exp": "80",
+      "gold": "30"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_064",
+    "name": "シーフラワー",
+    "sourceName": "シーフラワー",
+    "recruitable": false,
+    "stats": {
+      "attack": 85,
+      "defense": 48,
+      "speed": 40,
+      "maxHp": 75,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 80,
+      "gold": 65
+    },
+    "source": {
+      "attack": "85",
+      "defense": "48*",
+      "speed": "40",
+      "maxHp": "75",
+      "maxMp": "0",
+      "exp": "80",
+      "gold": "65"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_065",
+    "name": "カメレオンマン",
+    "sourceName": "カメレオンマン",
+    "recruitable": false,
+    "stats": {
+      "attack": 80,
+      "defense": 70,
+      "speed": 70,
+      "maxHp": 72,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 80,
+      "gold": 32
+    },
+    "source": {
+      "attack": "80",
+      "defense": "70*",
+      "speed": "70",
+      "maxHp": "72*",
+      "maxMp": "0",
+      "exp": "80",
+      "gold": "32"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_066",
+    "name": "スーパーテンツク",
+    "sourceName": "◎スーパーテンツク",
+    "recruitable": true,
+    "stats": {
+      "attack": 55,
+      "defense": 40,
+      "speed": 65,
+      "maxHp": 80,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 81,
+      "gold": 52
+    },
+    "source": {
+      "attack": "55",
+      "defense": "40*",
+      "speed": "65",
+      "maxHp": "80",
+      "maxMp": "0",
+      "exp": "81",
+      "gold": "52"
+    },
+    "unknownFields": [],
+    "note": "◎付きのため仲間候補"
+  },
+  {
+    "id": "monster_067",
+    "name": "ストーンビースト",
+    "sourceName": "ストーンビースト",
+    "recruitable": false,
+    "stats": {
+      "attack": 85,
+      "defense": 110,
+      "speed": 40,
+      "maxHp": 78,
+      "maxMp": 18
+    },
+    "rewards": {
+      "exp": 82,
+      "gold": 37
+    },
+    "source": {
+      "attack": "85",
+      "defense": "110*",
+      "speed": "40",
+      "maxHp": "78*",
+      "maxMp": "18",
+      "exp": "82",
+      "gold": "37"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_068",
+    "name": "こうもりはくしゃく",
+    "sourceName": "こうもりはくしゃく",
+    "recruitable": false,
+    "stats": {
+      "attack": 90,
+      "defense": 130,
+      "speed": 70,
+      "maxHp": 138,
+      "maxMp": 10
+    },
+    "rewards": {
+      "exp": 83,
+      "gold": 69
+    },
+    "source": {
+      "attack": "90",
+      "defense": "130*",
+      "speed": "70",
+      "maxHp": "138*",
+      "maxMp": "10",
+      "exp": "83",
+      "gold": "69"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_069",
+    "name": "ブラッディハンド",
+    "sourceName": "ブラッディハンド",
+    "recruitable": false,
+    "stats": {
+      "attack": 115,
+      "defense": 88,
+      "speed": 75,
+      "maxHp": 150,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 83,
+      "gold": 37
+    },
+    "source": {
+      "attack": "115",
+      "defense": "88*",
+      "speed": "75",
+      "maxHp": "150*",
+      "maxMp": "0",
+      "exp": "83",
+      "gold": "37"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_070",
+    "name": "ラリホーン",
+    "sourceName": "ラリホーン",
+    "recruitable": false,
+    "stats": {
+      "attack": 92,
+      "defense": 78,
+      "speed": 50,
+      "maxHp": 126,
+      "maxMp": 13
+    },
+    "rewards": {
+      "exp": 85,
+      "gold": 30
+    },
+    "source": {
+      "attack": "92",
+      "defense": "78*",
+      "speed": "50",
+      "maxHp": "126*",
+      "maxMp": "13",
+      "exp": "85",
+      "gold": "30"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_071",
+    "name": "マッドロン",
+    "sourceName": "マッドロン",
+    "recruitable": false,
+    "stats": {
+      "attack": 70,
+      "defense": 30,
+      "speed": 40,
+      "maxHp": 90,
+      "maxMp": 5
+    },
+    "rewards": {
+      "exp": 88,
+      "gold": 19
+    },
+    "source": {
+      "attack": "70",
+      "defense": "30*",
+      "speed": "40",
+      "maxHp": "-90",
+      "maxMp": "5",
+      "exp": "88",
+      "gold": "19"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_072",
+    "name": "オンディーナ",
+    "sourceName": "オンディーナ",
+    "recruitable": false,
+    "stats": {
+      "attack": 105,
+      "defense": 66,
+      "speed": 65,
+      "maxHp": 200,
+      "maxMp": 50
+    },
+    "rewards": {
+      "exp": 89,
+      "gold": 105
+    },
+    "source": {
+      "attack": "105",
+      "defense": "66*",
+      "speed": "65",
+      "maxHp": "-200",
+      "maxMp": "50",
+      "exp": "89",
+      "gold": "105"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_073",
+    "name": "おおイグアナ",
+    "sourceName": "おおイグアナ",
+    "recruitable": false,
+    "stats": {
+      "attack": 100,
+      "defense": 55,
+      "speed": 60,
+      "maxHp": 75,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 90,
+      "gold": 32
+    },
+    "source": {
+      "attack": "100",
+      "defense": "55*",
+      "speed": "60",
+      "maxHp": "-75",
+      "maxMp": "0",
+      "exp": "90",
+      "gold": "32"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_074",
+    "name": "ウィンドマージ",
+    "sourceName": "◎ウィンドマージ",
+    "recruitable": true,
+    "stats": {
+      "attack": 90,
+      "defense": 102,
+      "speed": 90,
+      "maxHp": 156,
+      "maxMp": 8
+    },
+    "rewards": {
+      "exp": 90,
+      "gold": 57
+    },
+    "source": {
+      "attack": "90",
+      "defense": "102*",
+      "speed": "90",
+      "maxHp": "156*",
+      "maxMp": "8?",
+      "exp": "90",
+      "gold": "57"
+    },
+    "unknownFields": [],
+    "note": "◎付きのため仲間候補"
+  },
+  {
+    "id": "monster_075",
+    "name": "たこつぼこぞう",
+    "sourceName": "たこつぼこぞう",
+    "recruitable": false,
+    "stats": {
+      "attack": 60,
+      "defense": 62,
+      "speed": 65,
+      "maxHp": 84,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 92,
+      "gold": 50
+    },
+    "source": {
+      "attack": "60?",
+      "defense": "62*",
+      "speed": "65",
+      "maxHp": "84*",
+      "maxMp": "0",
+      "exp": "92",
+      "gold": "50"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_076",
+    "name": "ぶちベホマラー",
+    "sourceName": "ぶちベホマラー",
+    "recruitable": false,
+    "stats": {
+      "attack": 0,
+      "defense": 73,
+      "speed": 70,
+      "maxHp": 180,
+      "maxMp": 20
+    },
+    "rewards": {
+      "exp": 94,
+      "gold": 80
+    },
+    "source": {
+      "attack": "?",
+      "defense": "73*",
+      "speed": "70",
+      "maxHp": "180*",
+      "maxMp": "20",
+      "exp": "94",
+      "gold": "80"
+    },
+    "unknownFields": [
+      "attack"
+    ],
+    "note": ""
+  },
+  {
+    "id": "monster_077",
+    "name": "ふなゆうれい",
+    "sourceName": "ふなゆうれい",
+    "recruitable": false,
+    "stats": {
+      "attack": 80,
+      "defense": 58,
+      "speed": 40,
+      "maxHp": 125,
+      "maxMp": 6
+    },
+    "rewards": {
+      "exp": 95,
+      "gold": 63
+    },
+    "source": {
+      "attack": "80",
+      "defense": "58*",
+      "speed": "40",
+      "maxHp": "-125",
+      "maxMp": "6",
+      "exp": "95",
+      "gold": "63"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_078",
+    "name": "スカルライダー",
+    "sourceName": "スカルライダー",
+    "recruitable": false,
+    "stats": {
+      "attack": 90,
+      "defense": 63,
+      "speed": 65,
+      "maxHp": 78,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 95,
+      "gold": 41
+    },
+    "source": {
+      "attack": "90",
+      "defense": "63*",
+      "speed": "65",
+      "maxHp": "78*",
+      "maxMp": "0",
+      "exp": "95",
+      "gold": "41"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_079",
+    "name": "さまようへいたい",
+    "sourceName": "さまようへいたい",
+    "recruitable": false,
+    "stats": {
+      "attack": 95,
+      "defense": 62,
+      "speed": 70,
+      "maxHp": 150,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 96,
+      "gold": 42
+    },
+    "source": {
+      "attack": "95",
+      "defense": "62*",
+      "speed": "70",
+      "maxHp": "-150",
+      "maxMp": "0",
+      "exp": "96",
+      "gold": "42"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_080",
+    "name": "ヘルゼーエン",
+    "sourceName": "ヘルゼーエン",
+    "recruitable": false,
+    "stats": {
+      "attack": 85,
+      "defense": 58,
+      "speed": 75,
+      "maxHp": 126,
+      "maxMp": 16
+    },
+    "rewards": {
+      "exp": 98,
+      "gold": 46
+    },
+    "source": {
+      "attack": "85",
+      "defense": "58*",
+      "speed": "75",
+      "maxHp": "126*",
+      "maxMp": "16",
+      "exp": "98",
+      "gold": "46"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_081",
+    "name": "おおうつぼ",
+    "sourceName": "おおうつぼ",
+    "recruitable": false,
+    "stats": {
+      "attack": 95,
+      "defense": 80,
+      "speed": 50,
+      "maxHp": 150,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 98,
+      "gold": 45
+    },
+    "source": {
+      "attack": "95",
+      "defense": "80*",
+      "speed": "50",
+      "maxHp": "-150",
+      "maxMp": "0",
+      "exp": "98",
+      "gold": "45"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_082",
+    "name": "ひとくいばこ",
+    "sourceName": "ひとくいばこ",
+    "recruitable": false,
+    "stats": {
+      "attack": 80,
+      "defense": 50,
+      "speed": 35,
+      "maxHp": 190,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 99,
+      "gold": 80
+    },
+    "source": {
+      "attack": "80",
+      "defense": "50",
+      "speed": "35",
+      "maxHp": "-190",
+      "maxMp": "?",
+      "exp": "99",
+      "gold": "80"
+    },
+    "unknownFields": [
+      "maxMp"
+    ],
+    "note": ""
+  },
+  {
+    "id": "monster_083",
+    "name": "ガマニアン",
+    "sourceName": "ガマニアン",
+    "recruitable": false,
+    "stats": {
+      "attack": 95,
+      "defense": 67,
+      "speed": 65,
+      "maxHp": 90,
+      "maxMp": 4
+    },
+    "rewards": {
+      "exp": 100,
+      "gold": 47
+    },
+    "source": {
+      "attack": "95",
+      "defense": "67*",
+      "speed": "65",
+      "maxHp": "90*",
+      "maxMp": "4",
+      "exp": "100",
+      "gold": "47"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_084",
+    "name": "キメイラ",
+    "sourceName": "◎キメイラ",
+    "recruitable": true,
+    "stats": {
+      "attack": 95,
+      "defense": 73,
+      "speed": 85,
+      "maxHp": 120,
+      "maxMp": 17
+    },
+    "rewards": {
+      "exp": 103,
+      "gold": 65
+    },
+    "source": {
+      "attack": "95",
+      "defense": "73*",
+      "speed": "85",
+      "maxHp": "120*",
+      "maxMp": "17",
+      "exp": "103",
+      "gold": "65"
+    },
+    "unknownFields": [],
+    "note": "◎付きのため仲間候補"
+  },
+  {
+    "id": "monster_085",
+    "name": "ようじゅつし",
+    "sourceName": "ようじゅつし",
+    "recruitable": false,
+    "stats": {
+      "attack": 80,
+      "defense": 80,
+      "speed": 45,
+      "maxHp": 120,
+      "maxMp": 30
+    },
+    "rewards": {
+      "exp": 105,
+      "gold": 77
+    },
+    "source": {
+      "attack": "80",
+      "defense": "80*",
+      "speed": "45",
+      "maxHp": "120*",
+      "maxMp": "30",
+      "exp": "105",
+      "gold": "77"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_086",
+    "name": "デビルアーマー",
+    "sourceName": "デビルアーマー",
+    "recruitable": false,
+    "stats": {
+      "attack": 95,
+      "defense": 120,
+      "speed": 40,
+      "maxHp": 75,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 108,
+      "gold": 45
+    },
+    "source": {
+      "attack": "95",
+      "defense": "120*",
+      "speed": "40",
+      "maxHp": "-75",
+      "maxMp": "0",
+      "exp": "108",
+      "gold": "45"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_087",
+    "name": "バーニングブレス",
+    "sourceName": "バーニングブレス",
+    "recruitable": false,
+    "stats": {
+      "attack": 80,
+      "defense": 59,
+      "speed": 50,
+      "maxHp": 108,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 110,
+      "gold": 53
+    },
+    "source": {
+      "attack": "80",
+      "defense": "59*",
+      "speed": "50",
+      "maxHp": "108*",
+      "maxMp": "0",
+      "exp": "110",
+      "gold": "53"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_088",
+    "name": "きりさきピエロ",
+    "sourceName": "きりさきピエロ",
+    "recruitable": false,
+    "stats": {
+      "attack": 80,
+      "defense": 82,
+      "speed": 50,
+      "maxHp": 90,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 110,
+      "gold": 65
+    },
+    "source": {
+      "attack": "80",
+      "defense": "82*",
+      "speed": "50",
+      "maxHp": "90*",
+      "maxMp": "0",
+      "exp": "110",
+      "gold": "65"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_089",
+    "name": "ヘルドラード",
+    "sourceName": "ヘルドラード",
+    "recruitable": false,
+    "stats": {
+      "attack": 110,
+      "defense": 97,
+      "speed": 90,
+      "maxHp": 150,
+      "maxMp": 6
+    },
+    "rewards": {
+      "exp": 113,
+      "gold": 85
+    },
+    "source": {
+      "attack": "110",
+      "defense": "97*",
+      "speed": "90",
+      "maxHp": "150*",
+      "maxMp": "6",
+      "exp": "113",
+      "gold": "85"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_090",
+    "name": "ダークゴイル",
+    "sourceName": "ダークゴイル",
+    "recruitable": false,
+    "stats": {
+      "attack": 140,
+      "defense": 72,
+      "speed": 90,
+      "maxHp": 156,
+      "maxMp": 15
+    },
+    "rewards": {
+      "exp": 113,
+      "gold": 63
+    },
+    "source": {
+      "attack": "140",
+      "defense": "72*",
+      "speed": "90",
+      "maxHp": "156*",
+      "maxMp": "15",
+      "exp": "113",
+      "gold": "63"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_091",
+    "name": "キラーウェーブ",
+    "sourceName": "キラーウェーブ",
+    "recruitable": false,
+    "stats": {
+      "attack": 90,
+      "defense": 80,
+      "speed": 50,
+      "maxHp": 108,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 115,
+      "gold": 20
+    },
+    "source": {
+      "attack": "90",
+      "defense": "80*",
+      "speed": "50",
+      "maxHp": "108*",
+      "maxMp": "0",
+      "exp": "115",
+      "gold": "20"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_092",
+    "name": "レッサーデーモン",
+    "sourceName": "◎レッサーデーモン",
+    "recruitable": true,
+    "stats": {
+      "attack": 80,
+      "defense": 52,
+      "speed": 40,
+      "maxHp": 144,
+      "maxMp": 4
+    },
+    "rewards": {
+      "exp": 115,
+      "gold": 39
+    },
+    "source": {
+      "attack": "80",
+      "defense": "52*",
+      "speed": "40",
+      "maxHp": "144*",
+      "maxMp": "4",
+      "exp": "115",
+      "gold": "39"
+    },
+    "unknownFields": [],
+    "note": "◎付きのため仲間候補"
+  },
+  {
+    "id": "monster_093",
+    "name": "エビラ",
+    "sourceName": "エビラ",
+    "recruitable": false,
+    "stats": {
+      "attack": 90,
+      "defense": 103,
+      "speed": 40,
+      "maxHp": 96,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 117,
+      "gold": 40
+    },
+    "source": {
+      "attack": "90",
+      "defense": "103*",
+      "speed": "40",
+      "maxHp": "96*",
+      "maxMp": "0",
+      "exp": "117",
+      "gold": "40"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_094",
+    "name": "メダパニとかげ",
+    "sourceName": "メダパニとかげ",
+    "recruitable": false,
+    "stats": {
+      "attack": 100,
+      "defense": 69,
+      "speed": 80,
+      "maxHp": 132,
+      "maxMp": 10
+    },
+    "rewards": {
+      "exp": 118,
+      "gold": 54
+    },
+    "source": {
+      "attack": "100",
+      "defense": "69*",
+      "speed": "80",
+      "maxHp": "132*",
+      "maxMp": "10?",
+      "exp": "118",
+      "gold": "54"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_095",
+    "name": "マッドウェーブ",
+    "sourceName": "マッドウェーブ",
+    "recruitable": false,
+    "stats": {
+      "attack": 95,
+      "defense": 88,
+      "speed": 80,
+      "maxHp": 156,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 119,
+      "gold": 70
+    },
+    "source": {
+      "attack": "95",
+      "defense": "88*",
+      "speed": "80",
+      "maxHp": "156*",
+      "maxMp": "0",
+      "exp": "119",
+      "gold": "70"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_096",
+    "name": "ユニコーン",
+    "sourceName": "ユニコーン",
+    "recruitable": false,
+    "stats": {
+      "attack": 95,
+      "defense": 60,
+      "speed": 65,
+      "maxHp": 145,
+      "maxMp": 9
+    },
+    "rewards": {
+      "exp": 120,
+      "gold": 45
+    },
+    "source": {
+      "attack": "95",
+      "defense": "60*",
+      "speed": "65",
+      "maxHp": "-145",
+      "maxMp": "9",
+      "exp": "120",
+      "gold": "45"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_097",
+    "name": "マリンスライム",
+    "sourceName": "マリンスライム",
+    "recruitable": false,
+    "stats": {
+      "attack": 50,
+      "defense": 50,
+      "speed": 90,
+      "maxHp": 3,
+      "maxMp": 120
+    },
+    "rewards": {
+      "exp": 70,
+      "gold": 0
+    },
+    "source": {
+      "attack": "50?135*",
+      "defense": "50",
+      "speed": "90*",
+      "maxHp": "3",
+      "maxMp": "120",
+      "exp": "70",
+      "gold": ""
+    },
+    "unknownFields": [
+      "gold"
+    ],
+    "note": ""
+  },
+  {
+    "id": "monster_098",
+    "name": "ばくだんいわ",
+    "sourceName": "◎ばくだんいわ",
+    "recruitable": true,
+    "stats": {
+      "attack": 0,
+      "defense": 150,
+      "speed": 60,
+      "maxHp": 260,
+      "maxMp": 1
+    },
+    "rewards": {
+      "exp": 120,
+      "gold": 13
+    },
+    "source": {
+      "attack": "?",
+      "defense": "150*",
+      "speed": "60",
+      "maxHp": "-260",
+      "maxMp": "1?",
+      "exp": "120",
+      "gold": "13"
+    },
+    "unknownFields": [
+      "attack"
+    ],
+    "note": "◎付きのため仲間候補"
+  },
+  {
+    "id": "monster_099",
+    "name": "ベホマスライム",
+    "sourceName": "ベホマスライム",
+    "recruitable": false,
+    "stats": {
+      "attack": 100,
+      "defense": 72,
+      "speed": 90,
+      "maxHp": 168,
+      "maxMp": 28
+    },
+    "rewards": {
+      "exp": 120,
+      "gold": 43
+    },
+    "source": {
+      "attack": "100",
+      "defense": "72*",
+      "speed": "90",
+      "maxHp": "168*",
+      "maxMp": "28",
+      "exp": "120",
+      "gold": "43"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_100",
+    "name": "メタルライダー",
+    "sourceName": "メタルライダー",
+    "recruitable": false,
+    "stats": {
+      "attack": 95,
+      "defense": 115,
+      "speed": 80,
+      "maxHp": 180,
+      "maxMp": 8
+    },
+    "rewards": {
+      "exp": 125,
+      "gold": 60
+    },
+    "source": {
+      "attack": "95",
+      "defense": "115*",
+      "speed": "80",
+      "maxHp": "180*",
+      "maxMp": "8",
+      "exp": "125",
+      "gold": "60"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_101",
+    "name": "アクアハンター",
+    "sourceName": "アクアハンター",
+    "recruitable": false,
+    "stats": {
+      "attack": 100,
+      "defense": 93,
+      "speed": 85,
+      "maxHp": 132,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 125,
+      "gold": 68
+    },
+    "source": {
+      "attack": "100",
+      "defense": "93*",
+      "speed": "85",
+      "maxHp": "132*",
+      "maxMp": "0",
+      "exp": "125",
+      "gold": "68"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_102",
+    "name": "マリンギャング",
+    "sourceName": "マリンギャング",
+    "recruitable": false,
+    "stats": {
+      "attack": 130,
+      "defense": 94,
+      "speed": 85,
+      "maxHp": 120,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 126,
+      "gold": 80
+    },
+    "source": {
+      "attack": "130",
+      "defense": "94*",
+      "speed": "85",
+      "maxHp": "120*",
+      "maxMp": "0",
+      "exp": "126",
+      "gold": "80"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_103",
+    "name": "メイジキメイラ",
+    "sourceName": "メイジキメイラ",
+    "recruitable": false,
+    "stats": {
+      "attack": 100,
+      "defense": 80,
+      "speed": 85,
+      "maxHp": 180,
+      "maxMp": 50
+    },
+    "rewards": {
+      "exp": 127,
+      "gold": 43
+    },
+    "source": {
+      "attack": "100?",
+      "defense": "80*",
+      "speed": "85",
+      "maxHp": "180*",
+      "maxMp": "50",
+      "exp": "127",
+      "gold": "43"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_104",
+    "name": "エビルドライブ",
+    "sourceName": "エビルドライブ",
+    "recruitable": false,
+    "stats": {
+      "attack": 115,
+      "defense": 75,
+      "speed": 85,
+      "maxHp": 198,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 130,
+      "gold": 43
+    },
+    "source": {
+      "attack": "115",
+      "defense": "75*",
+      "speed": "85",
+      "maxHp": "198*",
+      "maxMp": "0",
+      "exp": "130",
+      "gold": "43"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_105",
+    "name": "フライングダック",
+    "sourceName": "フライングダック",
+    "recruitable": false,
+    "stats": {
+      "attack": 100,
+      "defense": 84,
+      "speed": 65,
+      "maxHp": 156,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 130,
+      "gold": 32
+    },
+    "source": {
+      "attack": "100",
+      "defense": "84*",
+      "speed": "65",
+      "maxHp": "156*",
+      "maxMp": "0",
+      "exp": "130",
+      "gold": "32"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_106",
+    "name": "アイアンタートル",
+    "sourceName": "アイアンタートル",
+    "recruitable": false,
+    "stats": {
+      "attack": 95,
+      "defense": 250,
+      "speed": 70,
+      "maxHp": 138,
+      "maxMp": 8
+    },
+    "rewards": {
+      "exp": 132,
+      "gold": 80
+    },
+    "source": {
+      "attack": "95",
+      "defense": "250*",
+      "speed": "70",
+      "maxHp": "138*",
+      "maxMp": "8?",
+      "exp": "132",
+      "gold": "80"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_107",
+    "name": "グレートペリカン",
+    "sourceName": "グレートペリカン",
+    "recruitable": false,
+    "stats": {
+      "attack": 115,
+      "defense": 106,
+      "speed": 75,
+      "maxHp": 150,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 134,
+      "gold": 77
+    },
+    "source": {
+      "attack": "115",
+      "defense": "106*",
+      "speed": "75",
+      "maxHp": "150*",
+      "maxMp": "0",
+      "exp": "134",
+      "gold": "77"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_108",
+    "name": "いどまじん",
+    "sourceName": "いどまじん",
+    "recruitable": false,
+    "stats": {
+      "attack": 45,
+      "defense": 50,
+      "speed": 13,
+      "maxHp": 230,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 135,
+      "gold": 60
+    },
+    "source": {
+      "attack": "45",
+      "defense": "50?",
+      "speed": "13",
+      "maxHp": "230?",
+      "maxMp": "0?",
+      "exp": "135",
+      "gold": "60"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_109",
+    "name": "ウィングスネーク",
+    "sourceName": "ウィングスネーク",
+    "recruitable": false,
+    "stats": {
+      "attack": 105,
+      "defense": 58,
+      "speed": 75,
+      "maxHp": 144,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 135,
+      "gold": 47
+    },
+    "source": {
+      "attack": "105",
+      "defense": "58*",
+      "speed": "75",
+      "maxHp": "144*",
+      "maxMp": "0",
+      "exp": "135",
+      "gold": "47"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_110",
+    "name": "ホラーウォーカー",
+    "sourceName": "ホラーウォーカー",
+    "recruitable": false,
+    "stats": {
+      "attack": 120,
+      "defense": 97,
+      "speed": 80,
+      "maxHp": 162,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 137,
+      "gold": 84
+    },
+    "source": {
+      "attack": "120",
+      "defense": "97*",
+      "speed": "80",
+      "maxHp": "162*",
+      "maxMp": "0",
+      "exp": "137",
+      "gold": "84"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_111",
+    "name": "フーセンドラゴン",
+    "sourceName": "フーセンドラゴン",
+    "recruitable": false,
+    "stats": {
+      "attack": 120,
+      "defense": 64,
+      "speed": 75,
+      "maxHp": 228,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 142,
+      "gold": 53
+    },
+    "source": {
+      "attack": "120",
+      "defense": "64*",
+      "speed": "75",
+      "maxHp": "228*",
+      "maxMp": "0",
+      "exp": "142",
+      "gold": "53"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_112",
+    "name": "ヘルバイパー",
+    "sourceName": "ヘルバイパー",
+    "recruitable": false,
+    "stats": {
+      "attack": 120,
+      "defense": 72,
+      "speed": 80,
+      "maxHp": 180,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 144,
+      "gold": 18
+    },
+    "source": {
+      "attack": "120",
+      "defense": "72?",
+      "speed": "80",
+      "maxHp": "180",
+      "maxMp": "0?",
+      "exp": "144",
+      "gold": "18"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_113",
+    "name": "ヘルパイレーツ",
+    "sourceName": "ヘルパイレーツ",
+    "recruitable": false,
+    "stats": {
+      "attack": 130,
+      "defense": 96,
+      "speed": 60,
+      "maxHp": 150,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 144,
+      "gold": 72
+    },
+    "source": {
+      "attack": "130",
+      "defense": "96*",
+      "speed": "60",
+      "maxHp": "150*",
+      "maxMp": "0",
+      "exp": "144",
+      "gold": "72"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_114",
+    "name": "のろいのランプ",
+    "sourceName": "のろいのランプ",
+    "recruitable": false,
+    "stats": {
+      "attack": 130,
+      "defense": 210,
+      "speed": 95,
+      "maxHp": 150,
+      "maxMp": 18
+    },
+    "rewards": {
+      "exp": 146,
+      "gold": 48
+    },
+    "source": {
+      "attack": "130",
+      "defense": "210?",
+      "speed": "95",
+      "maxHp": "150*",
+      "maxMp": "18",
+      "exp": "146",
+      "gold": "48"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_115",
+    "name": "ミミック",
+    "sourceName": "ミミック",
+    "recruitable": false,
+    "stats": {
+      "attack": 0,
+      "defense": 98,
+      "speed": 50,
+      "maxHp": 380,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 150,
+      "gold": 91
+    },
+    "source": {
+      "attack": "?",
+      "defense": "98?",
+      "speed": "50",
+      "maxHp": "380",
+      "maxMp": "?",
+      "exp": "150",
+      "gold": "91"
+    },
+    "unknownFields": [
+      "attack",
+      "maxMp"
+    ],
+    "note": ""
+  },
+  {
+    "id": "monster_116",
+    "name": "イーブルフライ",
+    "sourceName": "イーブルフライ",
+    "recruitable": false,
+    "stats": {
+      "attack": 135,
+      "defense": 77,
+      "speed": 90,
+      "maxHp": 180,
+      "maxMp": 8
+    },
+    "rewards": {
+      "exp": 153,
+      "gold": 99
+    },
+    "source": {
+      "attack": "135",
+      "defense": "77*",
+      "speed": "90",
+      "maxHp": "-180",
+      "maxMp": "8",
+      "exp": "153",
+      "gold": "99"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_117",
+    "name": "バオー",
+    "sourceName": "バオー",
+    "recruitable": false,
+    "stats": {
+      "attack": 140,
+      "defense": 78,
+      "speed": 65,
+      "maxHp": 246,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 155,
+      "gold": 62
+    },
+    "source": {
+      "attack": "140",
+      "defense": "78*",
+      "speed": "65",
+      "maxHp": "246*",
+      "maxMp": "0",
+      "exp": "155",
+      "gold": "62"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_118",
+    "name": "マッドロブスター",
+    "sourceName": "マッドロブスター",
+    "recruitable": false,
+    "stats": {
+      "attack": 130,
+      "defense": 134,
+      "speed": 80,
+      "maxHp": 216,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 159,
+      "gold": 103
+    },
+    "source": {
+      "attack": "130",
+      "defense": "134*",
+      "speed": "80",
+      "maxHp": "216*",
+      "maxMp": "0",
+      "exp": "159",
+      "gold": "103"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_119",
+    "name": "くものきょじん",
+    "sourceName": "くものきょじん",
+    "recruitable": false,
+    "stats": {
+      "attack": 115,
+      "defense": 50,
+      "speed": 55,
+      "maxHp": 150,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 160,
+      "gold": 58
+    },
+    "source": {
+      "attack": "115",
+      "defense": "50*",
+      "speed": "55",
+      "maxHp": "150*",
+      "maxMp": "0",
+      "exp": "160",
+      "gold": "58"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_120",
+    "name": "かくとうパンサー",
+    "sourceName": "かくとうパンサー",
+    "recruitable": false,
+    "stats": {
+      "attack": 150,
+      "defense": 78,
+      "speed": 60,
+      "maxHp": 210,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 160,
+      "gold": 78
+    },
+    "source": {
+      "attack": "150",
+      "defense": "78*",
+      "speed": "60",
+      "maxHp": "210*",
+      "maxMp": "0",
+      "exp": "160",
+      "gold": "78"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_121",
+    "name": "フロストギズモ",
+    "sourceName": "フロストギズモ",
+    "recruitable": false,
+    "stats": {
+      "attack": 130,
+      "defense": 94,
+      "speed": 90,
+      "maxHp": 157,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 160,
+      "gold": 43
+    },
+    "source": {
+      "attack": "130",
+      "defense": "94*",
+      "speed": "90",
+      "maxHp": "-157",
+      "maxMp": "0",
+      "exp": "160",
+      "gold": "43"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_122",
+    "name": "パペットマン",
+    "sourceName": "パペットマン",
+    "recruitable": false,
+    "stats": {
+      "attack": 130,
+      "defense": 94,
+      "speed": 95,
+      "maxHp": 160,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 163,
+      "gold": 69
+    },
+    "source": {
+      "attack": "130",
+      "defense": "94*",
+      "speed": "95",
+      "maxHp": "160*",
+      "maxMp": "0",
+      "exp": "163",
+      "gold": "69"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_123",
+    "name": "マジックフライ",
+    "sourceName": "マジックフライ",
+    "recruitable": false,
+    "stats": {
+      "attack": 150,
+      "defense": 83,
+      "speed": 75,
+      "maxHp": 180,
+      "maxMp": 35
+    },
+    "rewards": {
+      "exp": 165,
+      "gold": 96
+    },
+    "source": {
+      "attack": "150?",
+      "defense": "83*",
+      "speed": "75",
+      "maxHp": "180*",
+      "maxMp": "35",
+      "exp": "165",
+      "gold": "96"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_124",
+    "name": "ヘルビースト",
+    "sourceName": "ヘルビースト",
+    "recruitable": false,
+    "stats": {
+      "attack": 75,
+      "defense": 82,
+      "speed": 35,
+      "maxHp": 360,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 165,
+      "gold": 210
+    },
+    "source": {
+      "attack": "75",
+      "defense": "82?",
+      "speed": "35",
+      "maxHp": "360",
+      "maxMp": "?",
+      "exp": "165",
+      "gold": "210"
+    },
+    "unknownFields": [
+      "maxMp"
+    ],
+    "note": ""
+  },
+  {
+    "id": "monster_125",
+    "name": "オーシャンキング",
+    "sourceName": "オーシャンキング",
+    "recruitable": false,
+    "stats": {
+      "attack": 135,
+      "defense": 110,
+      "speed": 60,
+      "maxHp": 198,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 167,
+      "gold": 87
+    },
+    "source": {
+      "attack": "135",
+      "defense": "110*",
+      "speed": "60",
+      "maxHp": "198*",
+      "maxMp": "0",
+      "exp": "167",
+      "gold": "87"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_126",
+    "name": "オーシャンナーガ",
+    "sourceName": "オーシャンナーガ",
+    "recruitable": false,
+    "stats": {
+      "attack": 145,
+      "defense": 120,
+      "speed": 80,
+      "maxHp": 240,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 169,
+      "gold": 94
+    },
+    "source": {
+      "attack": "145",
+      "defense": "120*",
+      "speed": "80",
+      "maxHp": "240*",
+      "maxMp": "0",
+      "exp": "169",
+      "gold": "94"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_127",
+    "name": "あくまのつぼ",
+    "sourceName": "あくまのつぼ",
+    "recruitable": false,
+    "stats": {
+      "attack": 67,
+      "defense": 134,
+      "speed": 50,
+      "maxHp": 240,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 170,
+      "gold": 135
+    },
+    "source": {
+      "attack": "67",
+      "defense": "134?",
+      "speed": "50",
+      "maxHp": "-240",
+      "maxMp": "?",
+      "exp": "170",
+      "gold": "135"
+    },
+    "unknownFields": [
+      "maxMp"
+    ],
+    "note": ""
+  },
+  {
+    "id": "monster_128",
+    "name": "ダークホーン",
+    "sourceName": "◎ダークホーン",
+    "recruitable": true,
+    "stats": {
+      "attack": 140,
+      "defense": 67,
+      "speed": 80,
+      "maxHp": 234,
+      "maxMp": 6
+    },
+    "rewards": {
+      "exp": 170,
+      "gold": 48
+    },
+    "source": {
+      "attack": "140",
+      "defense": "67*",
+      "speed": "80",
+      "maxHp": "234*",
+      "maxMp": "6",
+      "exp": "170",
+      "gold": "48"
+    },
+    "unknownFields": [],
+    "note": "◎付きのため仲間候補"
+  },
+  {
+    "id": "monster_129",
+    "name": "リビングデッド",
+    "sourceName": "リビングデッド",
+    "recruitable": false,
+    "stats": {
+      "attack": 130,
+      "defense": 72,
+      "speed": 70,
+      "maxHp": 197,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 170,
+      "gold": 32
+    },
+    "source": {
+      "attack": "130",
+      "defense": "72*",
+      "speed": "70",
+      "maxHp": "-197",
+      "maxMp": "0",
+      "exp": "170",
+      "gold": "32"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_130",
+    "name": "キングイーター",
+    "sourceName": "キングイーター",
+    "recruitable": false,
+    "stats": {
+      "attack": 130,
+      "defense": 70,
+      "speed": 75,
+      "maxHp": 180,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 174,
+      "gold": 97
+    },
+    "source": {
+      "attack": "130",
+      "defense": "70*",
+      "speed": "75",
+      "maxHp": "180*",
+      "maxMp": "0",
+      "exp": "174",
+      "gold": "97"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_131",
+    "name": "ディープバイター",
+    "sourceName": "ディープバイター",
+    "recruitable": false,
+    "stats": {
+      "attack": 130,
+      "defense": 330,
+      "speed": 80,
+      "maxHp": 250,
+      "maxMp": 8
+    },
+    "rewards": {
+      "exp": 175,
+      "gold": 112
+    },
+    "source": {
+      "attack": "130",
+      "defense": "330*",
+      "speed": "80",
+      "maxHp": "-250",
+      "maxMp": "8?",
+      "exp": "175",
+      "gold": "112"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_132",
+    "name": "オクトセントリー",
+    "sourceName": "オクトセントリー",
+    "recruitable": false,
+    "stats": {
+      "attack": 112,
+      "defense": 85,
+      "speed": 246,
+      "maxHp": 60,
+      "maxMp": 195
+    },
+    "rewards": {
+      "exp": 127,
+      "gold": 0
+    },
+    "source": {
+      "attack": "140?112*",
+      "defense": "85",
+      "speed": "246*",
+      "maxHp": "60",
+      "maxMp": "195",
+      "exp": "127",
+      "gold": ""
+    },
+    "unknownFields": [
+      "gold"
+    ],
+    "note": ""
+  },
+  {
+    "id": "monster_133",
+    "name": "キングスライム",
+    "sourceName": "◎キングスライム",
+    "recruitable": true,
+    "stats": {
+      "attack": 135,
+      "defense": 79,
+      "speed": 90,
+      "maxHp": 265,
+      "maxMp": 45
+    },
+    "rewards": {
+      "exp": 200,
+      "gold": 115
+    },
+    "source": {
+      "attack": "135",
+      "defense": "79*",
+      "speed": "90",
+      "maxHp": "-265",
+      "maxMp": "45",
+      "exp": "200",
+      "gold": "115"
+    },
+    "unknownFields": [],
+    "note": "◎付きのため仲間候補"
+  },
+  {
+    "id": "monster_134",
+    "name": "ハイオーク",
+    "sourceName": "ハイオーク",
+    "recruitable": false,
+    "stats": {
+      "attack": 150,
+      "defense": 90,
+      "speed": 80,
+      "maxHp": 246,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 210,
+      "gold": 65
+    },
+    "source": {
+      "attack": "150",
+      "defense": "90*",
+      "speed": "80",
+      "maxHp": "246*",
+      "maxMp": "0",
+      "exp": "210",
+      "gold": "65"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_135",
+    "name": "ホーンテッドミラー",
+    "sourceName": "ホーンテッドミラー",
+    "recruitable": false,
+    "stats": {
+      "attack": 0,
+      "defense": 180,
+      "speed": 90,
+      "maxHp": 250,
+      "maxMp": 30
+    },
+    "rewards": {
+      "exp": 215,
+      "gold": 50
+    },
+    "source": {
+      "attack": "?",
+      "defense": "180*",
+      "speed": "90",
+      "maxHp": "-250",
+      "maxMp": "30",
+      "exp": "215",
+      "gold": "50"
+    },
+    "unknownFields": [
+      "attack"
+    ],
+    "note": ""
+  },
+  {
+    "id": "monster_136",
+    "name": "トロル",
+    "sourceName": "トロル",
+    "recruitable": false,
+    "stats": {
+      "attack": 145,
+      "defense": 64,
+      "speed": 50,
+      "maxHp": 348,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 215,
+      "gold": 65
+    },
+    "source": {
+      "attack": "145",
+      "defense": "64*",
+      "speed": "50",
+      "maxHp": "348*",
+      "maxMp": "0",
+      "exp": "215",
+      "gold": "65"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_137",
+    "name": "バルンバ",
+    "sourceName": "バルンバ",
+    "recruitable": false,
+    "stats": {
+      "attack": 140,
+      "defense": 90,
+      "speed": 75,
+      "maxHp": 300,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 216,
+      "gold": 64
+    },
+    "source": {
+      "attack": "140",
+      "defense": "90*",
+      "speed": "75",
+      "maxHp": "300*",
+      "maxMp": "0",
+      "exp": "216",
+      "gold": "64"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_138",
+    "name": "じゃしんぞう",
+    "sourceName": "じゃしんぞう",
+    "recruitable": false,
+    "stats": {
+      "attack": 140,
+      "defense": 135,
+      "speed": 80,
+      "maxHp": 230,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 217,
+      "gold": 44
+    },
+    "source": {
+      "attack": "140",
+      "defense": "135*",
+      "speed": "80",
+      "maxHp": "-230",
+      "maxMp": "0",
+      "exp": "217",
+      "gold": "44"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_139",
+    "name": "ブチュチュンパ",
+    "sourceName": "ブチュチュンパ",
+    "recruitable": false,
+    "stats": {
+      "attack": 130,
+      "defense": 91,
+      "speed": 90,
+      "maxHp": 198,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 228,
+      "gold": 60
+    },
+    "source": {
+      "attack": "130",
+      "defense": "91*",
+      "speed": "90",
+      "maxHp": "198*",
+      "maxMp": "0",
+      "exp": "228",
+      "gold": "60"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_140",
+    "name": "サイレス",
+    "sourceName": "サイレス",
+    "recruitable": false,
+    "stats": {
+      "attack": 140,
+      "defense": 83,
+      "speed": 80,
+      "maxHp": 246,
+      "maxMp": 13
+    },
+    "rewards": {
+      "exp": 232,
+      "gold": 21
+    },
+    "source": {
+      "attack": "140",
+      "defense": "83*",
+      "speed": "80",
+      "maxHp": "246*",
+      "maxMp": "13",
+      "exp": "232",
+      "gold": "21"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_141",
+    "name": "ラストテンツク",
+    "sourceName": "ラストテンツク",
+    "recruitable": false,
+    "stats": {
+      "attack": 200,
+      "defense": 60,
+      "speed": 100,
+      "maxHp": 186,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 233,
+      "gold": 78
+    },
+    "source": {
+      "attack": "200",
+      "defense": "60*",
+      "speed": "100",
+      "maxHp": "186*",
+      "maxMp": "0",
+      "exp": "233",
+      "gold": "78"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_142",
+    "name": "いどまねき",
+    "sourceName": "いどまねき",
+    "recruitable": false,
+    "stats": {
+      "attack": 130,
+      "defense": 120,
+      "speed": 50,
+      "maxHp": 500,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 238,
+      "gold": 68
+    },
+    "source": {
+      "attack": "130",
+      "defense": "120?",
+      "speed": "50",
+      "maxHp": "500",
+      "maxMp": "0?",
+      "exp": "238",
+      "gold": "68"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_143",
+    "name": "ストロングアニマル",
+    "sourceName": "ストロングアニマル",
+    "recruitable": false,
+    "stats": {
+      "attack": 150,
+      "defense": 87,
+      "speed": 90,
+      "maxHp": 246,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 238,
+      "gold": 74
+    },
+    "source": {
+      "attack": "150",
+      "defense": "87*",
+      "speed": "90",
+      "maxHp": "246*",
+      "maxMp": "0",
+      "exp": "238",
+      "gold": "74"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_144",
+    "name": "ディゴング",
+    "sourceName": "ディゴング",
+    "recruitable": false,
+    "stats": {
+      "attack": 120,
+      "defense": 127,
+      "speed": 85,
+      "maxHp": 396,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 240,
+      "gold": 120
+    },
+    "source": {
+      "attack": "120",
+      "defense": "127*",
+      "speed": "85",
+      "maxHp": "396*",
+      "maxMp": "0",
+      "exp": "240",
+      "gold": "120"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_145",
+    "name": "ホロゴースト",
+    "sourceName": "ホロゴースト",
+    "recruitable": false,
+    "stats": {
+      "attack": 250,
+      "defense": 100,
+      "speed": 140,
+      "maxHp": 270,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 240,
+      "gold": 60
+    },
+    "source": {
+      "attack": "250",
+      "defense": "100?",
+      "speed": "140",
+      "maxHp": "-270",
+      "maxMp": "0",
+      "exp": "240",
+      "gold": "60"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_146",
+    "name": "アックスドラゴン",
+    "sourceName": "アックスドラゴン",
+    "recruitable": false,
+    "stats": {
+      "attack": 100,
+      "defense": 75,
+      "speed": 366,
+      "maxHp": 0,
+      "maxMp": 250
+    },
+    "rewards": {
+      "exp": 75,
+      "gold": 0
+    },
+    "source": {
+      "attack": "120?100*",
+      "defense": "75",
+      "speed": "366*",
+      "maxHp": "0",
+      "maxMp": "250",
+      "exp": "75",
+      "gold": ""
+    },
+    "unknownFields": [
+      "gold"
+    ],
+    "note": ""
+  },
+  {
+    "id": "monster_147",
+    "name": "ランプのまじん",
+    "sourceName": "ランプのまじん",
+    "recruitable": false,
+    "stats": {
+      "attack": 220,
+      "defense": 94,
+      "speed": 65,
+      "maxHp": 365,
+      "maxMp": 8
+    },
+    "rewards": {
+      "exp": 250,
+      "gold": 58
+    },
+    "source": {
+      "attack": "220",
+      "defense": "94*",
+      "speed": "65",
+      "maxHp": "-365",
+      "maxMp": "8?",
+      "exp": "250",
+      "gold": "58"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_148",
+    "name": "キラーバット",
+    "sourceName": "キラーバット",
+    "recruitable": false,
+    "stats": {
+      "attack": 180,
+      "defense": 90,
+      "speed": 90,
+      "maxHp": 246,
+      "maxMp": 20
+    },
+    "rewards": {
+      "exp": 250,
+      "gold": 52
+    },
+    "source": {
+      "attack": "180",
+      "defense": "90*",
+      "speed": "90",
+      "maxHp": "246*",
+      "maxMp": "20",
+      "exp": "250",
+      "gold": "52"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_149",
+    "name": "メガザルロック",
+    "sourceName": "メガザルロック",
+    "recruitable": false,
+    "stats": {
+      "attack": 140,
+      "defense": 153,
+      "speed": 90,
+      "maxHp": 300,
+      "maxMp": 65
+    },
+    "rewards": {
+      "exp": 252,
+      "gold": 70
+    },
+    "source": {
+      "attack": "140",
+      "defense": "153*",
+      "speed": "90",
+      "maxHp": "-300",
+      "maxMp": "65",
+      "exp": "252",
+      "gold": "70"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_150",
+    "name": "ヘルジャッカル",
+    "sourceName": "ヘルジャッカル",
+    "recruitable": false,
+    "stats": {
+      "attack": 240,
+      "defense": 90,
+      "speed": 85,
+      "maxHp": 300,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 257,
+      "gold": 69
+    },
+    "source": {
+      "attack": "240",
+      "defense": "90*",
+      "speed": "85",
+      "maxHp": "300*",
+      "maxMp": "0",
+      "exp": "257",
+      "gold": "69"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_151",
+    "name": "バーサクオーク",
+    "sourceName": "バーサクオーク",
+    "recruitable": false,
+    "stats": {
+      "attack": 140,
+      "defense": 90,
+      "speed": 80,
+      "maxHp": 246,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 266,
+      "gold": 112
+    },
+    "source": {
+      "attack": "140",
+      "defense": "90*",
+      "speed": "80",
+      "maxHp": "246*",
+      "maxMp": "0",
+      "exp": "266",
+      "gold": "112"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_152",
+    "name": "キラーモス",
+    "sourceName": "キラーモス",
+    "recruitable": false,
+    "stats": {
+      "attack": 160,
+      "defense": 80,
+      "speed": 90,
+      "maxHp": 200,
+      "maxMp": 8
+    },
+    "rewards": {
+      "exp": 270,
+      "gold": 88
+    },
+    "source": {
+      "attack": "160?",
+      "defense": "80*",
+      "speed": "90",
+      "maxHp": "-200",
+      "maxMp": "8",
+      "exp": "270",
+      "gold": "88"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_153",
+    "name": "デビルパピヨン",
+    "sourceName": "デビルパピヨン",
+    "recruitable": false,
+    "stats": {
+      "attack": 250,
+      "defense": 94,
+      "speed": 100,
+      "maxHp": 310,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 282,
+      "gold": 135
+    },
+    "source": {
+      "attack": "250",
+      "defense": "94*",
+      "speed": "100",
+      "maxHp": "-310",
+      "maxMp": "0",
+      "exp": "282",
+      "gold": "135"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_154",
+    "name": "ボーンプリズナー",
+    "sourceName": "ボーンプリズナー",
+    "recruitable": false,
+    "stats": {
+      "attack": 180,
+      "defense": 80,
+      "speed": 90,
+      "maxHp": 220,
+      "maxMp": 8
+    },
+    "rewards": {
+      "exp": 283,
+      "gold": 27
+    },
+    "source": {
+      "attack": "180",
+      "defense": "80*",
+      "speed": "90",
+      "maxHp": "-220",
+      "maxMp": "8",
+      "exp": "283",
+      "gold": "27"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_155",
+    "name": "タイガークロー",
+    "sourceName": "タイガークロー",
+    "recruitable": false,
+    "stats": {
+      "attack": 235,
+      "defense": 88,
+      "speed": 90,
+      "maxHp": 240,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 290,
+      "gold": 100
+    },
+    "source": {
+      "attack": "235",
+      "defense": "88*",
+      "speed": "90",
+      "maxHp": "240*",
+      "maxMp": "0",
+      "exp": "290",
+      "gold": "100"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_156",
+    "name": "キングマーマン",
+    "sourceName": "キングマーマン",
+    "recruitable": false,
+    "stats": {
+      "attack": 160,
+      "defense": 133,
+      "speed": 95,
+      "maxHp": 330,
+      "maxMp": 50
+    },
+    "rewards": {
+      "exp": 300,
+      "gold": 250
+    },
+    "source": {
+      "attack": "160",
+      "defense": "133*",
+      "speed": "95",
+      "maxHp": "330*",
+      "maxMp": "50",
+      "exp": "300",
+      "gold": "250"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_157",
+    "name": "エビルホーク",
+    "sourceName": "エビルホーク",
+    "recruitable": false,
+    "stats": {
+      "attack": 250,
+      "defense": 90,
+      "speed": 105,
+      "maxHp": 276,
+      "maxMp": 12
+    },
+    "rewards": {
+      "exp": 306,
+      "gold": 107
+    },
+    "source": {
+      "attack": "250",
+      "defense": "90*",
+      "speed": "105",
+      "maxHp": "276*",
+      "maxMp": "12",
+      "exp": "306",
+      "gold": "107"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_158",
+    "name": "ボストロール",
+    "sourceName": "◎ボストロール",
+    "recruitable": true,
+    "stats": {
+      "attack": 180,
+      "defense": 83,
+      "speed": 95,
+      "maxHp": 360,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 310,
+      "gold": 80
+    },
+    "source": {
+      "attack": "180",
+      "defense": "83*",
+      "speed": "95",
+      "maxHp": "-360",
+      "maxMp": "0",
+      "exp": "310",
+      "gold": "80"
+    },
+    "unknownFields": [],
+    "note": "◎付きのため仲間候補"
+  },
+  {
+    "id": "monster_159",
+    "name": "ドラゴンソルジャー",
+    "sourceName": "ドラゴンソルジャー",
+    "recruitable": false,
+    "stats": {
+      "attack": 200,
+      "defense": 90,
+      "speed": 85,
+      "maxHp": 306,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 310,
+      "gold": 90
+    },
+    "source": {
+      "attack": "200",
+      "defense": "90*",
+      "speed": "85",
+      "maxHp": "306*",
+      "maxMp": "0",
+      "exp": "310",
+      "gold": "90"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_160",
+    "name": "レジェンドホーン",
+    "sourceName": "レジェンドホーン",
+    "recruitable": false,
+    "stats": {
+      "attack": 180,
+      "defense": 110,
+      "speed": 80,
+      "maxHp": 258,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 310,
+      "gold": 93
+    },
+    "source": {
+      "attack": "180",
+      "defense": "110*",
+      "speed": "80",
+      "maxHp": "258*",
+      "maxMp": "0",
+      "exp": "310",
+      "gold": "93"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_161",
+    "name": "てっこうまじん",
+    "sourceName": "てっこうまじん",
+    "recruitable": false,
+    "stats": {
+      "attack": 180,
+      "defense": 138,
+      "speed": 95,
+      "maxHp": 320,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 312,
+      "gold": 99
+    },
+    "source": {
+      "attack": "180",
+      "defense": "138*",
+      "speed": "95",
+      "maxHp": "-320",
+      "maxMp": "0",
+      "exp": "312",
+      "gold": "99"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_162",
+    "name": "エビルワンド",
+    "sourceName": "エビルワンド",
+    "recruitable": false,
+    "stats": {
+      "attack": 200,
+      "defense": 182,
+      "speed": 85,
+      "maxHp": 246,
+      "maxMp": 12
+    },
+    "rewards": {
+      "exp": 315,
+      "gold": 53
+    },
+    "source": {
+      "attack": "200",
+      "defense": "182*",
+      "speed": "85",
+      "maxHp": "246*",
+      "maxMp": "12",
+      "exp": "315",
+      "gold": "53"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_163",
+    "name": "じごくのほのお",
+    "sourceName": "じごくのほのお",
+    "recruitable": false,
+    "stats": {
+      "attack": 230,
+      "defense": 80,
+      "speed": 140,
+      "maxHp": 216,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 325,
+      "gold": 86
+    },
+    "source": {
+      "attack": "230",
+      "defense": "80*",
+      "speed": "140",
+      "maxHp": "216*",
+      "maxMp": "0",
+      "exp": "325",
+      "gold": "86"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_164",
+    "name": "メカボーグ",
+    "sourceName": "メカボーグ",
+    "recruitable": false,
+    "stats": {
+      "attack": 240,
+      "defense": 120,
+      "speed": 95,
+      "maxHp": 250,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 330,
+      "gold": 46
+    },
+    "source": {
+      "attack": "240",
+      "defense": "120?",
+      "speed": "95",
+      "maxHp": "-250",
+      "maxMp": "0",
+      "exp": "330",
+      "gold": "46"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_165",
+    "name": "まおうのランプ",
+    "sourceName": "まおうのランプ",
+    "recruitable": false,
+    "stats": {
+      "attack": 0,
+      "defense": 167,
+      "speed": 110,
+      "maxHp": 240,
+      "maxMp": 30
+    },
+    "rewards": {
+      "exp": 330,
+      "gold": 61
+    },
+    "source": {
+      "attack": "?",
+      "defense": "167*",
+      "speed": "110",
+      "maxHp": "240*",
+      "maxMp": "30",
+      "exp": "330",
+      "gold": "61"
+    },
+    "unknownFields": [
+      "attack"
+    ],
+    "note": ""
+  },
+  {
+    "id": "monster_166",
+    "name": "マミーウィスプ",
+    "sourceName": "マミーウィスプ",
+    "recruitable": false,
+    "stats": {
+      "attack": 225,
+      "defense": 76,
+      "speed": 105,
+      "maxHp": 300,
+      "maxMp": 30
+    },
+    "rewards": {
+      "exp": 330,
+      "gold": 91
+    },
+    "source": {
+      "attack": "225",
+      "defense": "76*",
+      "speed": "105",
+      "maxHp": "-300",
+      "maxMp": "30",
+      "exp": "330",
+      "gold": "91"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_167",
+    "name": "スライムベホマズン",
+    "sourceName": "スライムベホマズン",
+    "recruitable": false,
+    "stats": {
+      "attack": 160,
+      "defense": 92,
+      "speed": 80,
+      "maxHp": 200,
+      "maxMp": 120
+    },
+    "rewards": {
+      "exp": 347,
+      "gold": 112
+    },
+    "source": {
+      "attack": "160?",
+      "defense": "92*",
+      "speed": "80",
+      "maxHp": "-200",
+      "maxMp": "120",
+      "exp": "347",
+      "gold": "112"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_168",
+    "name": "キラーマシン２",
+    "sourceName": "◎キラーマシン２",
+    "recruitable": true,
+    "stats": {
+      "attack": 220,
+      "defense": 185,
+      "speed": 80,
+      "maxHp": 238,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 350,
+      "gold": 73
+    },
+    "source": {
+      "attack": "220",
+      "defense": "185*",
+      "speed": "80",
+      "maxHp": "-238",
+      "maxMp": "0",
+      "exp": "350",
+      "gold": "73"
+    },
+    "unknownFields": [],
+    "note": "◎付きのため仲間候補"
+  },
+  {
+    "id": "monster_169",
+    "name": "ヘルクラッシャー",
+    "sourceName": "ヘルクラッシャー",
+    "recruitable": false,
+    "stats": {
+      "attack": 250,
+      "defense": 80,
+      "speed": 110,
+      "maxHp": 350,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 370,
+      "gold": 80
+    },
+    "source": {
+      "attack": "250",
+      "defense": "80?",
+      "speed": "110",
+      "maxHp": "-350",
+      "maxMp": "0",
+      "exp": "370",
+      "gold": "80"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_170",
+    "name": "スケアリードッグ",
+    "sourceName": "スケアリードッグ",
+    "recruitable": false,
+    "stats": {
+      "attack": 250,
+      "defense": 93,
+      "speed": 85,
+      "maxHp": 300,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 377,
+      "gold": 62
+    },
+    "source": {
+      "attack": "250",
+      "defense": "93*",
+      "speed": "85",
+      "maxHp": "300*",
+      "maxMp": "0",
+      "exp": "377",
+      "gold": "62"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_171",
+    "name": "ウイングデビル",
+    "sourceName": "ウイングデビル",
+    "recruitable": false,
+    "stats": {
+      "attack": 260,
+      "defense": 192,
+      "speed": 130,
+      "maxHp": 240,
+      "maxMp": 16
+    },
+    "rewards": {
+      "exp": 405,
+      "gold": 99
+    },
+    "source": {
+      "attack": "260",
+      "defense": "192*",
+      "speed": "130",
+      "maxHp": "-240",
+      "maxMp": "16",
+      "exp": "405",
+      "gold": "99"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_172",
+    "name": "ウルトラキメイラ",
+    "sourceName": "ウルトラキメイラ",
+    "recruitable": false,
+    "stats": {
+      "attack": 240,
+      "defense": 128,
+      "speed": 100,
+      "maxHp": 198,
+      "maxMp": 14
+    },
+    "rewards": {
+      "exp": 417,
+      "gold": 98
+    },
+    "source": {
+      "attack": "240",
+      "defense": "128*",
+      "speed": "100",
+      "maxHp": "198*",
+      "maxMp": "14",
+      "exp": "417",
+      "gold": "98"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_173",
+    "name": "キラージャック",
+    "sourceName": "キラージャック",
+    "recruitable": false,
+    "stats": {
+      "attack": 260,
+      "defense": 128,
+      "speed": 100,
+      "maxHp": 330,
+      "maxMp": 25
+    },
+    "rewards": {
+      "exp": 420,
+      "gold": 135
+    },
+    "source": {
+      "attack": "260",
+      "defense": "128*",
+      "speed": "100",
+      "maxHp": "330*",
+      "maxMp": "25",
+      "exp": "420",
+      "gold": "135"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_174",
+    "name": "ランドアーマー",
+    "sourceName": "ランドアーマー",
+    "recruitable": false,
+    "stats": {
+      "attack": 245,
+      "defense": 300,
+      "speed": 80,
+      "maxHp": 408,
+      "maxMp": 30
+    },
+    "rewards": {
+      "exp": 420,
+      "gold": 69
+    },
+    "source": {
+      "attack": "245",
+      "defense": "300*",
+      "speed": "80",
+      "maxHp": "408*",
+      "maxMp": "30",
+      "exp": "420",
+      "gold": "69"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_175",
+    "name": "あんこくまどう",
+    "sourceName": "あんこくまどう",
+    "recruitable": false,
+    "stats": {
+      "attack": 140,
+      "defense": 95,
+      "speed": 378,
+      "maxHp": 80,
+      "maxMp": 425
+    },
+    "rewards": {
+      "exp": 213,
+      "gold": 0
+    },
+    "source": {
+      "attack": "160?140?",
+      "defense": "95",
+      "speed": "378*",
+      "maxHp": "80",
+      "maxMp": "425",
+      "exp": "213",
+      "gold": ""
+    },
+    "unknownFields": [
+      "gold"
+    ],
+    "note": ""
+  },
+  {
+    "id": "monster_176",
+    "name": "ガーディアン",
+    "sourceName": "ガーディアン",
+    "recruitable": false,
+    "stats": {
+      "attack": 280,
+      "defense": 160,
+      "speed": 130,
+      "maxHp": 420,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 427,
+      "gold": 125
+    },
+    "source": {
+      "attack": "280",
+      "defense": "160*",
+      "speed": "130",
+      "maxHp": "420*",
+      "maxMp": "0",
+      "exp": "427",
+      "gold": "125"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_177",
+    "name": "ツボック",
+    "sourceName": "ツボック",
+    "recruitable": false,
+    "stats": {
+      "attack": 160,
+      "defense": 300,
+      "speed": 90,
+      "maxHp": 650,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 450,
+      "gold": 158
+    },
+    "source": {
+      "attack": "160",
+      "defense": "300?",
+      "speed": "90",
+      "maxHp": "650",
+      "maxMp": "?",
+      "exp": "450",
+      "gold": "158"
+    },
+    "unknownFields": [
+      "maxMp"
+    ],
+    "note": ""
+  },
+  {
+    "id": "monster_178",
+    "name": "うごくせきぞう",
+    "sourceName": "うごくせきぞう",
+    "recruitable": false,
+    "stats": {
+      "attack": 280,
+      "defense": 170,
+      "speed": 90,
+      "maxHp": 450,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 462,
+      "gold": 90
+    },
+    "source": {
+      "attack": "280",
+      "defense": "170*",
+      "speed": "90",
+      "maxHp": "-450",
+      "maxMp": "0",
+      "exp": "462",
+      "gold": "90"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_179",
+    "name": "ダークサタン",
+    "sourceName": "ダークサタン",
+    "recruitable": false,
+    "stats": {
+      "attack": 260,
+      "defense": 117,
+      "speed": 100,
+      "maxHp": 396,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 475,
+      "gold": 90
+    },
+    "source": {
+      "attack": "260",
+      "defense": "117*",
+      "speed": "100",
+      "maxHp": "396*",
+      "maxMp": "0",
+      "exp": "475",
+      "gold": "90"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_180",
+    "name": "デススタッフ",
+    "sourceName": "デススタッフ",
+    "recruitable": false,
+    "stats": {
+      "attack": 200,
+      "defense": 205,
+      "speed": 130,
+      "maxHp": 430,
+      "maxMp": 50
+    },
+    "rewards": {
+      "exp": 495,
+      "gold": 135
+    },
+    "source": {
+      "attack": "200",
+      "defense": "205*",
+      "speed": "130",
+      "maxHp": "430",
+      "maxMp": "50",
+      "exp": "495",
+      "gold": "135"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_181",
+    "name": "トロルボンバー",
+    "sourceName": "トロルボンバー",
+    "recruitable": false,
+    "stats": {
+      "attack": 290,
+      "defense": 90,
+      "speed": 100,
+      "maxHp": 510,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 510,
+      "gold": 70
+    },
+    "source": {
+      "attack": "290",
+      "defense": "90*",
+      "speed": "100",
+      "maxHp": "510*",
+      "maxMp": "0",
+      "exp": "510",
+      "gold": "70"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_182",
+    "name": "ずしおうまる",
+    "sourceName": "ずしおうまる",
+    "recruitable": false,
+    "stats": {
+      "attack": 270,
+      "defense": 115,
+      "speed": 105,
+      "maxHp": 396,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 534,
+      "gold": 90
+    },
+    "source": {
+      "attack": "270",
+      "defense": "115*",
+      "speed": "105",
+      "maxHp": "396*",
+      "maxMp": "0",
+      "exp": "534",
+      "gold": "90"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_183",
+    "name": "キラーデーモン",
+    "sourceName": "キラーデーモン",
+    "recruitable": false,
+    "stats": {
+      "attack": 250,
+      "defense": 120,
+      "speed": 110,
+      "maxHp": 440,
+      "maxMp": 38
+    },
+    "rewards": {
+      "exp": 550,
+      "gold": 130
+    },
+    "source": {
+      "attack": "250",
+      "defense": "120*",
+      "speed": "110",
+      "maxHp": "-440",
+      "maxMp": "38",
+      "exp": "550",
+      "gold": "130"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_184",
+    "name": "バトルレックス",
+    "sourceName": "バトルレックス",
+    "recruitable": false,
+    "stats": {
+      "attack": 300,
+      "defense": 100,
+      "speed": 100,
+      "maxHp": 516,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 580,
+      "gold": 92
+    },
+    "source": {
+      "attack": "300",
+      "defense": "100*",
+      "speed": "100",
+      "maxHp": "516*",
+      "maxMp": "0",
+      "exp": "580",
+      "gold": "92"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_185",
+    "name": "のろいのカガミ",
+    "sourceName": "のろいのカガミ",
+    "recruitable": false,
+    "stats": {
+      "attack": 150,
+      "defense": 188,
+      "speed": 120,
+      "maxHp": 510,
+      "maxMp": 30
+    },
+    "rewards": {
+      "exp": 580,
+      "gold": 130
+    },
+    "source": {
+      "attack": "150",
+      "defense": "188?",
+      "speed": "120",
+      "maxHp": "510*",
+      "maxMp": "30",
+      "exp": "580",
+      "gold": "130"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_186",
+    "name": "だいまじん",
+    "sourceName": "だいまじん",
+    "recruitable": false,
+    "stats": {
+      "attack": 320,
+      "defense": 200,
+      "speed": 130,
+      "maxHp": 550,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 700,
+      "gold": 120
+    },
+    "source": {
+      "attack": "320",
+      "defense": "200*",
+      "speed": "130",
+      "maxHp": "-550",
+      "maxMp": "0",
+      "exp": "700",
+      "gold": "120"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_187",
+    "name": "エビルフランケン",
+    "sourceName": "エビルフランケン",
+    "recruitable": false,
+    "stats": {
+      "attack": 350,
+      "defense": 180,
+      "speed": 120,
+      "maxHp": 820,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 705,
+      "gold": 80
+    },
+    "source": {
+      "attack": "350",
+      "defense": "180?",
+      "speed": "120",
+      "maxHp": "-820",
+      "maxMp": "?",
+      "exp": "705",
+      "gold": "80"
+    },
+    "unknownFields": [
+      "maxMp"
+    ],
+    "note": ""
+  },
+  {
+    "id": "monster_188",
+    "name": "マッスルアニマル",
+    "sourceName": "マッスルアニマル",
+    "recruitable": false,
+    "stats": {
+      "attack": 300,
+      "defense": 113,
+      "speed": 110,
+      "maxHp": 678,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 770,
+      "gold": 121
+    },
+    "source": {
+      "attack": "300",
+      "defense": "113*",
+      "speed": "110",
+      "maxHp": "678*",
+      "maxMp": "0",
+      "exp": "770",
+      "gold": "121"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_189",
+    "name": "ランプのまおう",
+    "sourceName": "◎ランプのまおう",
+    "recruitable": true,
+    "stats": {
+      "attack": 350,
+      "defense": 180,
+      "speed": 120,
+      "maxHp": 870,
+      "maxMp": 48
+    },
+    "rewards": {
+      "exp": 920,
+      "gold": 250
+    },
+    "source": {
+      "attack": "350",
+      "defense": "180?",
+      "speed": "120",
+      "maxHp": "870*",
+      "maxMp": "48",
+      "exp": "920",
+      "gold": "250"
+    },
+    "unknownFields": [],
+    "note": "◎付きのため仲間候補"
+  },
+  {
+    "id": "monster_190",
+    "name": "ブースカ",
+    "sourceName": "ブースカ",
+    "recruitable": false,
+    "stats": {
+      "attack": 250,
+      "defense": 113,
+      "speed": 110,
+      "maxHp": 456,
+      "maxMp": 80
+    },
+    "rewards": {
+      "exp": 950,
+      "gold": 130
+    },
+    "source": {
+      "attack": "250",
+      "defense": "113*",
+      "speed": "110",
+      "maxHp": "456*",
+      "maxMp": "80",
+      "exp": "950",
+      "gold": "130"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_191",
+    "name": "ボーンファイター",
+    "sourceName": "ボーンファイター",
+    "recruitable": false,
+    "stats": {
+      "attack": 330,
+      "defense": 130,
+      "speed": 140,
+      "maxHp": 800,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 980,
+      "gold": 112
+    },
+    "source": {
+      "attack": "330",
+      "defense": "130?",
+      "speed": "140",
+      "maxHp": "-800",
+      "maxMp": "?",
+      "exp": "980",
+      "gold": "112"
+    },
+    "unknownFields": [
+      "maxMp"
+    ],
+    "note": ""
+  },
+  {
+    "id": "monster_192",
+    "name": "キラーマジンガ",
+    "sourceName": "キラーマジンガ",
+    "recruitable": false,
+    "stats": {
+      "attack": 350,
+      "defense": 100,
+      "speed": 100,
+      "maxHp": 600,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 1100,
+      "gold": 123
+    },
+    "source": {
+      "attack": "350",
+      "defense": "100?",
+      "speed": "100",
+      "maxHp": "-600",
+      "maxMp": "0",
+      "exp": "1100",
+      "gold": "123"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_193",
+    "name": "メタルスライム",
+    "sourceName": "メタルスライム",
+    "recruitable": false,
+    "stats": {
+      "attack": 40,
+      "defense": 999,
+      "speed": 130,
+      "maxHp": 6,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 1350,
+      "gold": 75
+    },
+    "source": {
+      "attack": "40",
+      "defense": "999?",
+      "speed": "130?",
+      "maxHp": "-6",
+      "maxMp": "?",
+      "exp": "1350",
+      "gold": "75"
+    },
+    "unknownFields": [
+      "maxMp"
+    ],
+    "note": ""
+  },
+  {
+    "id": "monster_194",
+    "name": "メタルスライム（合体）スライム属",
+    "sourceName": "メタルスライム（合体）スライム属",
+    "recruitable": false,
+    "stats": {
+      "attack": 999,
+      "defense": 0,
+      "speed": 0,
+      "maxHp": 0,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 0,
+      "gold": 0
+    },
+    "source": {
+      "attack": "999?",
+      "defense": "?",
+      "speed": "?",
+      "maxHp": "?",
+      "maxMp": "?",
+      "exp": "?",
+      "gold": ""
+    },
+    "unknownFields": [
+      "defense",
+      "speed",
+      "maxHp",
+      "maxMp",
+      "exp",
+      "gold"
+    ],
+    "note": ""
+  },
+  {
+    "id": "monster_195",
+    "name": "デスホール",
+    "sourceName": "デスホール",
+    "recruitable": false,
+    "stats": {
+      "attack": 0,
+      "defense": 130,
+      "speed": 120,
+      "maxHp": 650,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 1350,
+      "gold": 35
+    },
+    "source": {
+      "attack": "?",
+      "defense": "130?",
+      "speed": "120",
+      "maxHp": "650",
+      "maxMp": "0?",
+      "exp": "1350",
+      "gold": "35"
+    },
+    "unknownFields": [
+      "attack"
+    ],
+    "note": ""
+  },
+  {
+    "id": "monster_196",
+    "name": "ブルサベージ",
+    "sourceName": "ブルサベージ",
+    "recruitable": false,
+    "stats": {
+      "attack": 330,
+      "defense": 115,
+      "speed": 150,
+      "maxHp": 900,
+      "maxMp": 8
+    },
+    "rewards": {
+      "exp": 1380,
+      "gold": 110
+    },
+    "source": {
+      "attack": "330",
+      "defense": "115*",
+      "speed": "150",
+      "maxHp": "900*",
+      "maxMp": "8",
+      "exp": "1380",
+      "gold": "110"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_197",
+    "name": "サタンジェネラル",
+    "sourceName": "サタンジェネラル",
+    "recruitable": false,
+    "stats": {
+      "attack": 290,
+      "defense": 127,
+      "speed": 120,
+      "maxHp": 630,
+      "maxMp": 90
+    },
+    "rewards": {
+      "exp": 1500,
+      "gold": 210
+    },
+    "source": {
+      "attack": "290",
+      "defense": "127*",
+      "speed": "120",
+      "maxHp": "-630",
+      "maxMp": "90",
+      "exp": "1500",
+      "gold": "210"
+    },
+    "unknownFields": [],
+    "note": ""
+  },
+  {
+    "id": "monster_198",
+    "name": "デーモンキング",
+    "sourceName": "デーモンキング",
+    "recruitable": false,
+    "stats": {
+      "attack": 350,
+      "defense": 153,
+      "speed": 150,
+      "maxHp": 850,
+      "maxMp": 999
+    },
+    "rewards": {
+      "exp": 250,
+      "gold": 0
+    },
+    "source": {
+      "attack": "350",
+      "defense": "153*",
+      "speed": "150",
+      "maxHp": "-850",
+      "maxMp": "999以上1800",
+      "exp": "250",
+      "gold": ""
+    },
+    "unknownFields": [
+      "gold"
+    ],
+    "note": ""
+  },
+  {
+    "id": "monster_199",
+    "name": "はぐれメタル",
+    "sourceName": "◎はぐれメタル",
+    "recruitable": true,
+    "stats": {
+      "attack": 0,
+      "defense": 999,
+      "speed": 300,
+      "maxHp": 6,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 10050,
+      "gold": 10
+    },
+    "source": {
+      "attack": "?",
+      "defense": "999?",
+      "speed": "300?",
+      "maxHp": "-6",
+      "maxMp": "?",
+      "exp": "10050",
+      "gold": "10"
+    },
+    "unknownFields": [
+      "attack",
+      "maxMp"
+    ],
+    "note": "◎付きのため仲間候補"
+  },
+  {
+    "id": "monster_200",
+    "name": "メタルキング",
+    "sourceName": "メタルキング",
+    "recruitable": false,
+    "stats": {
+      "attack": 150,
+      "defense": 999,
+      "speed": 150,
+      "maxHp": 15,
+      "maxMp": 0
+    },
+    "rewards": {
+      "exp": 30010,
+      "gold": 15
+    },
+    "source": {
+      "attack": "150",
+      "defense": "999?",
+      "speed": "150",
+      "maxHp": "15",
+      "maxMp": "?",
+      "exp": "30010",
+      "gold": "15"
+    },
+    "unknownFields": [
+      "maxMp"
+    ],
+    "note": ""
+  }
+]

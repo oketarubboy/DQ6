@@ -1,3 +1,5 @@
+const APP_VERSION = "v0.3.0";
+const DATA_VERSION = "2026-05-17 monsters-200";
 const SAVE_KEY = "job-rpg-pwa-sample-v2";
 
 const STAT_LABELS = {
@@ -8,6 +10,16 @@ const STAT_LABELS = {
   style: "かっこよさ",
   mhp: "MHP",
   mmp: "MMP"
+};
+
+const MONSTER_STAT_LABELS = {
+  attack: "攻撃力",
+  defense: "守備力",
+  speed: "素早さ",
+  maxHp: "最大HP",
+  maxMp: "最大MP",
+  exp: "経験値",
+  gold: "ゴールド"
 };
 
 const RARE_ITEMS = {
@@ -48,8 +60,11 @@ const DEFAULT_STATE = {
 };
 
 let jobs = [];
+let monsters = [];
 let state = JSON.parse(JSON.stringify(DEFAULT_STATE));
 let currentFilter = "all";
+let monsterFilter = "all";
+let monsterSearch = "";
 let deferredInstallPrompt = null;
 
 const $ = (selector) => document.querySelector(selector);
@@ -62,6 +77,12 @@ async function loadJobs() {
   const response = await fetch("data/jobs.json", { cache: "no-cache" });
   if (!response.ok) throw new Error("data/jobs.json を読み込めませんでした。GitHub Pages またはローカルサーバー上で実行してください。");
   jobs = await response.json();
+}
+
+async function loadMonsters() {
+  const response = await fetch("data/monsters.json", { cache: "no-cache" });
+  if (!response.ok) throw new Error("data/monsters.json を読み込めませんでした。GitHub Pages またはローカルサーバー上で実行してください。");
+  monsters = await response.json();
 }
 
 function loadState() {
@@ -508,6 +529,96 @@ function renderRareItems() {
   }
 }
 
+
+function renderVersionInfo() {
+  const versionEl = $("#versionInfo");
+  const dataVersionEl = $("#dataVersionInfo");
+  if (versionEl) versionEl.textContent = APP_VERSION;
+  if (dataVersionEl) dataVersionEl.textContent = DATA_VERSION;
+}
+
+function getMonsterNumber(monster) {
+  const match = String(monster.id || "").match(/(\d+)$/);
+  return match ? Number(match[1]) : 0;
+}
+
+function getMonsterFilteredList() {
+  const keyword = monsterSearch.trim().toLowerCase();
+  return monsters.filter((monster) => {
+    if (monsterFilter === "recruitable" && !monster.recruitable) return false;
+    if (monsterFilter === "strong" && Number(monster.stats?.attack || 0) < 200) return false;
+    if (!keyword) return true;
+    return monster.name.toLowerCase().includes(keyword);
+  });
+}
+
+function renderMonsterTabs() {
+  document.querySelectorAll(".monster-tab").forEach((tab) => {
+    tab.classList.toggle("active", tab.dataset.monsterFilter === monsterFilter);
+  });
+}
+
+function renderMonsterList() {
+  const tbody = $("#monsterTableBody");
+  const countEl = $("#monsterCount");
+  if (!tbody) return;
+
+  const filtered = getMonsterFilteredList();
+  const recruitableTotal = monsters.filter((monster) => monster.recruitable).length;
+  if (countEl) countEl.textContent = `${filtered.length} / ${monsters.length}体　仲間候補${recruitableTotal}体`;
+
+  tbody.innerHTML = "";
+  if (filtered.length === 0) {
+    tbody.innerHTML = `<tr><td colspan="10">該当するモンスターはありません。</td></tr>`;
+    return;
+  }
+
+  for (const monster of filtered) {
+    const stats = monster.stats || {};
+    const rewards = monster.rewards || {};
+    const unknownText = Array.isArray(monster.unknownFields) && monster.unknownFields.length
+      ? `数字なし：${monster.unknownFields.map((field) => MONSTER_STAT_LABELS[field] || field).join("、")}`
+      : "";
+    const tr = document.createElement("tr");
+    tr.innerHTML = `
+      <td>${getMonsterNumber(monster)}</td>
+      <td class="monster-name-cell"><strong>${monster.name}</strong>${unknownText ? `<span>${unknownText}</span>` : ""}</td>
+      <td class="${monster.recruitable ? "monster-recruitable" : "monster-normal"}">${monster.recruitable ? "候補" : "-"}</td>
+      <td>${stats.attack ?? 0}</td>
+      <td>${stats.defense ?? 0}</td>
+      <td>${stats.speed ?? 0}</td>
+      <td>${stats.maxHp ?? 0}</td>
+      <td>${stats.maxMp ?? 0}</td>
+      <td>${rewards.exp ?? 0}</td>
+      <td>${rewards.gold ?? 0}</td>
+    `;
+    tbody.appendChild(tr);
+  }
+}
+
+async function forceUpdate() {
+  setSaveStatus("更新準備中");
+  saveState(false);
+
+  try {
+    if ("serviceWorker" in navigator) {
+      const registrations = await navigator.serviceWorker.getRegistrations();
+      await Promise.all(registrations.map((registration) => registration.unregister()));
+    }
+
+    if ("caches" in window) {
+      const keys = await caches.keys();
+      await Promise.all(keys.map((key) => caches.delete(key)));
+    }
+  } catch (error) {
+    console.warn("Cache clear failed", error);
+  }
+
+  const url = new URL(window.location.href);
+  url.searchParams.set("update", Date.now().toString());
+  window.location.replace(url.toString());
+}
+
 function renderJobList() {
   const wrap = $("#jobList");
   const template = $("#jobCardTemplate");
@@ -653,6 +764,7 @@ function renderTabs() {
 
 function render() {
   normalizeOldLogEntries();
+  renderVersionInfo();
   $("#playerName").value = state.playerName;
   renderBaseStatsEditor();
   renderCurrentJob();
@@ -663,6 +775,8 @@ function render() {
   renderJobList();
   renderSelectedJobDetail();
   renderProgressTable();
+  renderMonsterTabs();
+  renderMonsterList();
   renderLog();
 }
 
@@ -674,6 +788,7 @@ function bindEvents() {
   });
 
   $("#saveButton").addEventListener("click", () => saveState(true));
+  $("#forceUpdateButton").addEventListener("click", forceUpdate);
   $("#resetButton").addEventListener("click", resetState);
   $("#battleOnceButton").addEventListener("click", () => addBattles(1));
   $("#battleTenButton").addEventListener("click", () => addBattles(10));
@@ -690,6 +805,22 @@ function bindEvents() {
       currentFilter = tab.dataset.filter;
       renderTabs();
       renderJobList();
+    });
+  });
+
+  const monsterSearchInput = $("#monsterSearch");
+  if (monsterSearchInput) {
+    monsterSearchInput.addEventListener("input", (event) => {
+      monsterSearch = event.target.value;
+      renderMonsterList();
+    });
+  }
+
+  document.querySelectorAll(".monster-tab").forEach((tab) => {
+    tab.addEventListener("click", () => {
+      monsterFilter = tab.dataset.monsterFilter;
+      renderMonsterTabs();
+      renderMonsterList();
     });
   });
 
@@ -719,7 +850,7 @@ async function registerServiceWorker() {
 
 async function init() {
   try {
-    await loadJobs();
+    await Promise.all([loadJobs(), loadMonsters()]);
     loadState();
     getProgress(state.currentJobId);
     getProgress(state.selectedJobId);

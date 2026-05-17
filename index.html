@@ -14,10 +14,12 @@
     <div>
       <p class="eyebrow">RPG PWA SAMPLE</p>
       <h1>職業システム実装サンプル</h1>
-      <p class="lead">職業変更によるパラメータ補正、熟練度、上級職解放条件、レアアイテム転職を確認できます。</p>
+      <p class="lead">職業変更によるパラメータ補正、熟練度、上級職解放条件、レアアイテム転職、モンスター図鑑を確認できます。</p>
+      <p class="version-line">Version <strong id="versionInfo">-</strong> / Data <span id="dataVersionInfo">-</span></p>
     </div>
     <div class="header-actions">
       <button id="installButton" class="ghost hidden">アプリをインストール</button>
+      <button id="forceUpdateButton" class="ghost">最新版に更新</button>
       <button id="saveButton">保存</button>
       <button id="resetButton" class="danger">リセット</button>
     </div>
@@ -163,6 +165,46 @@
           <tbody id="progressTableBody"></tbody>
         </table>
       </div>
+    </section>
+
+
+
+    <section class="panel monster-panel">
+      <div class="section-title-row">
+        <div>
+          <p class="eyebrow">MONSTERS</p>
+          <h2>モンスター図鑑</h2>
+        </div>
+        <span id="monsterCount" class="pill">-</span>
+      </div>
+      <div class="monster-toolbar">
+        <input id="monsterSearch" class="text-input monster-search" type="search" placeholder="モンスター名で検索" />
+        <div class="tabs monster-tabs" role="tablist" aria-label="モンスターフィルター">
+          <button class="monster-tab active" data-monster-filter="all">すべて</button>
+          <button class="monster-tab" data-monster-filter="recruitable">仲間候補</button>
+          <button class="monster-tab" data-monster-filter="strong">強敵</button>
+        </div>
+      </div>
+      <div class="table-scroll monster-table-wrap">
+        <table class="monster-table">
+          <thead>
+            <tr>
+              <th>No.</th>
+              <th>名前</th>
+              <th>仲間</th>
+              <th>攻撃力</th>
+              <th>守備力</th>
+              <th>素早さ</th>
+              <th>最大HP</th>
+              <th>最大MP</th>
+              <th>経験値</th>
+              <th>ゴールド</th>
+            </tr>
+          </thead>
+          <tbody id="monsterTableBody"></tbody>
+        </table>
+      </div>
+      <p class="hint">◎付きのモンスターは仲間候補として登録しています。* と - は除去し、50?135* のように複数候補がある値は低い方を採用しています。数字がない項目は 0 として登録しています。</p>
     </section>
 
     <section class="panel log-panel">

@@ -1,4 +1,4 @@
-const CACHE_NAME = "job-rpg-pwa-sample-v2";
+const CACHE_NAME = "job-rpg-pwa-sample-v3";
 const ASSETS = [
   "./",
   "./index.html",
@@ -6,6 +6,7 @@ const ASSETS = [
   "./css/style.css",
   "./js/main.js",
   "./data/jobs.json",
+  "./data/monsters.json",
   "./assets/icons/icon-192.png",
   "./assets/icons/icon-512.png"
 ];
