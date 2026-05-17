@@ -1,5 +1,5 @@
-const APP_VERSION = "v0.6.0";
-const DATA_VERSION = "2026-05-17 job-learn-rules-v2";
+const APP_VERSION = "v0.7.0";
+const DATA_VERSION = "2026-05-17 codex-battle-ui-v1";
 const SAVE_KEY = "job-rpg-pwa-sample-v6";
 
 const STAT_LABELS = {
@@ -53,6 +53,7 @@ const DEFAULT_STATE = {
   unlockedJobIds: [],
   acknowledgedUnlocks: [],
   recruitedMonsterIds: [],
+  defeatedMonsterIds: [],
   battle: null,
   selectedAbilityKey: "",
   log: ["RPGサンプルを開始しました。ダンジョンに潜るとターン制バトルが始まります。"]
@@ -113,6 +114,7 @@ function loadState() {
       unlockedJobIds: Array.isArray(parsed.unlockedJobIds) ? parsed.unlockedJobIds : [],
       acknowledgedUnlocks: Array.isArray(parsed.acknowledgedUnlocks) ? parsed.acknowledgedUnlocks : [],
       recruitedMonsterIds: Array.isArray(parsed.recruitedMonsterIds) ? parsed.recruitedMonsterIds : [],
+      defeatedMonsterIds: Array.isArray(parsed.defeatedMonsterIds) ? parsed.defeatedMonsterIds : [],
       log: Array.isArray(parsed.log) ? parsed.log.slice(0, 120) : []
     };
   } catch {
@@ -193,6 +195,20 @@ function getMonster(monsterId) {
 function getMonsterNumber(monster) {
   const match = String(monster?.id || "").match(/(\d+)$/);
   return match ? Number(match[1]) : 0;
+}
+
+function isMonsterDiscovered(monsterId) {
+  return state.defeatedMonsterIds.includes(monsterId) || state.recruitedMonsterIds.includes(monsterId);
+}
+
+function markMonsterDiscovered(monster) {
+  if (!monster || isMonsterDiscovered(monster.id)) return false;
+  state.defeatedMonsterIds.push(monster.id);
+  return true;
+}
+
+function getMonsterDiscoveryCount() {
+  return monsters.filter((monster) => isMonsterDiscovered(monster.id)).length;
 }
 
 function getProgress(jobId) {
@@ -1065,7 +1081,9 @@ function handleVictory(enemy) {
   state.gold += gold;
   state.totalBattles += 1;
   addJobBattleProgress(1);
+  const isFirstDiscovery = markMonsterDiscovered(enemy);
   addLog(`${enemy.name}を倒した！経験値${exp}、${gold}ゴールドを獲得。`, "victory");
+  if (isFirstDiscovery) addLog(`モンスター図鑑に「${enemy.name}」が登録されました。`, "codex");
 
   const newLevel = getHeroLevel();
   if (newLevel > oldLevel) {
@@ -1256,11 +1274,37 @@ function renderLearnedAbilities() {
   }
 }
 
+
+function renderBattlePlayerStatus() {
+  const wrap = $("#battlePlayerStatus");
+  if (!wrap) return;
+  const stats = getFinalStatValues();
+  const job = getJob(state.currentJobId);
+  const level = getHeroLevel();
+  const hpRate = stats.mhp ? Math.max(0, Math.min(100, Math.round((state.currentHp / stats.mhp) * 100))) : 0;
+  const mpRate = stats.mmp ? Math.max(0, Math.min(100, Math.round((state.currentMp / stats.mmp) * 100))) : 0;
+  const battleState = state.battle?.active ? "戦闘中" : "待機中";
+  wrap.innerHTML = `
+    <div class="battle-player-main">
+      <strong>${state.playerName}</strong>
+      <span>Lv${level} / ${job.name} / ${battleState}</span>
+    </div>
+    <div class="battle-player-meter">
+      <span>HP ${state.currentHp} / ${stats.mhp}</span>
+      <div class="progress-bar hp-bar"><div style="width:${hpRate}%"></div></div>
+    </div>
+    <div class="battle-player-meter">
+      <span>MP ${state.currentMp} / ${stats.mmp}</span>
+      <div class="progress-bar mp-bar"><div style="width:${mpRate}%"></div></div>
+    </div>`;
+}
+
 function renderBattle() {
   const enemy = getCurrentEnemy();
   const box = $("#enemyBox");
   const buttons = ["#attackButton", "#abilityButton", "#guardButton", "#fleeButton"].map($).filter(Boolean);
   renderAbilityCommand();
+  renderBattlePlayerStatus();
   if (!enemy) {
     $("#battleTitle").textContent = "戦闘なし";
     $("#battleTurn").textContent = "待機中";
@@ -1378,11 +1422,13 @@ function renderProgressTable() {
 function getMonsterFilteredList() {
   const keyword = monsterSearch.trim().toLowerCase();
   return monsters.filter((monster) => {
+    const discovered = isMonsterDiscovered(monster.id);
+    if (monsterFilter !== "all" && !discovered) return false;
     if (monsterFilter === "recruitable" && !monster.recruitable) return false;
     if (monsterFilter === "recruited" && !state.recruitedMonsterIds.includes(monster.id)) return false;
     if (monsterFilter === "strong" && Number(monster.stats?.attack || 0) < 200) return false;
     if (!keyword) return true;
-    return monster.name.toLowerCase().includes(keyword);
+    return discovered && monster.name.toLowerCase().includes(keyword);
   });
 }
 
@@ -1392,15 +1438,25 @@ function renderMonsterTabs() {
 
 function renderMonsterList() {
   const list = getMonsterFilteredList();
-  $("#monsterCount").textContent = `${list.length} / ${monsters.length}体`;
+  const discoveredCount = getMonsterDiscoveryCount();
+  $("#monsterCount").textContent = monsterFilter === "all"
+    ? `発見 ${discoveredCount} / ${monsters.length}体`
+    : `${list.length}件 / 発見 ${discoveredCount}体`;
   const tbody = $("#monsterTableBody");
   tbody.innerHTML = "";
   for (const monster of list) {
+    const discovered = isMonsterDiscovered(monster.id);
+    const tr = document.createElement("tr");
+    if (!discovered) {
+      tr.className = "monster-unknown-row";
+      tr.innerHTML = `<td>${getMonsterNumber(monster)}</td><td class="monster-name-cell"><strong>？？？？</strong><span>まだ倒していません</span></td><td class="monster-normal">未発見</td><td>?</td><td>?</td><td>?</td><td>?</td><td>?</td><td>?</td><td>?</td>`;
+      tbody.appendChild(tr);
+      continue;
+    }
     const stats = monster.stats || {};
     const rewards = monster.rewards || {};
     const unknownText = Array.isArray(monster.unknownFields) && monster.unknownFields.length ? `数字なし：${monster.unknownFields.map((field) => MONSTER_STAT_LABELS[field] || field).join("、")}` : "";
     const recruited = state.recruitedMonsterIds.includes(monster.id);
-    const tr = document.createElement("tr");
     tr.innerHTML = `<td>${getMonsterNumber(monster)}</td><td class="monster-name-cell"><strong>${monster.name}</strong>${unknownText ? `<span>${unknownText}</span>` : ""}</td><td class="${recruited ? "monster-recruited" : monster.recruitable ? "monster-recruitable" : "monster-normal"}">${recruited ? "仲間" : monster.recruitable ? "候補" : "-"}</td><td>${stats.attack ?? 0}</td><td>${stats.defense ?? 0}</td><td>${stats.speed ?? 0}</td><td>${stats.maxHp ?? 0}</td><td>${stats.maxMp ?? 0}</td><td>${rewards.exp ?? 0}</td><td>${rewards.gold ?? 0}</td>`;
     tbody.appendChild(tr);
   }

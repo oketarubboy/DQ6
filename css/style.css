@@ -755,3 +755,192 @@ select.text-input { appearance: auto; }
   .ability-list,
   .battle-command-grid { grid-template-columns: 1fr; }
 }
+
+/* v0.7.0 図鑑・戦闘UI・スクロール削減 */
+.app-header {
+  max-width: 1480px;
+  padding: 1.35rem 1rem 0.6rem;
+  align-items: center;
+}
+.app-header h1 {
+  margin: 0.08rem 0 0.25rem;
+  font-size: clamp(1.55rem, 2.8vw, 2.55rem);
+}
+.lead { line-height: 1.55; }
+.version-line { margin-top: 0.35rem; }
+button { padding: 0.68rem 0.95rem; }
+.layout {
+  max-width: 1480px;
+  padding: 0.7rem 1rem 2rem;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+.panel {
+  border-radius: 18px;
+  padding: 0.85rem;
+}
+.section-title-row {
+  margin-bottom: 0.7rem;
+}
+.hint {
+  margin-top: 0.45rem;
+  line-height: 1.45;
+}
+.profile-panel,
+.current-panel,
+.detail-panel,
+.bonus-panel,
+.item-panel { grid-column: span 1; }
+.stats-panel,
+.dungeon-panel,
+.battle-panel,
+.ability-panel,
+.jobs-panel,
+.progress-panel,
+.monster-panel,
+.log-panel { grid-column: span 2; }
+.stats-panel .stats-grid,
+.stats-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.5rem;
+}
+.stat-card,
+.multiplier-card,
+.bonus-item,
+.unlock-item,
+.requirement-box,
+.hero-status-grid > div,
+.hpmp-box,
+.enemy-box,
+.ability-command-box {
+  border-radius: 14px;
+  padding: 0.65rem;
+}
+.stat-value { font-size: 1.24rem; }
+.stat-detail,
+.multiplier-value { font-size: 0.72rem; }
+.hero-status-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.5rem;
+  margin-top: 0.7rem;
+}
+.hero-status-grid strong { font-size: 1rem; }
+.hpmp-box {
+  gap: 0.5rem;
+  margin-top: 0.55rem;
+}
+.current-summary {
+  gap: 0.5rem;
+}
+.current-summary > div {
+  padding: 0.65rem;
+  border-radius: 14px;
+}
+.progress-wrap { margin-top: 0.65rem; }
+.progress-bar { height: 12px; }
+.dungeon-panel .battle-actions { margin-top: 0.7rem; }
+.battle-player-status {
+  display: grid;
+  grid-template-columns: minmax(130px, 0.8fr) 1fr 1fr;
+  gap: 0.65rem;
+  align-items: stretch;
+  margin-bottom: 0.65rem;
+}
+.battle-player-main,
+.battle-player-meter {
+  background: rgba(0, 0, 0, 0.18);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 0.62rem;
+}
+.battle-player-main strong,
+.battle-player-main span,
+.battle-player-meter span {
+  display: block;
+}
+.battle-player-main strong { font-size: 1.05rem; }
+.battle-player-main span,
+.battle-player-meter span {
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 800;
+  margin-bottom: 0.28rem;
+}
+.enemy-name-row { margin-bottom: 0.45rem; }
+.enemy-name-row strong { font-size: 1.16rem; }
+.enemy-stats-mini { margin-top: 0.55rem; }
+.enemy-stats-mini span {
+  padding: 0.26rem 0.46rem;
+  font-size: 0.72rem;
+}
+.ability-command-box { margin-top: 0.65rem; }
+.ability-use-row {
+  grid-template-columns: minmax(0, 1fr) 92px;
+  gap: 0.5rem;
+}
+.command-grid { margin-top: 0.65rem; gap: 0.5rem; }
+.ability-list,
+.job-list,
+.table-scroll,
+.monster-table-wrap,
+.battle-log {
+  max-height: 320px;
+}
+.job-list { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.job-card { padding: 0.65rem; border-radius: 15px; }
+.job-card-rank,
+.job-card-desc { line-height: 1.35; margin-top: 0.25rem; }
+th, td { padding: 0.52rem 0.65rem; font-size: 0.84rem; }
+.monster-unknown-row td { color: var(--muted); }
+.monster-unknown-row .monster-name-cell strong {
+  color: #d5dbea;
+  letter-spacing: 0.12em;
+}
+.log-entry.codex { border-left-color: var(--accent-2); }
+@media (max-width: 1180px) {
+  .layout { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .profile-panel,
+  .current-panel,
+  .stats-panel,
+  .dungeon-panel,
+  .battle-panel,
+  .ability-panel,
+  .detail-panel,
+  .bonus-panel,
+  .item-panel { grid-column: span 1; }
+  .jobs-panel,
+  .progress-panel,
+  .monster-panel,
+  .log-panel { grid-column: span 2; }
+  .stats-grid,
+  .stats-panel .stats-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .job-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 760px) {
+  .app-header { padding: 1rem 0.8rem 0.5rem; }
+  .layout { grid-template-columns: 1fr; padding: 0.65rem 0.8rem 1.5rem; }
+  .profile-panel,
+  .current-panel,
+  .stats-panel,
+  .dungeon-panel,
+  .battle-panel,
+  .ability-panel,
+  .jobs-panel,
+  .progress-panel,
+  .monster-panel,
+  .log-panel,
+  .detail-panel,
+  .bonus-panel,
+  .item-panel { grid-column: span 1; }
+  .battle-player-status,
+  .hero-status-grid,
+  .stats-grid,
+  .stats-panel .stats-grid,
+  .job-list,
+  .ability-list { grid-template-columns: 1fr; }
+  .ability-list,
+  .job-list,
+  .table-scroll,
+  .monster-table-wrap,
+  .battle-log { max-height: none; }
+}
