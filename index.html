@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#253451" />
+  <title>職業システム RPG PWA サンプル</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="assets/icons/icon-192.png" />
+</head>
+<body>
+  <header class="app-header">
+    <div>
+      <p class="eyebrow">RPG PWA SAMPLE</p>
+      <h1>職業システム実装サンプル</h1>
+      <p class="lead">職業変更によるパラメータ補正、熟練度、上級職マスター特典を確認できます。</p>
+    </div>
+    <div class="header-actions">
+      <button id="installButton" class="ghost hidden">アプリをインストール</button>
+      <button id="saveButton">保存</button>
+      <button id="resetButton" class="danger">リセット</button>
+    </div>
+  </header>
+
+  <main class="layout">
+    <section class="panel profile-panel">
+      <div class="section-title-row">
+        <div>
+          <p class="eyebrow">PLAYER</p>
+          <h2>主人公</h2>
+        </div>
+        <span id="saveStatus" class="pill">未保存</span>
+      </div>
+
+      <label class="field-label" for="playerName">名前</label>
+      <input id="playerName" class="text-input" type="text" maxlength="16" />
+
+      <h3>基礎パラメータ</h3>
+      <div id="baseStatsEditor" class="base-stats-grid"></div>
+      <p class="hint">最終値 = 基礎値 × 職業補正％ + マスター特典です。</p>
+    </section>
+
+    <section class="panel current-panel">
+      <div class="section-title-row">
+        <div>
+          <p class="eyebrow">CURRENT JOB</p>
+          <h2 id="currentJobName">-</h2>
+        </div>
+        <span id="currentJobType" class="pill">-</span>
+      </div>
+
+      <div class="current-summary">
+        <div>
+          <span class="summary-label">熟練度</span>
+          <strong id="currentRank">-</strong>
+        </div>
+        <div>
+          <span class="summary-label">次まで</span>
+          <strong id="nextBattles">-</strong>
+        </div>
+        <div>
+          <span class="summary-label">総戦闘数</span>
+          <strong id="totalBattles">0</strong>
+        </div>
+      </div>
+
+      <div class="progress-wrap">
+        <div class="progress-label"><span id="progressText">-</span></div>
+        <div class="progress-bar"><div id="jobProgressBar"></div></div>
+      </div>
+
+      <div class="battle-actions">
+        <button id="battleOnceButton">1回戦闘</button>
+        <button id="battleTenButton" class="secondary">10回戦闘</button>
+        <button id="battleHundredButton" class="secondary">100回戦闘</button>
+      </div>
+    </section>
+
+    <section class="panel stats-panel">
+      <div class="section-title-row">
+        <div>
+          <p class="eyebrow">PARAMETERS</p>
+          <h2>現在の能力</h2>
+        </div>
+      </div>
+      <div id="statsCards" class="stats-grid"></div>
+    </section>
+
+    <section class="panel bonus-panel">
+      <div class="section-title-row">
+        <div>
+          <p class="eyebrow">MASTER BONUS</p>
+          <h2>発動中の上級職マスター特典</h2>
+        </div>
+      </div>
+      <div id="masterBonusList" class="bonus-list"></div>
+    </section>
+
+    <section class="panel jobs-panel">
+      <div class="section-title-row">
+        <div>
+          <p class="eyebrow">JOB CHANGE</p>
+          <h2>職業変更</h2>
+        </div>
+      </div>
+      <div class="tabs" role="tablist" aria-label="職業フィルター">
+        <button class="tab active" data-filter="all">すべて</button>
+        <button class="tab" data-filter="basic">基本職</button>
+        <button class="tab" data-filter="advanced">上級職</button>
+        <button class="tab" data-filter="mastered">マスター済み</button>
+      </div>
+      <div id="jobList" class="job-list"></div>
+    </section>
+
+    <section class="panel detail-panel">
+      <div class="section-title-row">
+        <div>
+          <p class="eyebrow">DETAIL</p>
+          <h2 id="selectedJobName">職業を選択してください</h2>
+        </div>
+        <span id="selectedJobRank" class="pill">-</span>
+      </div>
+      <p id="selectedJobDescription" class="job-description"></p>
+      <div id="selectedJobMultipliers" class="multiplier-grid"></div>
+      <button id="changeJobButton" class="wide">この職業に転職する</button>
+    </section>
+
+    <section class="panel progress-panel">
+      <div class="section-title-row">
+        <div>
+          <p class="eyebrow">PROGRESS</p>
+          <h2>職業熟練度一覧</h2>
+        </div>
+      </div>
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>職業</th>
+              <th>種別</th>
+              <th>熟練度</th>
+              <th>次まで</th>
+              <th>累計戦闘</th>
+            </tr>
+          </thead>
+          <tbody id="progressTableBody"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="panel log-panel">
+      <div class="section-title-row">
+        <div>
+          <p class="eyebrow">LOG</p>
+          <h2>戦闘ログ</h2>
+        </div>
+        <button id="clearLogButton" class="ghost small">ログ消去</button>
+      </div>
+      <div id="battleLog" class="battle-log"></div>
+    </section>
+  </main>
+
+  <template id="jobCardTemplate">
+    <button class="job-card">
+      <span class="job-card-top">
+        <strong class="job-card-name"></strong>
+        <span class="job-card-type pill"></span>
+      </span>
+      <span class="job-card-rank"></span>
+      <span class="job-card-desc"></span>
+    </button>
+  </template>
+
+  <script src="js/main.js" type="module"></script>
+</body>
+</html>
