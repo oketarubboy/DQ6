@@ -14,7 +14,7 @@
     <div>
       <p class="eyebrow">RPG PWA SAMPLE</p>
       <h1>職業システム実装サンプル</h1>
-      <p class="lead">職業変更によるパラメータ補正、熟練度、上級職マスター特典を確認できます。</p>
+      <p class="lead">職業変更によるパラメータ補正、熟練度、上級職解放条件、レアアイテム転職を確認できます。</p>
     </div>
     <div class="header-actions">
       <button id="installButton" class="ghost hidden">アプリをインストール</button>
@@ -97,6 +97,17 @@
       <div id="masterBonusList" class="bonus-list"></div>
     </section>
 
+    <section class="panel item-panel">
+      <div class="section-title-row">
+        <div>
+          <p class="eyebrow">RARE ITEMS</p>
+          <h2>レアアイテム転職</h2>
+        </div>
+      </div>
+      <div id="rareItemList" class="unlock-list"></div>
+      <p class="hint">ドラゴンとはぐれメタルは、対応する悟りアイテムを使用すると転職が解放されます。</p>
+    </section>
+
     <section class="panel jobs-panel">
       <div class="section-title-row">
         <div>
@@ -108,6 +119,8 @@
         <button class="tab active" data-filter="all">すべて</button>
         <button class="tab" data-filter="basic">基本職</button>
         <button class="tab" data-filter="advanced">上級職</button>
+        <button class="tab" data-filter="unlocked">転職可能</button>
+        <button class="tab" data-filter="locked">未解放</button>
         <button class="tab" data-filter="mastered">マスター済み</button>
       </div>
       <div id="jobList" class="job-list"></div>
@@ -122,6 +135,7 @@
         <span id="selectedJobRank" class="pill">-</span>
       </div>
       <p id="selectedJobDescription" class="job-description"></p>
+      <div id="selectedJobRequirement" class="requirement-box"></div>
       <div id="selectedJobMultipliers" class="multiplier-grid"></div>
       <button id="changeJobButton" class="wide">この職業に転職する</button>
     </section>
@@ -139,9 +153,11 @@
             <tr>
               <th>職業</th>
               <th>種別</th>
+              <th>解放状態</th>
               <th>熟練度</th>
               <th>次まで</th>
               <th>累計戦闘</th>
+              <th>解放条件</th>
             </tr>
           </thead>
           <tbody id="progressTableBody"></tbody>

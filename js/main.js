@@ -1,4 +1,5 @@
-const SAVE_KEY = "job-rpg-pwa-sample-v1";
+const SAVE_KEY = "job-rpg-pwa-sample-v2";
+
 const STAT_LABELS = {
   str: "力",
   agi: "素早さ",
@@ -7,6 +8,19 @@ const STAT_LABELS = {
   style: "かっこよさ",
   mhp: "MHP",
   mmp: "MMP"
+};
+
+const RARE_ITEMS = {
+  dragon_satori: {
+    name: "ドラゴンの悟り",
+    targetJobId: "dragon",
+    description: "使用すると、上級職「ドラゴン」への転職が解放されます。"
+  },
+  hagure_satori: {
+    name: "はぐれの悟り",
+    targetJobId: "metal_sprite",
+    description: "使用すると、上級職「はぐれメタル」への転職が解放されます。"
+  }
 };
 
 const DEFAULT_STATE = {
@@ -24,7 +38,13 @@ const DEFAULT_STATE = {
   selectedJobId: "unemployed",
   totalBattles: 0,
   jobProgress: {},
-  log: ["職業システムのサンプルを開始しました。職業を選び、戦闘ボタンで熟練度を上げてください。"]
+  items: {
+    dragon_satori: 1,
+    hagure_satori: 1
+  },
+  unlockedJobIds: [],
+  acknowledgedUnlocks: [],
+  log: ["職業システムのサンプルを開始しました。基本職をマスターすると、条件に合う上級職が解放されます。"]
 };
 
 let jobs = [];
@@ -58,10 +78,20 @@ function loadState() {
       ...parsed,
       baseStats: { ...DEFAULT_STATE.baseStats, ...(parsed.baseStats || {}) },
       jobProgress: parsed.jobProgress || {},
-      log: Array.isArray(parsed.log) ? parsed.log.slice(0, 80) : []
+      items: { ...DEFAULT_STATE.items, ...(parsed.items || {}) },
+      unlockedJobIds: Array.isArray(parsed.unlockedJobIds) ? parsed.unlockedJobIds : [],
+      acknowledgedUnlocks: Array.isArray(parsed.acknowledgedUnlocks) ? parsed.acknowledgedUnlocks : [],
+      log: Array.isArray(parsed.log) ? parsed.log.slice(0, 100) : []
     };
   } catch {
     state = clone(DEFAULT_STATE);
+  }
+
+  if (!isJobUnlocked(state.currentJobId)) {
+    const lockedName = getJob(state.currentJobId).name;
+    state.currentJobId = "unemployed";
+    state.selectedJobId = "unemployed";
+    addLog(`${lockedName}は現在の条件では未解放のため、無職に戻しました。`, "normal");
   }
 }
 
@@ -111,6 +141,66 @@ function getTypeLabel(type) {
   if (type === "basic") return "基本職";
   if (type === "advanced") return "上級職";
   return "標準";
+}
+
+function getItemName(itemId) {
+  return RARE_ITEMS[itemId]?.name || itemId;
+}
+
+function isJobUnlocked(jobId) {
+  const job = getJob(jobId);
+  if (!job || job.type === "none" || job.type === "basic") return true;
+  if (!job.unlock) return true;
+
+  if (job.unlock.type === "masteries") {
+    return job.unlock.required.every((requiredJobId) => isMastered(requiredJobId));
+  }
+
+  if (job.unlock.type === "item") {
+    return state.unlockedJobIds.includes(job.id);
+  }
+
+  return true;
+}
+
+function getUnlockDetail(job) {
+  if (isJobUnlocked(job.id)) {
+    return { unlocked: true, text: "転職可能", missing: [] };
+  }
+
+  if (!job.unlock) {
+    return { unlocked: true, text: "転職可能", missing: [] };
+  }
+
+  if (job.unlock.type === "masteries") {
+    const required = job.unlock.required.map((requiredJobId) => {
+      const requiredJob = getJob(requiredJobId);
+      const mastered = isMastered(requiredJobId);
+      return {
+        id: requiredJobId,
+        name: requiredJob.name,
+        mastered
+      };
+    });
+    const missing = required.filter((item) => !item.mastered);
+    return {
+      unlocked: false,
+      text: `必要職業：${required.map((item) => `${item.name}${item.mastered ? "★" : ""}`).join(" ＋ ")}`,
+      missing
+    };
+  }
+
+  if (job.unlock.type === "item") {
+    const itemName = getItemName(job.unlock.itemId);
+    const count = state.items[job.unlock.itemId] || 0;
+    return {
+      unlocked: false,
+      text: `${itemName}を使用すると解放されます。所持数：${count}`,
+      missing: count > 0 ? [] : [{ name: itemName, mastered: false }]
+    };
+  }
+
+  return { unlocked: false, text: "解放条件を満たしていません。", missing: [] };
 }
 
 function getNextInfo(job) {
@@ -173,7 +263,7 @@ function computeStats(jobId = state.currentJobId) {
 
 function addLog(message, kind = "normal") {
   state.log.unshift({ text: message, kind, at: new Date().toLocaleTimeString("ja-JP", { hour: "2-digit", minute: "2-digit", second: "2-digit" }) });
-  state.log = state.log.slice(0, 80);
+  state.log = state.log.slice(0, 100);
 }
 
 function normalizeOldLogEntries() {
@@ -181,6 +271,29 @@ function normalizeOldLogEntries() {
     if (typeof entry === "string") return { text: entry, kind: "normal", at: "" };
     return entry;
   });
+}
+
+function getMasterBonusText(job) {
+  if (!job.masterBonus) return "";
+  const flat = Object.entries(job.masterBonus.flat || {})
+    .map(([stat, value]) => `${STAT_LABELS[stat]}+${value}`)
+    .join("、");
+  const passives = (job.masterBonus.passives || []).join("、");
+  const joined = [flat, passives].filter(Boolean).join("、");
+  return joined ? ` 特典：${joined}` : "";
+}
+
+function announceNewlyUnlockedJobs() {
+  const newlyUnlocked = jobs.filter((job) => {
+    if (job.unlock?.type !== "masteries") return false;
+    if (!isJobUnlocked(job.id)) return false;
+    return !state.acknowledgedUnlocks.includes(job.id);
+  });
+
+  for (const job of newlyUnlocked) {
+    state.acknowledgedUnlocks.push(job.id);
+    addLog(`上級職「${job.name}」への転職が解放されました。`, "unlock");
+  }
 }
 
 function addBattles(count) {
@@ -209,6 +322,7 @@ function addBattles(count) {
         progress.mastered = true;
         masteredNow = true;
         addLog(`${job.name}をマスターしました。${getMasterBonusText(job)}`, "master");
+        announceNewlyUnlockedJobs();
       }
     }
   }
@@ -226,22 +340,54 @@ function addBattles(count) {
   render();
 }
 
-function getMasterBonusText(job) {
-  if (!job.masterBonus) return "";
-  const flat = Object.entries(job.masterBonus.flat || {})
-    .map(([stat, value]) => `${STAT_LABELS[stat]}+${value}`)
-    .join("、");
-  const passives = (job.masterBonus.passives || []).join("、");
-  const joined = [flat, passives].filter(Boolean).join("、");
-  return joined ? ` 特典：${joined}` : "";
-}
-
 function changeJob(jobId) {
   const job = getJob(jobId);
+  if (!isJobUnlocked(job.id)) {
+    addLog(`${job.name}にはまだ転職できません。${getUnlockDetail(job).text}`, "locked");
+    saveState(false);
+    render();
+    return;
+  }
+
   state.currentJobId = job.id;
   state.selectedJobId = job.id;
   getProgress(job.id);
   addLog(`${job.name}に転職しました。`, "change");
+  saveState(false);
+  render();
+}
+
+function useUnlockItem(itemId) {
+  const item = RARE_ITEMS[itemId];
+  if (!item) return;
+  const targetJob = getJob(item.targetJobId);
+
+  if (isJobUnlocked(targetJob.id)) {
+    addLog(`${targetJob.name}はすでに解放済みです。`, "normal");
+    render();
+    return;
+  }
+
+  const count = state.items[itemId] || 0;
+  if (count <= 0) {
+    addLog(`${item.name}を持っていません。`, "locked");
+    render();
+    return;
+  }
+
+  state.items[itemId] = count - 1;
+  state.unlockedJobIds.push(targetJob.id);
+  state.acknowledgedUnlocks.push(targetJob.id);
+  addLog(`${item.name}を使用しました。上級職「${targetJob.name}」への転職が解放されました。`, "unlock");
+  saveState(false);
+  render();
+}
+
+function grantItem(itemId) {
+  const item = RARE_ITEMS[itemId];
+  if (!item) return;
+  state.items[itemId] = (state.items[itemId] || 0) + 1;
+  addLog(`サンプル用に「${item.name}」を1個入手しました。`, "normal");
   saveState(false);
   render();
 }
@@ -334,6 +480,34 @@ function renderMasterBonuses() {
   }
 }
 
+function renderRareItems() {
+  const wrap = $("#rareItemList");
+  if (!wrap) return;
+  wrap.innerHTML = "";
+
+  for (const [itemId, item] of Object.entries(RARE_ITEMS)) {
+    const count = state.items[itemId] || 0;
+    const targetJob = getJob(item.targetJobId);
+    const unlocked = isJobUnlocked(targetJob.id);
+    const row = document.createElement("div");
+    row.className = "unlock-item";
+    row.innerHTML = `
+      <div>
+        <strong>${item.name}</strong>
+        <span>${item.description}</span>
+        <em>所持数：${count} / 対象職業：${targetJob.name} / 状態：${unlocked ? "解放済み" : "未解放"}</em>
+      </div>
+      <div class="unlock-actions">
+        <button class="small use-item-button" ${unlocked || count <= 0 ? "disabled" : ""}>使用して解放</button>
+        <button class="ghost small grant-item-button">サンプル用に入手</button>
+      </div>
+    `;
+    row.querySelector(".use-item-button").addEventListener("click", () => useUnlockItem(itemId));
+    row.querySelector(".grant-item-button").addEventListener("click", () => grantItem(itemId));
+    wrap.appendChild(row);
+  }
+}
+
 function renderJobList() {
   const wrap = $("#jobList");
   const template = $("#jobCardTemplate");
@@ -341,6 +515,8 @@ function renderJobList() {
 
   const filtered = jobs.filter((job) => {
     if (currentFilter === "all") return true;
+    if (currentFilter === "unlocked") return isJobUnlocked(job.id);
+    if (currentFilter === "locked") return !isJobUnlocked(job.id);
     if (currentFilter === "mastered") return isMastered(job.id);
     return job.type === currentFilter;
   });
@@ -353,16 +529,18 @@ function renderJobList() {
   for (const job of filtered) {
     const progress = getProgress(job.id);
     const next = getNextInfo(job);
+    const unlock = getUnlockDetail(job);
     const node = template.content.firstElementChild.cloneNode(true);
     node.dataset.jobId = job.id;
     node.classList.toggle("selected", state.selectedJobId === job.id);
     node.classList.toggle("current", state.currentJobId === job.id);
+    node.classList.toggle("locked", !unlock.unlocked);
     node.querySelector(".job-card-name").textContent = job.name;
-    node.querySelector(".job-card-type").textContent = getTypeLabel(job.type);
+    node.querySelector(".job-card-type").textContent = unlock.unlocked ? getTypeLabel(job.type) : "未解放";
     node.querySelector(".job-card-rank").textContent = job.thresholds.length
       ? `熟練度 ${progress.rank}/8　次まで ${next.label}　累計 ${progress.totalBattles}戦`
       : "熟練度なし";
-    node.querySelector(".job-card-desc").textContent = job.description;
+    node.querySelector(".job-card-desc").textContent = `${job.description} ${job.type === "advanced" ? `｜${unlock.text}` : ""}`;
     node.addEventListener("click", () => {
       state.selectedJobId = job.id;
       renderJobList();
@@ -377,10 +555,25 @@ function renderSelectedJobDetail() {
   const progress = getProgress(job.id);
   const next = getNextInfo(job);
   const preview = computeStats(job.id);
+  const unlock = getUnlockDetail(job);
 
   $("#selectedJobName").textContent = job.name;
   $("#selectedJobRank").textContent = job.thresholds.length ? `熟練度 ${progress.rank}/8` : "熟練度なし";
   $("#selectedJobDescription").textContent = `${job.description} ${job.thresholds.length ? `次の熟練度まで${next.label}です。` : ""}`;
+
+  const requirement = $("#selectedJobRequirement");
+  if (requirement) {
+    if (job.type === "advanced") {
+      requirement.className = `requirement-box ${unlock.unlocked ? "ok" : "locked"}`;
+      requirement.innerHTML = `
+        <strong>${unlock.unlocked ? "解放済み" : "未解放"}</strong>
+        <span>${unlock.text}</span>
+      `;
+    } else {
+      requirement.className = "requirement-box ok";
+      requirement.innerHTML = `<strong>転職可能</strong><span>基本職は最初から転職できます。</span>`;
+    }
+  }
 
   const wrap = $("#selectedJobMultipliers");
   wrap.innerHTML = "";
@@ -401,8 +594,15 @@ function renderSelectedJobDetail() {
   }
 
   const button = $("#changeJobButton");
-  button.disabled = state.currentJobId === job.id;
-  button.textContent = state.currentJobId === job.id ? "現在の職業です" : "この職業に転職する";
+  const isCurrent = state.currentJobId === job.id;
+  button.disabled = isCurrent || !unlock.unlocked;
+  if (isCurrent) {
+    button.textContent = "現在の職業です";
+  } else if (!unlock.unlocked) {
+    button.textContent = "解放条件を満たしていません";
+  } else {
+    button.textContent = "この職業に転職する";
+  }
 }
 
 function renderProgressTable() {
@@ -412,13 +612,16 @@ function renderProgressTable() {
   for (const job of jobs) {
     const progress = getProgress(job.id);
     const next = getNextInfo(job);
+    const unlock = getUnlockDetail(job);
     const tr = document.createElement("tr");
     tr.innerHTML = `
       <td>${job.name}</td>
       <td>${getTypeLabel(job.type)}</td>
+      <td>${job.type === "advanced" ? (unlock.unlocked ? "解放済み" : "未解放") : "最初から可"}</td>
       <td>${job.thresholds.length ? `${progress.rank}/8${progress.mastered ? " ★" : ""}` : "-"}</td>
       <td>${next.label}</td>
       <td>${progress.totalBattles.toLocaleString("ja-JP")}</td>
+      <td>${job.type === "advanced" ? unlock.text : "-"}</td>
     `;
     tbody.appendChild(tr);
   }
@@ -455,6 +658,7 @@ function render() {
   renderCurrentJob();
   renderStats();
   renderMasterBonuses();
+  renderRareItems();
   renderTabs();
   renderJobList();
   renderSelectedJobDetail();

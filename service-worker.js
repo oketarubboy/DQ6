@@ -1,4 +1,4 @@
-const CACHE_NAME = "job-rpg-pwa-sample-v1";
+const CACHE_NAME = "job-rpg-pwa-sample-v2";
 const ASSETS = [
   "./",
   "./index.html",

@@ -121,7 +121,8 @@ button.wide { width: 100%; margin-top: 1rem; }
 .log-panel { grid-column: span 2; }
 
 .detail-panel,
-.bonus-panel { grid-column: span 1; }
+.bonus-panel,
+.item-panel { grid-column: span 1; }
 
 .section-title-row {
   display: flex;
@@ -196,7 +197,9 @@ h3 { margin-top: 1rem; margin-bottom: 0.65rem; font-size: 1rem; color: #dfe8ff; 
 .base-stat-control,
 .stat-card,
 .multiplier-card,
-.bonus-item {
+.bonus-item,
+.unlock-item,
+.requirement-box {
   background: rgba(0, 0, 0, 0.18);
   border: 1px solid var(--line);
   border-radius: 16px;
@@ -380,7 +383,7 @@ h3 { margin-top: 1rem; margin-bottom: 0.65rem; font-size: 1rem; color: #dfe8ff; 
 table {
   width: 100%;
   border-collapse: collapse;
-  min-width: 680px;
+  min-width: 920px;
 }
 
 th, td {
@@ -426,6 +429,7 @@ tr:last-child td { border-bottom: 0; }
   .layout { grid-template-columns: 1fr 1fr; }
   .stats-panel,
   .bonus-panel,
+  .item-panel,
   .detail-panel { grid-column: span 1; }
   .jobs-panel,
   .progress-panel,
@@ -442,8 +446,80 @@ tr:last-child td { border-bottom: 0; }
   .progress-panel,
   .log-panel,
   .detail-panel,
-  .bonus-panel { grid-column: span 1; }
+  .bonus-panel,
+  .item-panel { grid-column: span 1; }
   .job-list { grid-template-columns: 1fr; max-height: none; }
   .battle-actions { grid-template-columns: 1fr; }
   .current-summary { grid-template-columns: 1fr; }
+}
+
+
+.job-card.locked {
+  opacity: 0.62;
+  border-style: dashed;
+}
+
+.job-card.locked .pill {
+  color: #ffe5e5;
+  background: rgba(255, 125, 125, 0.12);
+  border-color: rgba(255, 125, 125, 0.3);
+}
+
+.unlock-list {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.unlock-item {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.8rem;
+  align-items: center;
+}
+
+.unlock-item strong,
+.requirement-box strong {
+  display: block;
+  margin-bottom: 0.35rem;
+}
+
+.unlock-item span,
+.unlock-item em,
+.requirement-box span {
+  display: block;
+  color: var(--muted);
+  line-height: 1.7;
+  font-size: 0.86rem;
+  font-style: normal;
+}
+
+.unlock-actions {
+  display: flex;
+  gap: 0.45rem;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.requirement-box {
+  margin-bottom: 0.8rem;
+}
+
+.requirement-box.ok {
+  border-color: rgba(156, 255, 194, 0.32);
+  background: rgba(156, 255, 194, 0.08);
+}
+
+.requirement-box.locked {
+  border-color: rgba(255, 125, 125, 0.34);
+  background: rgba(255, 125, 125, 0.08);
+}
+
+.log-entry.unlock { border-left-color: var(--ok); }
+.log-entry.locked { border-left-color: var(--danger); }
+
+@media (max-width: 760px) {
+  .item-panel { grid-column: span 1; }
+  .unlock-item { grid-template-columns: 1fr; }
+  .unlock-actions { justify-content: stretch; }
+  .unlock-actions button { flex: 1; }
 }

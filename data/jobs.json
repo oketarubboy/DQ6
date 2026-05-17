@@ -4,7 +4,15 @@
     "name": "無職",
     "type": "none",
     "description": "職業補正が入らない標準状態です。",
-    "multipliers": { "str": 100, "agi": 100, "vit": 100, "int": 100, "style": 100, "mhp": 100, "mmp": 100 },
+    "multipliers": {
+      "str": 100,
+      "agi": 100,
+      "vit": 100,
+      "int": 100,
+      "style": 100,
+      "mhp": 100,
+      "mmp": 100
+    },
     "thresholds": [],
     "masterBonus": null
   },
@@ -13,8 +21,24 @@
     "name": "戦士",
     "type": "basic",
     "description": "力と最大HPが高い前衛職です。",
-    "multipliers": { "str": 110, "agi": 65, "vit": 100, "int": 70, "style": 100, "mhp": 110, "mmp": 40 },
-    "thresholds": [9, 10, 15, 20, 30, 30, 35],
+    "multipliers": {
+      "str": 110,
+      "agi": 65,
+      "vit": 100,
+      "int": 70,
+      "style": 100,
+      "mhp": 110,
+      "mmp": 40
+    },
+    "thresholds": [
+      9,
+      10,
+      15,
+      20,
+      30,
+      30,
+      35
+    ],
     "masterBonus": null
   },
   {
@@ -22,8 +46,24 @@
     "name": "武闘家",
     "type": "basic",
     "description": "素早さが高く、物理攻撃向きの職業です。",
-    "multipliers": { "str": 100, "agi": 115, "vit": 90, "int": 80, "style": 100, "mhp": 100, "mmp": 50 },
-    "thresholds": [15, 16, 28, 30, 35, 33, 42],
+    "multipliers": {
+      "str": 100,
+      "agi": 115,
+      "vit": 90,
+      "int": 80,
+      "style": 100,
+      "mhp": 100,
+      "mmp": 50
+    },
+    "thresholds": [
+      15,
+      16,
+      28,
+      30,
+      35,
+      33,
+      42
+    ],
     "masterBonus": null
   },
   {
@@ -31,8 +71,24 @@
     "name": "魔法使い",
     "type": "basic",
     "description": "賢さと最大MPが高い攻撃魔法向きの職業です。",
-    "multipliers": { "str": 60, "agi": 95, "vit": 60, "int": 120, "style": 100, "mhp": 60, "mmp": 110 },
-    "thresholds": [12, 15, 15, 32, 30, 40, 35],
+    "multipliers": {
+      "str": 60,
+      "agi": 95,
+      "vit": 60,
+      "int": 120,
+      "style": 100,
+      "mhp": 60,
+      "mmp": 110
+    },
+    "thresholds": [
+      12,
+      15,
+      15,
+      32,
+      30,
+      40,
+      35
+    ],
     "masterBonus": null
   },
   {
@@ -40,8 +96,24 @@
     "name": "僧侶",
     "type": "basic",
     "description": "回復・支援に向いた職業です。",
-    "multipliers": { "str": 80, "agi": 90, "vit": 70, "int": 110, "style": 100, "mhp": 80, "mmp": 100 },
-    "thresholds": [18, 18, 13, 30, 20, 30, 30],
+    "multipliers": {
+      "str": 80,
+      "agi": 90,
+      "vit": 70,
+      "int": 110,
+      "style": 100,
+      "mhp": 80,
+      "mmp": 100
+    },
+    "thresholds": [
+      18,
+      18,
+      13,
+      30,
+      20,
+      30,
+      30
+    ],
     "masterBonus": null
   },
   {
@@ -49,8 +121,24 @@
     "name": "踊り子",
     "type": "basic",
     "description": "素早さとかっこよさが高い職業です。",
-    "multipliers": { "str": 70, "agi": 130, "vit": 60, "int": 100, "style": 110, "mhp": 70, "mmp": 80 },
-    "thresholds": [4, 13, 20, 15, 29, 15, 23],
+    "multipliers": {
+      "str": 70,
+      "agi": 130,
+      "vit": 60,
+      "int": 100,
+      "style": 110,
+      "mhp": 70,
+      "mmp": 80
+    },
+    "thresholds": [
+      4,
+      13,
+      20,
+      15,
+      29,
+      15,
+      23
+    ],
     "masterBonus": null
   },
   {
@@ -58,8 +146,24 @@
     "name": "盗賊",
     "type": "basic",
     "description": "素早さが高く、探索・ドロップ系の拡張に向きます。",
-    "multipliers": { "str": 90, "agi": 120, "vit": 70, "int": 90, "style": 80, "mhp": 90, "mmp": 60 },
-    "thresholds": [7, 9, 13, 18, 18, 44, 30],
+    "multipliers": {
+      "str": 90,
+      "agi": 120,
+      "vit": 70,
+      "int": 90,
+      "style": 80,
+      "mhp": 90,
+      "mmp": 60
+    },
+    "thresholds": [
+      7,
+      9,
+      13,
+      18,
+      18,
+      44,
+      30
+    ],
     "masterBonus": null
   },
   {
@@ -67,8 +171,24 @@
     "name": "魔物使い",
     "type": "basic",
     "description": "仲間モンスターの勧誘率アップなどに使いやすい職業です。",
-    "multipliers": { "str": 85, "agi": 100, "vit": 80, "int": 100, "style": 100, "mhp": 80, "mmp": 70 },
-    "thresholds": [17, 15, 25, 19, 16, 32, 40],
+    "multipliers": {
+      "str": 85,
+      "agi": 100,
+      "vit": 80,
+      "int": 100,
+      "style": 100,
+      "mhp": 80,
+      "mmp": 70
+    },
+    "thresholds": [
+      17,
+      15,
+      25,
+      19,
+      16,
+      32,
+      40
+    ],
     "masterBonus": null
   },
   {
@@ -76,8 +196,24 @@
     "name": "商人",
     "type": "basic",
     "description": "賢さと最大HPが高く、獲得ゴールド増加などに向く職業です。",
-    "multipliers": { "str": 95, "agi": 60, "vit": 80, "int": 120, "style": 80, "mhp": 100, "mmp": 50 },
-    "thresholds": [6, 8, 9, 16, 25, 30, 35],
+    "multipliers": {
+      "str": 95,
+      "agi": 60,
+      "vit": 80,
+      "int": 120,
+      "style": 80,
+      "mhp": 100,
+      "mmp": 50
+    },
+    "thresholds": [
+      6,
+      8,
+      9,
+      16,
+      25,
+      30,
+      35
+    ],
     "masterBonus": null
   },
   {
@@ -85,8 +221,24 @@
     "name": "遊び人",
     "type": "basic",
     "description": "能力は低めですが、特殊な上級職解放に使いやすい職業です。",
-    "multipliers": { "str": 70, "agi": 70, "vit": 60, "int": 80, "style": 105, "mhp": 70, "mmp": 60 },
-    "thresholds": [11, 13, 20, 22, 15, 36, 37],
+    "multipliers": {
+      "str": 70,
+      "agi": 70,
+      "vit": 60,
+      "int": 80,
+      "style": 105,
+      "mhp": 70,
+      "mmp": 60
+    },
+    "thresholds": [
+      11,
+      13,
+      20,
+      22,
+      15,
+      36,
+      37
+    ],
     "masterBonus": null
   },
   {
@@ -94,11 +246,38 @@
     "name": "バトルマスター",
     "type": "advanced",
     "description": "力・素早さ・身守り・最大HPが高い上級前衛職です。",
-    "multipliers": { "str": 115, "agi": 110, "vit": 110, "int": 80, "style": 100, "mhp": 120, "mmp": 60 },
-    "thresholds": [14, 20, 30, 35, 40, 50, 60],
+    "multipliers": {
+      "str": 115,
+      "agi": 110,
+      "vit": 110,
+      "int": 80,
+      "style": 100,
+      "mhp": 120,
+      "mmp": 60
+    },
+    "thresholds": [
+      14,
+      20,
+      30,
+      35,
+      40,
+      50,
+      60
+    ],
     "masterBonus": {
-      "flat": { "str": 20 },
-      "passives": ["たまに打撃攻撃を打ち払う"]
+      "flat": {
+        "str": 20
+      },
+      "passives": [
+        "たまに打撃攻撃を打ち払う"
+      ]
+    },
+    "unlock": {
+      "type": "masteries",
+      "required": [
+        "warrior",
+        "martial_artist"
+      ]
     }
   },
   {
@@ -106,11 +285,36 @@
     "name": "魔法戦士",
     "type": "advanced",
     "description": "物理と魔法を両立する上級職です。",
-    "multipliers": { "str": 105, "agi": 90, "vit": 85, "int": 100, "style": 100, "mhp": 90, "mmp": 110 },
-    "thresholds": [11, 12, 26, 40, 50, 50, 50],
+    "multipliers": {
+      "str": 105,
+      "agi": 90,
+      "vit": 85,
+      "int": 100,
+      "style": 100,
+      "mhp": 90,
+      "mmp": 110
+    },
+    "thresholds": [
+      11,
+      12,
+      26,
+      40,
+      50,
+      50,
+      50
+    ],
     "masterBonus": {
-      "flat": { "mmp": 20 },
+      "flat": {
+        "mmp": 20
+      },
       "passives": []
+    },
+    "unlock": {
+      "type": "masteries",
+      "required": [
+        "warrior",
+        "mage"
+      ]
     }
   },
   {
@@ -118,11 +322,38 @@
     "name": "パラディン",
     "type": "advanced",
     "description": "力・素早さ・賢さのバランスがよい守護系上級職です。",
-    "multipliers": { "str": 110, "agi": 115, "vit": 100, "int": 115, "style": 100, "mhp": 100, "mmp": 100 },
-    "thresholds": [24, 25, 30, 35, 40, 45, 60],
+    "multipliers": {
+      "str": 110,
+      "agi": 115,
+      "vit": 100,
+      "int": 115,
+      "style": 100,
+      "mhp": 100,
+      "mmp": 100
+    },
+    "thresholds": [
+      24,
+      25,
+      30,
+      35,
+      40,
+      45,
+      60
+    ],
     "masterBonus": {
-      "flat": { "mhp": 20 },
-      "passives": ["たまに敵を一撃で倒す"]
+      "flat": {
+        "mhp": 20
+      },
+      "passives": [
+        "たまに敵を一撃で倒す"
+      ]
+    },
+    "unlock": {
+      "type": "masteries",
+      "required": [
+        "martial_artist",
+        "priest"
+      ]
     }
   },
   {
@@ -130,11 +361,38 @@
     "name": "賢者",
     "type": "advanced",
     "description": "賢さと最大MPが非常に高い魔法系上級職です。",
-    "multipliers": { "str": 70, "agi": 105, "vit": 80, "int": 120, "style": 100, "mhp": 80, "mmp": 120 },
-    "thresholds": [14, 25, 30, 40, 40, 60, 60],
+    "multipliers": {
+      "str": 70,
+      "agi": 105,
+      "vit": 80,
+      "int": 120,
+      "style": 100,
+      "mhp": 80,
+      "mmp": 120
+    },
+    "thresholds": [
+      14,
+      25,
+      30,
+      40,
+      40,
+      60,
+      60
+    ],
     "masterBonus": {
-      "flat": { "mmp": 20 },
-      "passives": ["消費MPが減少"]
+      "flat": {
+        "mmp": 20
+      },
+      "passives": [
+        "消費MPが減少"
+      ]
+    },
+    "unlock": {
+      "type": "masteries",
+      "required": [
+        "mage",
+        "priest"
+      ]
     }
   },
   {
@@ -142,11 +400,39 @@
     "name": "レンジャー",
     "type": "advanced",
     "description": "素早さが高く、探索・逃走補正に向いた上級職です。",
-    "multipliers": { "str": 90, "agi": 120, "vit": 80, "int": 110, "style": 100, "mhp": 90, "mmp": 70 },
-    "thresholds": [19, 30, 30, 30, 30, 30, 30],
+    "multipliers": {
+      "str": 90,
+      "agi": 120,
+      "vit": 80,
+      "int": 110,
+      "style": 100,
+      "mhp": 90,
+      "mmp": 70
+    },
+    "thresholds": [
+      19,
+      30,
+      30,
+      30,
+      30,
+      30,
+      30
+    ],
     "masterBonus": {
-      "flat": { "agi": 20 },
-      "passives": ["戦闘から逃げやすくなる"]
+      "flat": {
+        "agi": 20
+      },
+      "passives": [
+        "戦闘から逃げやすくなる"
+      ]
+    },
+    "unlock": {
+      "type": "masteries",
+      "required": [
+        "thief",
+        "monster_tamer",
+        "merchant"
+      ]
     }
   },
   {
@@ -154,11 +440,38 @@
     "name": "スーパースター",
     "type": "advanced",
     "description": "かっこよさが高く、敵の行動阻害に向いた上級職です。",
-    "multipliers": { "str": 80, "agi": 90, "vit": 90, "int": 100, "style": 115, "mhp": 80, "mmp": 90 },
-    "thresholds": [9, 15, 15, 30, 40, 50, 60],
+    "multipliers": {
+      "str": 80,
+      "agi": 90,
+      "vit": 90,
+      "int": 100,
+      "style": 115,
+      "mhp": 80,
+      "mmp": 90
+    },
+    "thresholds": [
+      9,
+      15,
+      15,
+      30,
+      40,
+      50,
+      60
+    ],
     "masterBonus": {
-      "flat": { "style": 15 },
-      "passives": ["一定確率で敵が見とれる"]
+      "flat": {
+        "style": 15
+      },
+      "passives": [
+        "一定確率で敵が見とれる"
+      ]
+    },
+    "unlock": {
+      "type": "masteries",
+      "required": [
+        "dancer",
+        "gadabout"
+      ]
     }
   },
   {
@@ -166,11 +479,40 @@
     "name": "勇者",
     "type": "advanced",
     "description": "全体的に高水準で、賢さ・かっこよさ・最大HP・最大MPが高い上級職です。",
-    "multipliers": { "str": 110, "agi": 100, "vit": 100, "int": 115, "style": 110, "mhp": 110, "mmp": 110 },
-    "thresholds": [7, 12, 20, 20, 30, 30, 30],
+    "multipliers": {
+      "str": 110,
+      "agi": 100,
+      "vit": 100,
+      "int": 115,
+      "style": 110,
+      "mhp": 110,
+      "mmp": 110
+    },
+    "thresholds": [
+      7,
+      12,
+      20,
+      20,
+      30,
+      30,
+      30
+    ],
     "masterBonus": {
-      "flat": { "mmp": 40 },
-      "passives": ["戦闘中HPが回復する"]
+      "flat": {
+        "mmp": 40
+      },
+      "passives": [
+        "戦闘中HPが回復する"
+      ]
+    },
+    "unlock": {
+      "type": "masteries",
+      "required": [
+        "battle_master",
+        "sage",
+        "ranger",
+        "superstar"
+      ]
     }
   },
   {
@@ -178,11 +520,33 @@
     "name": "ドラゴン",
     "type": "advanced",
     "description": "力・身守り・最大HPが非常に高い重量級上級職です。",
-    "multipliers": { "str": 120, "agi": 80, "vit": 120, "int": 90, "style": 100, "mhp": 130, "mmp": 80 },
-    "thresholds": [9, 20, 20, 35, 45, 60, 90],
+    "multipliers": {
+      "str": 120,
+      "agi": 80,
+      "vit": 120,
+      "int": 90,
+      "style": 100,
+      "mhp": 130,
+      "mmp": 80
+    },
+    "thresholds": [
+      9,
+      20,
+      20,
+      35,
+      45,
+      60,
+      90
+    ],
     "masterBonus": {
-      "flat": { "str": 20 },
+      "flat": {
+        "str": 20
+      },
       "passives": []
+    },
+    "unlock": {
+      "type": "item",
+      "itemId": "dragon_satori"
     }
   },
   {
@@ -190,11 +554,35 @@
     "name": "はぐれメタル",
     "type": "advanced",
     "description": "素早さと身守りが極端に高い特殊上級職です。公開版ではオリジナル名称への変更推奨です。",
-    "multipliers": { "str": 60, "agi": 200, "vit": 200, "int": 80, "style": 100, "mhp": 20, "mmp": 70 },
-    "thresholds": [9, 10, 10, 20, 50, 100, 100],
+    "multipliers": {
+      "str": 60,
+      "agi": 200,
+      "vit": 200,
+      "int": 80,
+      "style": 100,
+      "mhp": 20,
+      "mmp": 70
+    },
+    "thresholds": [
+      9,
+      10,
+      10,
+      20,
+      50,
+      100,
+      100
+    ],
     "masterBonus": {
-      "flat": { "mhp": 100 },
-      "passives": ["呪文やブレスを無効にする"]
+      "flat": {
+        "mhp": 100
+      },
+      "passives": [
+        "呪文やブレスを無効にする"
+      ]
+    },
+    "unlock": {
+      "type": "item",
+      "itemId": "hagure_satori"
     }
   }
 ]
