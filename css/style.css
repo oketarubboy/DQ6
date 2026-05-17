@@ -600,3 +600,100 @@ tr:last-child td { border-bottom: 0; }
     flex: 1;
   }
 }
+
+
+/* v0.4.0 battle additions */
+select.text-input { appearance: auto; }
+.hero-status-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.65rem;
+  margin-top: 1rem;
+}
+.hero-status-grid > div,
+.hpmp-box,
+.enemy-box {
+  background: rgba(0, 0, 0, 0.18);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 0.8rem;
+}
+.hero-status-grid span,
+.hpmp-label,
+.enemy-hp-label {
+  display: block;
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+}
+.hero-status-grid strong {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 900;
+}
+.hpmp-box {
+  display: grid;
+  gap: 0.7rem;
+  margin-top: 0.75rem;
+}
+.hp-bar > div { background: linear-gradient(90deg, #ff9b9b, #ffd1a1); }
+.mp-bar > div { background: linear-gradient(90deg, #8fd3ff, #d5b4ff); }
+.enemy-hp-bar > div { background: linear-gradient(90deg, #ff8585, #ffce85); }
+.battle-actions.two { grid-template-columns: repeat(2, 1fr); }
+.command-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0.65rem;
+  margin-top: 1rem;
+}
+.enemy-box.empty strong,
+.enemy-box.empty span {
+  display: block;
+}
+.enemy-box.empty span { color: var(--muted); margin-top: 0.35rem; }
+.enemy-name-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.7rem;
+  margin-bottom: 0.6rem;
+}
+.enemy-name-row strong { font-size: 1.35rem; }
+.enemy-name-row span { color: var(--muted); font-weight: 800; }
+.enemy-stats-mini {
+  display: flex;
+  gap: 0.45rem;
+  flex-wrap: wrap;
+  margin-top: 0.75rem;
+}
+.enemy-stats-mini span {
+  color: #eaf4ff;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.35rem 0.55rem;
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+.monster-recruited { color: var(--accent-2); font-weight: 900; }
+.log-entry.encounter { border-left-color: var(--accent-2); }
+.log-entry.battle { border-left-color: var(--accent); }
+.log-entry.enemy { border-left-color: #ffb86b; }
+.log-entry.victory { border-left-color: var(--ok); }
+.log-entry.levelup { border-left-color: #fff18f; }
+.log-entry.defeat { border-left-color: var(--danger); }
+.log-entry.recruit { border-left-color: #d5b4ff; }
+.log-entry.spell { border-left-color: #8fd3ff; }
+.log-entry.heal { border-left-color: #9cffc2; }
+.log-entry.critical { border-left-color: #fff18f; }
+@media (max-width: 1100px) {
+  .dungeon-panel,
+  .battle-panel { grid-column: span 1; }
+  .command-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 760px) {
+  .hero-status-grid,
+  .battle-actions.two,
+  .command-grid { grid-template-columns: 1fr; }
+}

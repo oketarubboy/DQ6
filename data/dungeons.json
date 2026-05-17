@@ -1,0 +1,182 @@
+[
+  {
+    "id": "dungeon_01",
+    "name": "山肌の道",
+    "order": 1,
+    "enemyStart": 1,
+    "enemyEnd": 10,
+    "recommendedLevel": 1,
+    "description": "出現モンスターNo.1〜10のサンプルダンジョンです。"
+  },
+  {
+    "id": "dungeon_02",
+    "name": "川の抜け道",
+    "order": 2,
+    "enemyStart": 11,
+    "enemyEnd": 20,
+    "recommendedLevel": 6,
+    "description": "出現モンスターNo.11〜20のサンプルダンジョンです。"
+  },
+  {
+    "id": "dungeon_03",
+    "name": "試練の塔",
+    "order": 3,
+    "enemyStart": 21,
+    "enemyEnd": 30,
+    "recommendedLevel": 11,
+    "description": "出現モンスターNo.21〜30のサンプルダンジョンです。"
+  },
+  {
+    "id": "dungeon_04",
+    "name": "夢見の洞窟",
+    "order": 4,
+    "enemyStart": 31,
+    "enemyEnd": 40,
+    "recommendedLevel": 16,
+    "description": "出現モンスターNo.31〜40のサンプルダンジョンです。"
+  },
+  {
+    "id": "dungeon_05",
+    "name": "アモール北の洞窟",
+    "order": 5,
+    "enemyStart": 41,
+    "enemyEnd": 50,
+    "recommendedLevel": 21,
+    "description": "出現モンスターNo.41〜50のサンプルダンジョンです。"
+  },
+  {
+    "id": "dungeon_06",
+    "name": "月鏡の塔",
+    "order": 6,
+    "enemyStart": 51,
+    "enemyEnd": 60,
+    "recommendedLevel": 26,
+    "description": "出現モンスターNo.51〜60のサンプルダンジョンです。"
+  },
+  {
+    "id": "dungeon_07",
+    "name": "地底魔城",
+    "order": 7,
+    "enemyStart": 61,
+    "enemyEnd": 70,
+    "recommendedLevel": 31,
+    "description": "出現モンスターNo.61〜70のサンプルダンジョンです。"
+  },
+  {
+    "id": "dungeon_08",
+    "name": "ムドーの島",
+    "order": 8,
+    "enemyStart": 71,
+    "enemyEnd": 80,
+    "recommendedLevel": 36,
+    "description": "出現モンスターNo.71〜80のサンプルダンジョンです。"
+  },
+  {
+    "id": "dungeon_09",
+    "name": "ムドーの城",
+    "order": 9,
+    "enemyStart": 81,
+    "enemyEnd": 90,
+    "recommendedLevel": 41,
+    "description": "出現モンスターNo.81〜90のサンプルダンジョンです。"
+  },
+  {
+    "id": "dungeon_10",
+    "name": "モンストル北の山",
+    "order": 10,
+    "enemyStart": 91,
+    "enemyEnd": 100,
+    "recommendedLevel": 46,
+    "description": "出現モンスターNo.91〜100のサンプルダンジョンです。"
+  },
+  {
+    "id": "dungeon_11",
+    "name": "旅人の洞窟",
+    "order": 11,
+    "enemyStart": 101,
+    "enemyEnd": 110,
+    "recommendedLevel": 51,
+    "description": "出現モンスターNo.101〜110のサンプルダンジョンです。"
+  },
+  {
+    "id": "dungeon_12",
+    "name": "洗礼の洞窟",
+    "order": 12,
+    "enemyStart": 111,
+    "enemyEnd": 120,
+    "recommendedLevel": 56,
+    "description": "出現モンスターNo.111〜120のサンプルダンジョンです。"
+  },
+  {
+    "id": "dungeon_13",
+    "name": "運命の壁",
+    "order": 13,
+    "enemyStart": 121,
+    "enemyEnd": 130,
+    "recommendedLevel": 61,
+    "description": "出現モンスターNo.121〜130のサンプルダンジョンです。"
+  },
+  {
+    "id": "dungeon_14",
+    "name": "魔術師の塔",
+    "order": 14,
+    "enemyStart": 131,
+    "enemyEnd": 140,
+    "recommendedLevel": 66,
+    "description": "出現モンスターNo.131〜140のサンプルダンジョンです。"
+  },
+  {
+    "id": "dungeon_15",
+    "name": "海底神殿",
+    "order": 15,
+    "enemyStart": 141,
+    "enemyEnd": 150,
+    "recommendedLevel": 71,
+    "description": "出現モンスターNo.141〜150のサンプルダンジョンです。"
+  },
+  {
+    "id": "dungeon_16",
+    "name": "不思議な洞窟",
+    "order": 16,
+    "enemyStart": 151,
+    "enemyEnd": 160,
+    "recommendedLevel": 76,
+    "description": "出現モンスターNo.151〜160のサンプルダンジョンです。"
+  },
+  {
+    "id": "dungeon_17",
+    "name": "天馬の塔",
+    "order": 17,
+    "enemyStart": 161,
+    "enemyEnd": 170,
+    "recommendedLevel": 81,
+    "description": "出現モンスターNo.161〜170のサンプルダンジョンです。"
+  },
+  {
+    "id": "dungeon_18",
+    "name": "欲望の町・炭鉱",
+    "order": 18,
+    "enemyStart": 171,
+    "enemyEnd": 180,
+    "recommendedLevel": 86,
+    "description": "出現モンスターNo.171〜180のサンプルダンジョンです。"
+  },
+  {
+    "id": "dungeon_19",
+    "name": "デスタムーアの城",
+    "order": 19,
+    "enemyStart": 181,
+    "enemyEnd": 190,
+    "recommendedLevel": 91,
+    "description": "出現モンスターNo.181〜190のサンプルダンジョンです。"
+  },
+  {
+    "id": "dungeon_20",
+    "name": "隠しダンジョン",
+    "order": 20,
+    "enemyStart": 191,
+    "enemyEnd": 200,
+    "recommendedLevel": 96,
+    "description": "出現モンスターNo.191〜200のサンプルダンジョンです。"
+  }
+]

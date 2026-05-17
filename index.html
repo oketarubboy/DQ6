@@ -13,8 +13,8 @@
   <header class="app-header">
     <div>
       <p class="eyebrow">RPG PWA SAMPLE</p>
-      <h1>職業システム実装サンプル</h1>
-      <p class="lead">職業変更によるパラメータ補正、熟練度、上級職解放条件、レアアイテム転職、モンスター図鑑を確認できます。</p>
+      <h1>職業・仲間モンスター・ターン制バトル</h1>
+      <p class="lead">職業変更、熟練度、上級職解放、レベルアップ、ダンジョン探索、コマンドバトルを確認できます。</p>
       <p class="version-line">Version <strong id="versionInfo">-</strong> / Data <span id="dataVersionInfo">-</span></p>
     </div>
     <div class="header-actions">
@@ -34,13 +34,26 @@
         </div>
         <span id="saveStatus" class="pill">未保存</span>
       </div>
-
       <label class="field-label" for="playerName">名前</label>
       <input id="playerName" class="text-input" type="text" maxlength="16" />
-
-      <h3>基礎パラメータ</h3>
-      <div id="baseStatsEditor" class="base-stats-grid"></div>
-      <p class="hint">最終値 = 基礎値 × 職業補正％ + マスター特典です。</p>
+      <div class="hero-status-grid">
+        <div><span>レベル</span><strong id="heroLevel">1</strong></div>
+        <div><span>経験値</span><strong id="heroExp">0</strong></div>
+        <div><span>次まで</span><strong id="heroNextExp">-</strong></div>
+        <div><span>ゴールド</span><strong id="heroGold">0</strong></div>
+      </div>
+      <div class="hpmp-box">
+        <div>
+          <div class="hpmp-label">HP <span id="hpText">-</span></div>
+          <div class="progress-bar hp-bar"><div id="hpBar"></div></div>
+        </div>
+        <div>
+          <div class="hpmp-label">MP <span id="mpText">-</span></div>
+          <div class="progress-bar mp-bar"><div id="mpBar"></div></div>
+        </div>
+      </div>
+      <button id="restButton" class="wide secondary">宿屋で全回復</button>
+      <p class="hint">基礎パラメータは、指定の主人公経験値テーブルから自動計算します。</p>
     </section>
 
     <section class="panel current-panel">
@@ -51,32 +64,16 @@
         </div>
         <span id="currentJobType" class="pill">-</span>
       </div>
-
       <div class="current-summary">
-        <div>
-          <span class="summary-label">熟練度</span>
-          <strong id="currentRank">-</strong>
-        </div>
-        <div>
-          <span class="summary-label">次まで</span>
-          <strong id="nextBattles">-</strong>
-        </div>
-        <div>
-          <span class="summary-label">総戦闘数</span>
-          <strong id="totalBattles">0</strong>
-        </div>
+        <div><span class="summary-label">熟練度</span><strong id="currentRank">-</strong></div>
+        <div><span class="summary-label">次まで</span><strong id="nextBattles">-</strong></div>
+        <div><span class="summary-label">総勝利数</span><strong id="totalBattles">0</strong></div>
       </div>
-
       <div class="progress-wrap">
         <div class="progress-label"><span id="progressText">-</span></div>
         <div class="progress-bar"><div id="jobProgressBar"></div></div>
       </div>
-
-      <div class="battle-actions">
-        <button id="battleOnceButton">1回戦闘</button>
-        <button id="battleTenButton" class="secondary">10回戦闘</button>
-        <button id="battleHundredButton" class="secondary">100回戦闘</button>
-      </div>
+      <p class="hint">熟練度は戦闘に勝利すると1回分進みます。</p>
     </section>
 
     <section class="panel stats-panel">
@@ -87,6 +84,45 @@
         </div>
       </div>
       <div id="statsCards" class="stats-grid"></div>
+    </section>
+
+    <section class="panel dungeon-panel">
+      <div class="section-title-row">
+        <div>
+          <p class="eyebrow">DUNGEON</p>
+          <h2>ダンジョン探索</h2>
+        </div>
+        <span id="dungeonInfo" class="pill">-</span>
+      </div>
+      <label class="field-label" for="dungeonSelect">行き先</label>
+      <select id="dungeonSelect" class="text-input"></select>
+      <p id="dungeonDescription" class="hint"></p>
+      <div class="battle-actions two">
+        <button id="enterDungeonButton">ダンジョンに潜る</button>
+        <button id="sameDungeonButton" class="secondary">同じ場所で次の戦闘</button>
+      </div>
+    </section>
+
+    <section class="panel battle-panel">
+      <div class="section-title-row">
+        <div>
+          <p class="eyebrow">COMMAND BATTLE</p>
+          <h2 id="battleTitle">戦闘なし</h2>
+        </div>
+        <span id="battleTurn" class="pill">-</span>
+      </div>
+      <div id="enemyBox" class="enemy-box empty">
+        <strong>ダンジョンに潜ると敵が出現します。</strong>
+        <span>「ダンジョン探索」から行き先を選んでください。</span>
+      </div>
+      <div class="command-grid">
+        <button id="attackButton">たたかう</button>
+        <button id="fireButton" class="secondary">火の術 MP4</button>
+        <button id="healButton" class="secondary">ホイミ MP3</button>
+        <button id="guardButton" class="ghost">ぼうぎょ</button>
+        <button id="fleeButton" class="ghost">にげる</button>
+      </div>
+      <p class="hint">勝利すると経験値・ゴールド・職業熟練度を獲得します。◎付きモンスターは確率で仲間になります。</p>
     </section>
 
     <section class="panel bonus-panel">
@@ -153,21 +189,13 @@
         <table>
           <thead>
             <tr>
-              <th>職業</th>
-              <th>種別</th>
-              <th>解放状態</th>
-              <th>熟練度</th>
-              <th>次まで</th>
-              <th>累計戦闘</th>
-              <th>解放条件</th>
+              <th>職業</th><th>種別</th><th>解放状態</th><th>熟練度</th><th>次まで</th><th>累計勝利</th><th>解放条件</th>
             </tr>
           </thead>
           <tbody id="progressTableBody"></tbody>
         </table>
       </div>
     </section>
-
-
 
     <section class="panel monster-panel">
       <div class="section-title-row">
@@ -182,6 +210,7 @@
         <div class="tabs monster-tabs" role="tablist" aria-label="モンスターフィルター">
           <button class="monster-tab active" data-monster-filter="all">すべて</button>
           <button class="monster-tab" data-monster-filter="recruitable">仲間候補</button>
+          <button class="monster-tab" data-monster-filter="recruited">仲間済み</button>
           <button class="monster-tab" data-monster-filter="strong">強敵</button>
         </div>
       </div>
@@ -189,29 +218,19 @@
         <table class="monster-table">
           <thead>
             <tr>
-              <th>No.</th>
-              <th>名前</th>
-              <th>仲間</th>
-              <th>攻撃力</th>
-              <th>守備力</th>
-              <th>素早さ</th>
-              <th>最大HP</th>
-              <th>最大MP</th>
-              <th>経験値</th>
-              <th>ゴールド</th>
+              <th>No.</th><th>名前</th><th>仲間</th><th>攻撃力</th><th>守備力</th><th>素早さ</th><th>最大HP</th><th>最大MP</th><th>経験値</th><th>ゴールド</th>
             </tr>
           </thead>
           <tbody id="monsterTableBody"></tbody>
         </table>
       </div>
-      <p class="hint">◎付きのモンスターは仲間候補として登録しています。* と - は除去し、50?135* のように複数候補がある値は低い方を採用しています。数字がない項目は 0 として登録しています。</p>
     </section>
 
     <section class="panel log-panel">
       <div class="section-title-row">
         <div>
           <p class="eyebrow">LOG</p>
-          <h2>戦闘ログ</h2>
+          <h2>冒険ログ</h2>
         </div>
         <button id="clearLogButton" class="ghost small">ログ消去</button>
       </div>
@@ -221,10 +240,7 @@
 
   <template id="jobCardTemplate">
     <button class="job-card">
-      <span class="job-card-top">
-        <strong class="job-card-name"></strong>
-        <span class="job-card-type pill"></span>
-      </span>
+      <span class="job-card-top"><strong class="job-card-name"></strong><span class="job-card-type pill"></span></span>
       <span class="job-card-rank"></span>
       <span class="job-card-desc"></span>
     </button>
